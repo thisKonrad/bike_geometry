@@ -1,12 +1,13 @@
 /* :::: FRAME SIZE :::: */
+import CalcStyle from '../../styles/CalcStyle.module.css';
 
 
 export default function FrameSize(){
 
 return (<>
-<div className='form_component'>
+<div className={CalcStyle.form_component}>
   <label>
-      <p className='form_tag'>Inside Leg Measurement:</p>
+      <p className={CalcStyle.form_tag}>Inside Leg Measurement:</p>
       <input 
       type='number'
       name='insideLeg'

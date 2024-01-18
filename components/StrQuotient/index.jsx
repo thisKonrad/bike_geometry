@@ -1,4 +1,5 @@
 /* :::: STRQUOTIENT :::: */
+import CalcStyle from '../../styles/CalcStyle.module.css';
 
 /**
 * STRQuotienten = Info: comfort: over 1.55, sport: 1.45 till 1.55, race: under 1.45;
@@ -9,7 +10,7 @@
 export default function StrQuotient({check, onCheck, strRangeValue, onRangeChange}){
 
 
-    return(<div className='form_component'>
+    return(<div className={CalcStyle.form_component}>
         <h4>Define Str Values</h4>
     <input
         type="radio"

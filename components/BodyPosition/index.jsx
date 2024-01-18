@@ -1,4 +1,5 @@
 /* :::: Body Position :::: */
+import CalcStyle from '../../styles/CalcStyle.module.css';
 
 /*Oberrohrlänge / Top Tube Length:
 * measures: (body measures, vorbaulänge)
@@ -11,7 +12,7 @@
 
 export default function BodyPosition(){
 
-  return (<div className='form_component'>
+  return (<div className={CalcStyle.form_component}>
     <label>
       body position:
       <select 

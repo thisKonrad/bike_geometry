@@ -1,7 +1,7 @@
-/* :::: CalculatorErgoCss :::: */
+/* :::: Calculator Module css :::: */
 .frame_size_wrap{
     z-index:0;
-    margin-top: 25%;
+    margin-top: 14%;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     width: 24rem;
 }
 .form_component{
-    margin: 1rem;
+    margin: 2rem;
 }
 .form_tag{
     font-size: 1.2rem;

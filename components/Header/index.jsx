@@ -21,18 +21,13 @@ return (<>
             </Link>
             </div> 
             <div>
-            <Link href="/collection">
-                <button>Collection</button>
-            </Link>
-            </div>
-            <div>
             <Link href="/calculator_ergo">
                 <button>Ergonomic Calculator</button>
             </Link>
             </div>
             <div>
-            <Link href="/calculator_parts">
-                <button>Parts Calculator</button>
+            <Link href="/collection">
+                <button>Collection</button>
             </Link>
             </div>
           </nav>

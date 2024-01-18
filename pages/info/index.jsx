@@ -1,7 +1,7 @@
 /* :::: Information :::: */
 'use client'
 import Header from '@/components/Header'
-import styles from '../../app/page.module.css'
+import styles from '@/styles/Home.module.css'
 
 
 export default function Information() {

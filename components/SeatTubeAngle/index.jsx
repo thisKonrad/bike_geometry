@@ -1,10 +1,10 @@
 /* :::: SeatTubeAngle :::: */
-
+import CalcStyle from '../../styles/CalcStyle.module.css';
 
 export default function SeatTubeAngle({onChange, angel}) {
 
 
-    return (<div className='form_component'>
+    return (<div className={CalcStyle.form_component}>
         <label>
             <p className='form_tag'>Seat Tube Angel:</p>
             <input

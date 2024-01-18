@@ -7,10 +7,10 @@ import FrameSize from '@/components/FrameSize';
 import StrQuotient from '@/components/StrQuotient';
 import SeatTubeAngle from '@/components/SeatTubeAngle';
 import WheelSize from '@/components/Wheelsize';
-import styles from '@/styles/Home.module.css';
 import useSWR from "swr";
 import {useState} from 'react';
-import CalculatorStyles from '@/styles/CalculatorStyles.css';
+import styles from '../../styles/Home.module.css';
+import CalcStyle from '../../styles/CalcStyle.module.css';
 
 
 /** Framesize:
@@ -198,7 +198,7 @@ export default function Calculator() {
     currentPageTitle={'Ergonomic Calculator'}>
     </Header>
     <main className={styles.main}>
-      <section className={CalculatorStyles.frame_size_wrap}>
+      <section className={CalcStyle.frame_size_wrap}>
       <section >
       <h1>Calculate your Bike !</h1>
       <article>

@@ -1,7 +1,7 @@
 /* :::: Profile :::: */
 'use client'
-import Header from '@/components/Header/page'
-import styles from '../../app/page.module.css'
+import Header from '@/components/Header/index.jsx'
+import styles from '@/styles/Home.module.css'
 
 
 export default function Profile() {

@@ -1,12 +1,12 @@
 /* :::: WHEELSIZE :::: */
-
+import CalcStyle from '../../styles/CalcStyle.module.css';
 
 export default function WheelSize(){
 
 
-    return(<div className='form_component'>
+    return(<div className={CalcStyle.form_component}>
         <label>
-            <p className='form_tag'>Wheelsize:</p>
+            <p className={CalcStyle.form_tag}>Wheelsize:</p>
         <select 
         name='wheelsize'
         defaultValue='28'

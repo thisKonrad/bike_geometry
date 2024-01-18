@@ -1,11 +1,11 @@
 /* :::: USER NAME :::: */
-
+import CalcStyle from '../../styles/CalcStyle.module.css';
 
 export default function UserName(){
 
-    return (<div className='form_component'>
+    return (<div className={CalcStyle.form_component}>
         <label>
-        <p className='form_tag'>User Name</p>
+        <p className={CalcStyle.form_tag}>User Name</p>
         <input
         name='userName'
         type='text'
@@ -15,6 +15,5 @@ export default function UserName(){
         >
         </input>
     </label>
-    </div>
-  )
+    </div>)
 }
