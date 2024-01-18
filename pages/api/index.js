@@ -10,7 +10,6 @@ export default async function handler(request, response) {
   /*    if (request.method === "GET") {
          const bikes = await BikeGeometry.find();
          console.log('Response: ', response)
- 
          return response.status(200).json(bikes);
      } */
 

@@ -53,7 +53,7 @@ Wheelsize:
 
 export default function Calculator() {
 
-  const { mutate } = useSWR("/api/index.js");
+  const { mutate } = useSWR("/api");
 
   const[seatTubeAngelState, setSeatTubeAngelState]= useState(0);
   const[strRange,setStrRangeValue]= useState(0);
@@ -62,6 +62,7 @@ export default function Calculator() {
     min: 125,
     max: 175,
   }); 
+
 
   function handleSeatTubeRange (event) {
     setSeatTubeAngelState(event.target.value);
@@ -83,7 +84,7 @@ export default function Calculator() {
      const formData = new FormData(event.target);
      const data = Object.fromEntries(formData);
 
-     const response = await fetch("/api/index.js", {
+     const response = await fetch("/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -91,7 +92,7 @@ export default function Calculator() {
       body: JSON.stringify(data),
       });
       if (response.ok) {
-        console.log(response)
+        console.log('Response', response)
       mutate();
     }
 
