@@ -1,0 +1,15 @@
+/* :::: header style :::: */
+header{
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 18rem;
+    width: 100%;
+    gap: 2rem;
+    /* top | right | bottom | left */
+    padding: 2rem 12rem 1rem 14rem;
+    background-color: var(--headerColor);
+}
