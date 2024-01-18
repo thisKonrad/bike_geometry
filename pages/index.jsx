@@ -1,5 +1,5 @@
-import Header from '@/components/Header/page'
-import styles from './page.module.css'
+import Header from '@/components/Header'
+import styles from '../styles/Home.module.css'
 
 
 export default function Home() {
@@ -9,7 +9,6 @@ export default function Home() {
     currentPageTitle={'Bike Calculator'}>
     </Header>
     <main className={styles.main}>
-      {children}
       <article>
       <h1>Welcome</h1>
       <h3>Awesome Cyclist!</h3>
