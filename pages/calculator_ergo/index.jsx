@@ -1,16 +1,16 @@
 /* :::: ERGONOMIC CALCULATOR :::: */
 'use client'
-import Header from '@/components/Header/page';
-import BikeTitle from '@/components/BikeTitle/page';
-import UserName from '@/components/UserName/page';
-import FrameSize from '@/components/FrameSize/page';
-import StrQuotient from '@/components/StrQuotient/page.jsx';
-import SeatTubeAngle from '@/components/SeatTubeAngle/page';
-import WheelSize from '@/components/Wheelsize/page';
-import styles from '../../app/page.module.css';
+import Header from '@/components/Header'
+import BikeTitle from '@/components/BikeTitle';
+import UserName from '@/components/UserName';
+import FrameSize from '@/components/FrameSize';
+import StrQuotient from '@/components/StrQuotient';
+import SeatTubeAngle from '@/components/SeatTubeAngle';
+import WheelSize from '@/components/Wheelsize';
+import styles from '@/styles/Home.module.css';
 import useSWR from "swr";
 import {useState} from 'react';
-import './calculator_ergo.css';
+import CalculatorStyles from '@/styles/CalculatorStyles.css';
 
 
 /** Framesize:
@@ -198,7 +198,7 @@ export default function Calculator() {
     currentPageTitle={'Ergonomic Calculator'}>
     </Header>
     <main className={styles.main}>
-      <section className='frame_size_wrap'>
+      <section className={CalculatorStyles.frame_size_wrap}>
       <section >
       <h1>Calculate your Bike !</h1>
       <article>

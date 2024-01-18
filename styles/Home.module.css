@@ -9,4 +9,4 @@ min-height: 100vh;
 margin: 0 auto;
 padding: 2rem;
 text-align: center;
-background-color: rgb(255, 237, 213);}
+background-color: var(--backgroundColor);}

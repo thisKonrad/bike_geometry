@@ -1,14 +1,13 @@
 /* :::: HEADER :::: */
 'use client'
 import Link from 'next/link'
-//import './header.css'
-import './header.css'
+import styles from '@/styles/Header.module.css'
 
 
 export default function Header ({currentPageTitle}) {
 
 return (<>
-    <header>
+    <header className={styles.header}>
     <h1>{currentPageTitle}</h1>
         <nav>
         <div>
