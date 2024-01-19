@@ -1,20 +1,25 @@
 /* :::: Profile :::: */
 'use client'
-import Header from '@/components/Header/index.jsx'
-import styles from '@/styles/Home.module.css'
+import Header from '@/components/Header/index.jsx';
+import useSWR from 'swr';
+import styles from '@/styles/Home.module.css';
 import BikeCardStyle from '../../styles/BikeCardStyle.module.css';
 
 export default function Profile() {
 
-  //  const { data, isLoading, mutate } = useSWR("/api");
-  /*console.log("data from client", data);*/
-  /*  if (isLoading) {
-    return <h1>Loading...</h1>;
+  const { data, isLoading, mutate } = useSWR("/api");
+  console.log("data from client", data);
+    if (isLoading) {
+    return <h1>Bikes are Loading...</h1>;
   }
   if (!data) {
     return;
-  }*/
+  }
+  if( data){
+    mutate()
+  }
 
+  
   return (<>
     <Header
     currentPageTitle={'Collection'}>
