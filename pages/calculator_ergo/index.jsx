@@ -80,22 +80,9 @@ export default function Calculator() {
   async function handleSubmit (event){
 
      event.preventDefault();
-
+     /* :::: Form :::: */
      const formData = new FormData(event.target);
      const data = Object.fromEntries(formData);
-
-     const response = await fetch("/api", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-      });
-      if (response.ok) {
-        console.log('Response', response)
-      mutate();
-    }
-
 
     /* :::: USER NAME :::: */
     const userName = data.userName;
@@ -108,17 +95,17 @@ export default function Calculator() {
       switch (data.bikeType) {
       case 'race':
         const raceFrameSize = Math.round(data.insideLeg * 0.66)
-        formData.append('frameSize', raceFrameSize);
+        data['frameSize']= raceFrameSize;
         console.log('FrameSize: ',raceFrameSize)
         break;
       case 'mtb':
         const mtbFrameSize = Math.round(data.insideLeg * 0.57)
-        formData.append('frameSize', mtbFrameSize);
+        data['frameSize']= mtbFrameSize;
         console.log('FrameSize: ',mtbFrameSize)
         break;
       case 'city':
         const cityFrameSize = Math.round(data.insideLeg * 0.67)
-        formData.append('frameSize', cityFrameSize);
+        data['frameSize']= cityFrameSize;
         console.log('FrameSize: ',cityFrameSize)
         break;
       default:
@@ -130,27 +117,27 @@ export default function Calculator() {
     const topTubeBase = data.insideLeg * 0.66;
     if(data.bikeType === 'race'){
         const raceTopTube = Math.round(topTubeBase - 8);
-          formData.append('topTubeLength', raceTopTube);
+          data['topTubeLength']=raceTopTube;
             console.log('topTubeLength: ',raceTopTube)}
     if(data.bikeType === 'mtb'){
       const mtbTopTube = Math.round(topTubeBase - 10);
-        formData.append('topTubeLength', mtbTopTube);
+          data['topTubeLength']=mtbTopTube;
           console.log('topTubeLength: ',mtbTopTube);
       }
     else if(data.bikeType === 'city'){
       const cityTopTube = Math.round(topTubeBase - 5);
-        formData.append('topTubeLength', cityTopTube);
+         data['topTubeLength']=cityTopTube;
           console.log('topTubeLength: ',cityTopTube);
     };
 
     /* :::: calculate SADDLE HEIGHT :::: */
     const saddleHeight = Math.floor(data.insideLeg * 1.09);
-      formData.append('saddleHeight', saddleHeight);
+      data['saddleHeight']=saddleHeight;
   
     /* :::: calculate STACK :::: */
     const stack = data.insideLeg * 0.62;
     const stackResult = Math.ceil(stack);
-      formData.append('stack', stackResult);
+      data['stack']=stackResult;
       
     /* :::: calculate REACH :::: */
     switch (data.strQuotient) {
@@ -158,22 +145,22 @@ export default function Calculator() {
         setStrLimit({min: 155, max: 175})
         const comfortReach = Math.round(stackResult) / (strRange / 100);
         const comfortReachResult = Math.ceil(comfortReach);
-          formData.append('reach', comfortReachResult);
+          data['reach']= comfortReachResult;
           console.log('reach: ', comfortReachResult)
         break;
       case 'strSport':
         setStrLimit({min: 145, max: 155})
         const sportReach = Math.round(stackResult) / (strRange / 100);
         const sportReachResult = Math.ceil(sportReach);
-          formData.append('reach', sportReachResult);
-            console.log('Reach: ',sportReachResult)
+          data['reach']= sportReachResult;
+          console.log('reach: ',sportReachResult)
         break;
       case 'strRace':
         setStrLimit({min: 125, max: 145})
         const raceReach = Math.round(stackResult) / (strRange / 100);
         const raceReachResult = Math.ceil(raceReach);
-          formData.append('reach', raceReachResult);
-            console.log('Reach: ', raceReachResult)
+          data['reach']=raceReachResult;
+          console.log('Reach: ', raceReachResult)
         break;
       default:
         console.log('No Str Selected'); 
@@ -182,31 +169,47 @@ export default function Calculator() {
     /* :::: calculate CRANK :::: */
     const crank = (data.insideLeg / 100) *20;
     const crankLength = crank.toFixed(2)*1;
-      formData.append('crankLength', crankLength);
+      data['crankLength']=crankLength;
+
 
     /* :::: WHEELSIZE :::: */
     const wheelsizeValue = data.wheelsize * 1;
 
     /* :::: SEATTUBEANGLE :::: */
     const seatTubeAngle = seatTubeAngleState *1;
-      formData.append('seatTubeAngle', seatTubeAngle)
 
     /* :::: Control Values :::: */
     const insideLegLength = data.insideLeg;
-    const strRangeSelect = strRange*1;
-      formData.append('strQuotient',strRangeSelect)
+      const strRangeSelect = strRange*1;
+      data['strQuotient']= strRangeSelect;
+
+
+    /* >>>>> :::: FORM SUBMIT :::: <<<<< */
+    const response = await fetch("/api", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+      });
+      if (response.ok) {
+        console.log('Response', response)
+      mutate();
+    }
 
       /* ::::::: LOGS ::::::::: */
-      console.log('Form Data: ', data)
-      console.log('BikeTitle: ', bikeTitle)
+      console.log('data: ', data);
+      console.log('formData entries: ', formData.entries())
+
+      /* console.log('BikeTitle: ', bikeTitle)
       console.log('UserName: ', userName)
       console.log('SaddleHeight: ', saddleHeight)
       console.log('Stack: ', stackResult)
       console.log('CrankLength: ', crankLength)
       console.log('Wheelsize: ', wheelsizeValue)
-      console.log("SeatTubeAngleFromState: ", seatTubeAngle)
-      console.log("STR RANGE :", strRangeSelect)
-      console.log('insideLeg: ', insideLegLength)
+      console.log("SeatTubeAngleFromState: ", seatTubeAngle) */
+      //console.log("STR RANGE :", strRangeSelect)
+      //console.log('insideLeg: ', insideLegLength)
   };
  
 

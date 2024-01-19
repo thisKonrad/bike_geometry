@@ -13,13 +13,12 @@ const BikeGeometrySchema = new Schema({
     strQuotient: { type: Number, },
     seatTubeAngle: { type: Number, },
     wheelsize: { type: Number, },
-    /*  topTubeLength: { type: Number, }, */
-    /* frameSize: { type: Number, }, */
-    /* saddleHeight: { type: Number, },
+    topTubeLength: { type: Number, },
+    frameSize: { type: Number, },
+    saddleHeight: { type: Number, },
     stack: { type: Number, },
-    reach: { type: Number, }, */
-    /* strRangeSelect: { type: Number, }, */
-    /* crankLength: { type: Number, }, */
+    reach: { type: Number, },
+    crankLength: { type: Number, },
 });
 
 const BikeGeometry = mongoose.models.BikeGeometry || mongoose.model("BikeGeometry", BikeGeometrySchema);
