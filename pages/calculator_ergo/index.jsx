@@ -183,7 +183,6 @@ export default function Calculator() {
       const strRangeSelect = strRange*1;
       data['strQuotient']= strRangeSelect;
 
-
     /* >>>>> :::: FORM SUBMIT :::: <<<<< */
     const response = await fetch("/api", {
       method: "POST",

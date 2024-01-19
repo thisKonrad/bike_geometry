@@ -6,7 +6,7 @@ import styles from '@/styles/Home.module.css'
 
 export default function Profile() {
   return (<>
-      <Header
+    <Header
     currentPageTitle={'Collection'}>
     </Header>
     <main className={styles.main}>
