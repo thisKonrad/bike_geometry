@@ -1,5 +1,5 @@
 /* :::: API ID :::: */
-import dbConnect from "@/db/connectDB";
+/* import dbConnect from "@/db/connectDB";
 import BikeGeometry from "@/db/models/BikeGeometry";
 
 
@@ -19,7 +19,7 @@ export default async function handler(request, response) {
             return response.status(404).json({ status: "No bike found" });
         }
         response.status(200).json(bike);
-    }
+    } */
 
 
     /*     if (request.method === "PUT") {
