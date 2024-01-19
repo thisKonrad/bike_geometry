@@ -7,19 +7,17 @@ import BikeCardStyle from '../../styles/BikeCardStyle.module.css';
 
 export default function Profile() {
 
-  const { data, isLoading, mutate } = useSWR("/api");
-  console.log("data from client", data);
+  const { data, isLoading } = useSWR("/api");
+  console.log('Data from DB: ', data);
     if (isLoading) {
     return <h1>Bikes are Loading...</h1>;
   }
   if (!data) {
+    console.log('No DB Data!')
     return;
   }
-  if( data){
-    mutate()
-  }
 
-  
+
   return (<>
     <Header
     currentPageTitle={'Collection'}>
