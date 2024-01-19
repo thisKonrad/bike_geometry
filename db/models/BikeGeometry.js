@@ -11,7 +11,7 @@ const BikeGeometrySchema = new Schema({
     insideLeg: { type: Number, required: true },
     comfortRange: { type: Number, },
     strQuotient: { type: Number, },
-    seatTubeAngel: { type: Number, },
+    seatTubeAngle: { type: Number, },
     wheelsize: { type: Number, },
     /*  topTubeLength: { type: Number, }, */
     /* frameSize: { type: Number, }, */
