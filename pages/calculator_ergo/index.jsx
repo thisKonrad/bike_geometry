@@ -177,6 +177,7 @@ export default function Calculator() {
 
     /* :::: SEATTUBEANGLE :::: */
     const seatTubeAngle = seatTubeAngleState *1;
+      data['seatTubeAngle']= seatTubeAngle;
 
     /* :::: Control Values :::: */
     const insideLegLength = data.insideLeg;

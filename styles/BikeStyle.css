@@ -1,0 +1,20 @@
+/* :::: BikeStyle :::: */
+
+.bike_card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:ghostwhite
+}   
+
+.bikecard_fragment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:cadetblue;
+}
+
+p{
+    font-size:1.2rem;
+    letter-spacing: 2px;
+}
