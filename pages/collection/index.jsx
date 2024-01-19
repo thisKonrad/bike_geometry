@@ -3,22 +3,24 @@
 import Header from '@/components/Header/index.jsx';
 import BikeCard from '@/components/BikeCard';
 import useSWR from 'swr';
+//import {useEffect} from 'react';
 import styles from '@/styles/Home.module.css';
 
 
+
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
 export default function Collection() {
 
-  const { data, isLoading } = useSWR("/api");
-  
+    const { data, isLoading } = useSWR("/api", fetcher);
     if (isLoading) {
     return <h1>Bikes are Loading...</h1>;
   }
   if (!data) {
     console.log('No DB Data!')
     return;
-  }
-
-  console.log('Data from DB: ', data);
+  } 
+ console.log('Data from DB: ', data);
  
 
   return (<>
