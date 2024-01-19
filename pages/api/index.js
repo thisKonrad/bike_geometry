@@ -1,17 +1,17 @@
 /* :::: API :::: */
-import BikeGeometry from "@/db/models/BikeGeometry";
+import BikeGeometry from "@/db/models/BikeGeometry.js";
 import dbConnect from "@/db/connectDB.js";
 
 
 export default async function handler(request, response) {
   await dbConnect();
-  console.log(' hi from Server!')
+  console.log('Hi from Server!')
 
-  /*    if (request.method === "GET") {
-         const bikes = await BikeGeometry.find();
-         console.log('Response: ', response)
-         return response.status(200).json(bikes);
-     } */
+  if (request.method === "GET") {
+    const bikes = await BikeGeometry.find();
+    console.log('Response: ', response)
+    return response.status(200).json(bikes);
+  }
 
   if (request.method === "POST") {
     try {

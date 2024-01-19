@@ -182,6 +182,7 @@ export default function Calculator() {
     const strRangeSelect = strRange*1;
 
 
+      console.log('Form Data: ', data)
       console.log('BikeTitle: ', bikeTitle)
       console.log('UserName: ', userName)
       console.log('SaddleHeight: ', saddleHeight)
@@ -210,7 +211,7 @@ export default function Calculator() {
      <form 
      onSubmit={handleSubmit} 
      method='post' 
-     action='./api/geometry/index.js'>
+     action='./api'>
       <BikeTitle/>
       <UserName/>
       <FrameSize/>
