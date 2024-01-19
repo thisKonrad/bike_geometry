@@ -93,20 +93,21 @@ export default function Calculator() {
 
      /* :::: calculate FRAMESIZE :::: */
       switch (data.bikeType) {
-      case 'race':
+      case 'Race':
         const raceFrameSize = Math.round(data.insideLeg * 0.66)
         data['frameSize']= raceFrameSize;
-        console.log('FrameSize: ',raceFrameSize)
         break;
-      case 'mtb':
+      case 'MTB':
         const mtbFrameSize = Math.round(data.insideLeg * 0.57)
         data['frameSize']= mtbFrameSize;
-        console.log('FrameSize: ',mtbFrameSize)
         break;
-      case 'city':
+      case 'City':
         const cityFrameSize = Math.round(data.insideLeg * 0.67)
         data['frameSize']= cityFrameSize;
-        console.log('FrameSize: ',cityFrameSize)
+        break;
+      case 'Trekking':
+        const trekkingFrameSize = Math.round(data.insideLeg * 0.67)
+        data['frameSize']= trekkingFrameSize;
         break;
       default:
         console.log(''); 
@@ -115,16 +116,16 @@ export default function Calculator() {
 
     /*:::: calculate TOPTUBE :::::*/
     const topTubeBase = data.insideLeg * 0.66;
-    if(data.bikeType === 'race'){
+    if(data.bikeType === 'Race'){
         const raceTopTube = Math.round(topTubeBase - 8);
           data['topTubeLength']=raceTopTube;
             console.log('topTubeLength: ',raceTopTube)}
-    if(data.bikeType === 'mtb'){
+    if(data.bikeType === 'MTB'){
       const mtbTopTube = Math.round(topTubeBase - 10);
           data['topTubeLength']=mtbTopTube;
           console.log('topTubeLength: ',mtbTopTube);
       }
-    else if(data.bikeType === 'city'){
+    else if(data.bikeType === 'City' && data.bikeType === 'Trekking'){
       const cityTopTube = Math.round(topTubeBase - 5);
          data['topTubeLength']=cityTopTube;
           console.log('topTubeLength: ',cityTopTube);

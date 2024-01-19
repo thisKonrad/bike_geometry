@@ -23,12 +23,13 @@ return (<>
       <p className='form_tag'>Bike Type</p>
     <select 
     name='bikeType' 
-    defaultValue='mtb'
+    defaultValue=''
     >
      <option value=''>choose a bike type</option>
-      <option value='mtb'>MTB</option>
-      <option value='race'>Race Bike</option>
-      <option value='city'>City, Cross or Trekking Bike</option>
+      <option value='MTB'>MTB</option>
+      <option value='Race'>Race Bike</option>
+      <option value='City'>City Bike</option>
+      <option value='Trekking'>Trekking Bike</option>
     </select>
   </label>
 </div>
