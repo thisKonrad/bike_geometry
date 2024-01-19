@@ -1,0 +1,20 @@
+/* :::: BikeStyle :::: */
+
+.bikecard{
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem;
+    background-color:var(--bikeCardColor);
+}   
+
+.bikecard_fragment{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.2rem;
+}

@@ -132,12 +132,12 @@ export default function Calculator() {
 
     /* :::: calculate SADDLE HEIGHT :::: */
     const saddleHeight = Math.floor(data.insideLeg * 1.09);
-      data['saddleHeight']=saddleHeight;
+       data['saddleHeight']=saddleHeight;
   
     /* :::: calculate STACK :::: */
     const stack = data.insideLeg * 0.62;
     const stackResult = Math.ceil(stack);
-      data['stack']=stackResult;
+       data['stack']=stackResult;
       
     /* :::: calculate REACH :::: */
     switch (data.strQuotient) {
@@ -177,11 +177,13 @@ export default function Calculator() {
 
     /* :::: SEATTUBEANGLE :::: */
     const seatTubeAngle = seatTubeAngleState *1;
+      data['seatTubeAngle']= seatTubeAngle;
 
     /* :::: Control Values :::: */
     const insideLegLength = data.insideLeg;
       const strRangeSelect = strRange*1;
-      data['strQuotient']= strRangeSelect;
+      data['strQuotient']= strRangeSelect; 
+
 
     /* >>>>> :::: FORM SUBMIT :::: <<<<< */
     const response = await fetch("/api", {

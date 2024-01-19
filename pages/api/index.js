@@ -4,15 +4,10 @@ import dbConnect from "@/db/connectDB.js";
 
 
 export default async function handler(request, response) {
+
   await dbConnect();
   console.log('Hi from Server!')
-
-  if (request.method === "GET") {
-    const bikes = await BikeGeometry.find();
-    console.log('Response: ', response)
-    return response.status(200).json(bikes);
-  }
-
+  console.log('req met.: ', request.method)
   if (request.method === "POST") {
     try {
       console.log('Request Body: ', request.body);
@@ -25,4 +20,11 @@ export default async function handler(request, response) {
       response.status(400).json({ error: e.message });
     }
   }
+
+  if (request.method === "GET") {
+    const bikes = await BikeGeometry.find();
+    console.log('Request: ', bikes)
+    return response.status(200).json(bikes);
+  }
+
 }
