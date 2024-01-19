@@ -9,7 +9,7 @@ const BikeGeometrySchema = new Schema({
     bikeType: { type: String, required: true },
     userName: { type: String, required: true },
     insideLeg: { type: Number, required: true },
-    comfortRange: { type: Number, },
+    comfortRange: { type: Number, required: true },
     strQuotient: { type: Number, },
     seatTubeAngle: { type: Number, },
     wheelsize: { type: Number, },

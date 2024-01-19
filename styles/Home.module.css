@@ -1,13 +1,16 @@
 /* :::: Home Module css :::: */
 .main {
 display: flex;
-justify-content: center;
-align-items: center;
+flex-direction: row;
+justify-content:space-evenly;
+align-items:center;
 gap: 1rem;
 flex-wrap: wrap;
-min-width: 78%;
+min-width: 80%;
 min-height: 100vh;
-margin: 0 auto;
-padding: 2rem;
+margin: 0em auto;
+padding-top: 16rem;
 text-align: center;
-background-color: var(--backgroundColor);}
+background-color: var(--backgroundColor);
+}
+
