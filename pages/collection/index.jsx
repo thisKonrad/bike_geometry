@@ -7,7 +7,6 @@ import useSWR from 'swr';
 import styles from '@/styles/Home.module.css';
 
 
-
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Collection() {

@@ -55,10 +55,10 @@ export default function CollectionSearchBar({show}){
 
 return (<section className={SearchBar.searchbar_wrap}>
     <ul>
-        <li>
-            <button className={SearchBar.searchreset}
+        <li className={SearchBar.list}>
+            <button className={SearchBar.search_reset}
             onClick={resetSearch}>
-                reset search
+            reset
             </button>
         </li>
         <li className={SearchBar.list}>

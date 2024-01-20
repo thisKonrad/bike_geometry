@@ -13,12 +13,12 @@
     font-size: 1.2rem;
 }
 
-.resetSearch{
-    list-style: none;
+.search_reset{
     margin: 1rem;
-    font-size: 2rem;
+    padding: 1rem;
+    font-size: 1.2rem;
     height: 1.4rem;
-    width: 3rem;
+    width: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;

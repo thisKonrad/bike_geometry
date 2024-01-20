@@ -46,7 +46,7 @@ export default function BikeCard({data}){
             }
             if(frameSizeSelect){
                 filteredData = filteredData.filter((bike) =>
-                bike.frameSize === frameSizeSelect);
+                bike.frameSize === Number(frameSizeSelect));
             }
             return filteredData;
         } else {
