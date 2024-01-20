@@ -1,13 +1,13 @@
 /* :::: Calculator Module css :::: */
-.frame_size_wrap{
+.calculator_wrap{
     z-index:0;
     margin-top: 14%;
     position: absolute;
-    display: flex;
+   /*  display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    width: 24rem;
+    width: 24rem; */
 }
 .form_component{
     margin: 2rem;

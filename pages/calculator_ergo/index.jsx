@@ -224,7 +224,7 @@ export default function Calculator() {
     currentPageTitle={'Ergonomic Calculator'}>
     </Header>
     <main className={styles.main}>
-      <section className={CalcStyle.frame_size_wrap}>
+      <section className={CalcStyle.calculator_wrap}>
       <section >
       <h1>Calculate your Bike !</h1>
       <article>
