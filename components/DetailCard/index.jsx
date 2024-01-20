@@ -3,7 +3,7 @@ import BikeCardStyle from '../../styles/BikeCardStyle.module.css';
 
 
 export default function DetailCard({data}){
-
+   
 
 return (<section>
     <ul>

@@ -13,7 +13,7 @@ export default function Collection() {
 
     const { data, isLoading } = useSWR("/api", fetcher);
     if (isLoading) {
-    return <h1>Bikes are Loading...</h1>;
+    return <h1 className={styles.loader}>Bikes are Loading...</h1>;
   }
   if (!data) {
     console.log('No DB Data!')
