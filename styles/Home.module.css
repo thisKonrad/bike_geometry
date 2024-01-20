@@ -14,3 +14,9 @@ text-align: center;
 background-color: var(--backgroundColor);
 }
 
+.loader{
+    margin-top: 40vh;
+    margin-left: 20vw;
+    font-size: 4rem;
+}
+
