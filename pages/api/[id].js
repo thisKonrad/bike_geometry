@@ -13,17 +13,21 @@ export default async function handler(request, response) {
 
     if (request.method === "GET") {
         const bike = await BikeGeometry.findById(id);
+
         console.log("bike", bike);
 
         if (!bike) {
             return response.status(404).json({ status: "No bike found" });
         }
+
         response.status(200).json(bike);
+
     }
 
     if (request.method === "DELETE") {
         console.log("server id", id);
         await BikeGeometry.findByIdAndDelete(id);
+
         response.status(200).json({ status: `Bike deleted.` });
     }
 }

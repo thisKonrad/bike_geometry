@@ -1,7 +1,7 @@
 /* :::: BikeCard :::: */
 import Link from 'next/link';
 import {useStore} from '../Zustand';
-import { useRouter } from 'next/router'
+///import { useRouter } from 'next/router'
 import BikeCardStyle from '../../styles/BikeCardStyle.module.css';
 
 
@@ -10,7 +10,7 @@ export default function BikeCard({data}){
     const searchUser = useStore((state) => state.searchUser);
     const selectType = useStore((state) => state.selectType);
     const frameSizeSelect = useStore((state)=> state.frameSizeSelect);
-    const router = useRouter();
+    //const router = useRouter();
 
 
     const filterData = ()=> { 
@@ -47,9 +47,8 @@ return (<section className={BikeCardStyle.card_wrap}>
     key={bike._id}
     className={BikeCardStyle.bikecard}
     >
-    <Link href={`./details/[slug].js`}>
+    <Link href={`/api/${bike._id}`}>
     <button className={BikeCardStyle.detail_button}
-    onClick={router.push(`/details/[slug].js=${bike._id}`)}
     >&#187;</button>
     </Link>
     <div className={BikeCardStyle.bikecard_fragment}>

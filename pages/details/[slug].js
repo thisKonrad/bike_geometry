@@ -16,7 +16,8 @@ export default function DetailPage() {
 
     const { data, isLoading } = useSWR("/api/[id].js", fetcher);
     if (isLoading) {
-        return <h1>Details are Loading...</h1>;
+
+        return <h1 className={styles.loader}>Details are Loading...</h1>;
     }
     if (!data) {
         console.log('No ID DB Data!');
@@ -27,7 +28,7 @@ export default function DetailPage() {
 
     return (<>
         <Header
-            currentPageTitle={'Collection'}>
+            currentPageTitle={'Details'}>
         </Header>
         <main className={styles.main}>
             <DetailCard
