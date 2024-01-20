@@ -91,8 +91,9 @@ export default function Calculator() {
     const bikeTitle = data.bikeTitle;
 
     /* :::: DATE :::: */
-    const date = new Date();
-    
+    const date = new Date().toUTCString();
+      data['date']= date;
+    console.log('date: ', date);
 
      /* :::: calculate FRAMESIZE :::: */
       switch (data.bikeType) {
