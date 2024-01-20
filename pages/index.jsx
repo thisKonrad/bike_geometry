@@ -12,11 +12,11 @@ export default function Home() {
       <h1>Welcome</h1>
       <h3>Awesome Cyclist!</h3>
         <div>
-          <p>Lets calculate your bike geometry here</p>
-          <p>go over the menue bars to set your values</p>
-          <p>if you like go to the profile page</p>
-          <p>to store your personal</p>
-          <p>geometry properyties</p>
+          Lets calculate your bike geometry here
+          go over the menue bars to set your values
+          if you like go to the profile page
+          to store your personal
+          geometry properyties
         </div>
       </article>
     </main>
