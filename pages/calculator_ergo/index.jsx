@@ -90,6 +90,9 @@ export default function Calculator() {
     /* :::: BikeTitle :::: */
     const bikeTitle = data.bikeTitle;
 
+    /* :::: DATE :::: */
+    const date = new Date();
+    
 
      /* :::: calculate FRAMESIZE :::: */
       switch (data.bikeType) {
