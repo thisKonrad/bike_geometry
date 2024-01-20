@@ -32,3 +32,12 @@
     justify-content: center;
     align-items: center;
 }
+
+.delete_button{
+    font-size: 1rem;
+    height: 1.4rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

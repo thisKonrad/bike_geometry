@@ -1,0 +1,25 @@
+/* :::: searchbar styles :::: */
+.searchbar_wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.list{
+    list-style: none;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+.search_reset{
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    height: 1.4rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

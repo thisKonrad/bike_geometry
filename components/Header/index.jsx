@@ -1,5 +1,6 @@
 /* :::: HEADER :::: */
 'use client'
+import CollectionSearchBar from '../CollectionSearchBar'
 import Link from 'next/link'
 import styles from '@/styles/Header.module.css'
 
@@ -31,6 +32,11 @@ return (<>
             </Link>
             </div>
           </nav>
+          <div>
+            <CollectionSearchBar
+            show={ currentPageTitle === 'Collection'}
+            />
+          </div>
       </header>
       </>)
 };

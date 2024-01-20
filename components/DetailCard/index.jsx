@@ -2,7 +2,7 @@
 import BikeCardStyle from '../../styles/BikeCardStyle.module.css';
 
 
-export default function BikeCard({data}){
+export default function DetailCard({data}){
 
 
 return (<section>
