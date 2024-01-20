@@ -38,15 +38,15 @@ export default function BikeCard({data}){
 
             if(searchUser){
                 filteredData = filteredData.filter((bike) =>
-                bike.bikeTitle.toLowerCase().includes(searchUser.toLowerCase()))
+                bike.userName.toLowerCase().includes(searchUser.toLowerCase()));
             }
             if(selectType){
                 filteredData = filteredData.filter((bike) =>
-                bike.bikeType.includes(selectType))
+                bike.bikeType.includes(selectType));
             }
             if(frameSizeSelect){
                 filteredData = filteredData.filter((bike) =>
-                bike.frameSize === frameSizeSelect)
+                bike.frameSize === frameSizeSelect);
             }
             return filteredData;
         } else {
@@ -58,10 +58,6 @@ export default function BikeCard({data}){
 
     console.log("Filtered Bikes: ", filteredBikes);
 
-    function resetSearch(){
-
-    }
-    
 
 return (<section className={BikeCardStyle.card_wrap}>
     <ul>
