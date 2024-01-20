@@ -5,7 +5,8 @@ import CalcStyle from '../../styles/CalcStyle.module.css';
 export default function FrameSize(){
 
 return (<>
-<div className={CalcStyle.form_component}>
+<div className={CalcStyle.framesize}>
+<div>
   <label>
       <p className={CalcStyle.form_tag}>Inside Leg Measurement:</p>
       <input 
@@ -20,7 +21,7 @@ return (<>
     </div>
     <div>
   <label>
-      <p className='form_tag'>Bike Type</p>
+      <p className={CalcStyle.form_tag}>Bike Type</p>
     <select 
     name='bikeType' 
     defaultValue=''
@@ -32,6 +33,7 @@ return (<>
       <option value='Trekking'>Trekking Bike</option>
     </select>
   </label>
+</div>
 </div>
 </>)
 }

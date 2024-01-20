@@ -3,7 +3,7 @@ import CalcStyle from '../../styles/CalcStyle.module.css';
 
 export default function UserName(){
 
-    return (<div className={CalcStyle.form_component}>
+    return (<div className={CalcStyle.user_name}>
         <label>
         <p className={CalcStyle.form_tag}>User Name</p>
         <input

@@ -12,8 +12,7 @@ import CalcStyle from '../../styles/CalcStyle.module.css';
 
 export default function BodyPosition(){
 
-  return (<div className={CalcStyle.form_component}>
-    <label>
+  return (<label>
       body position:
       <select 
       name="bikePosition" 
@@ -24,7 +23,5 @@ export default function BodyPosition(){
         <option value='0.53'>sport position</option>
         <option value='0.54'>race position</option>
       </select>
-    </label>
-  </div>
-)
+    </label>)
 }

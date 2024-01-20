@@ -1,5 +1,5 @@
 /* :::: CollectionSearchBar :::: */
-import SearchBar from '@/styles/SearchBar.module.css'
+/* import SearchBar from '@/styles/SearchBar.module.css' */
 import {useStore} from '../Zustand';
 import HeaderStyle from '../../styles/HeaderStyle.module.css';
 
