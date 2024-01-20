@@ -1,6 +1,7 @@
 /* :::: CollectionSearchBar :::: */
 import SearchBar from '@/styles/SearchBar.module.css'
 import {useStore} from '../Zustand';
+import HeaderStyle from '../../styles/HeaderStyle.module.css';
 
 
 export default function CollectionSearchBar({show}){
@@ -44,15 +45,15 @@ export default function CollectionSearchBar({show}){
         updateSelectType('')
     }
 
-return (<section className={SearchBar.searchbar_wrap}>
+return (<section className={HeaderStyle.searchbar_wrap}>
     <ul>
-        <li className={SearchBar.list}>
-            <button className={SearchBar.search_reset}
+        <li className={HeaderStyle.list_001}>
+            <button className={HeaderStyle.search_reset}
             onClick={resetSearch}>
             reset
             </button>
         </li>
-        <li className={SearchBar.list}>
+        <li className={HeaderStyle.search_list_002}>
             <div>
                 <label>
                 <p>search by user</p>
@@ -66,7 +67,7 @@ return (<section className={SearchBar.searchbar_wrap}>
                 </label>
             </div>
         </li>
-        <li className={SearchBar.list}>
+        <li className={HeaderStyle.search_list_003}>
             <div>
                 <label>
                 <p>select by Type</p>
@@ -83,7 +84,7 @@ return (<section className={SearchBar.searchbar_wrap}>
                 </label>
             </div>
         </li>
-        <li className={SearchBar.list}>
+        <li className={HeaderStyle.search_list_004}>
             <div>
                 <label>
                 <p>Search by Frame Size</p>
