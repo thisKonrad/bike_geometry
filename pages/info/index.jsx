@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import InfoStyle from '@/styles/InfoStyle.module.css'
 
 
+
 export default function Information() {
   return (<>
     <Header
@@ -23,6 +24,15 @@ export default function Information() {
         After that you can go to the collection where you can see
         all bike geometries</p>
       </article>
+    </section>
+    <section>
+    <img
+        src="@/assets/inside_leg_white_002.webp"
+        alt="how to measure the inner leg length"
+        width="400"
+        height="600"
+        className={InfoStyle.image}
+      />
     </section>
     <section className={InfoStyle.jumbo}>
       <article className={InfoStyle.article}>
