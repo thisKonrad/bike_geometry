@@ -1,12 +1,22 @@
 /* :::: CollectionSearchBar :::: */
 import SearchBar from '@/styles/SearchBar.module.css'
+import useStore from './store';
 
 
-export default function CollectionSearchBar({show, onHandleChange, onHandleSelect}){
+export default function CollectionSearchBar({show}){
+
+    const searchTitle = useStore((state) => state.searchTitle);
+    const updateSearchTitle = useStore((state) => state.updateSearchTitle);
+    const selectType = useStore((state) => state.selectedType);
+    const updateSelectType = useStore((state) => state.updateSelectType);
+
 
     if(!show){
         return null;
     }
+
+    console.log('selectTaype:',selectType)
+    console.log('SearchTitle: ', searchTitle)
 
 return (<section className={SearchBar.searchbar_wrap}>
     <ul>
@@ -17,8 +27,8 @@ return (<section className={SearchBar.searchbar_wrap}>
                 <input
                 type='text'
                 placeholder='user search'
-                onChange={(e)=>onHandleChange(e)} 
-                value={input.titleSearch}
+                onChange={(e)=> updateSearchTitle(e.target.value)} 
+                value={searchTitle}
                 >
                 </input>
                 </label>
@@ -29,9 +39,8 @@ return (<section className={SearchBar.searchbar_wrap}>
                 <label>
                 <p>Search by Type</p>
                 <select
-                defaultValue=''
-                onChange={(e)=> onHandleChange(e)} 
-                onInput={(e)=> onHandleSelect(e)}
+                value={selectType}
+                onChange={(e)=>updateSelectType(e.target.value)} 
                 >
                     <option value=''>search by type</option>
                     <option value='City'>City</option>

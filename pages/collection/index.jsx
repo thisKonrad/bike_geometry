@@ -21,6 +21,8 @@ export default function Collection() {
     return;
   } 
  console.log('Data from DB: ', data);
+
+ 
  
 
   return (<>
