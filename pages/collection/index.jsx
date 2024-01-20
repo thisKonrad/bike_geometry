@@ -22,8 +22,7 @@ export default function Collection() {
   } 
  console.log('Data from DB: ', data);
 
- 
- 
+
 
   return (<>
     <Header

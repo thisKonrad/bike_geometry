@@ -1,33 +1,62 @@
 /* :::: CollectionSearchBar :::: */
 import SearchBar from '@/styles/SearchBar.module.css'
-import useStore from './store';
+import {useStore} from '../Zustand';
 
 
 export default function CollectionSearchBar({show}){
 
-    const searchTitle = useStore((state) => state.searchTitle);
-    const updateSearchTitle = useStore((state) => state.updateSearchTitle);
-    const selectType = useStore((state) => state.selectedType);
+    const searchUser = useStore((state) => state.searchUser);
+    const updateSearchUser = useStore((state) => state.updateSearchUser);
+
+    const selectType = useStore((state) => state.selectType);
     const updateSelectType = useStore((state) => state.updateSelectType);
 
+    const frameSizeSelect = useStore((state)=> state.frameSizeSelect)
+    const updateFrameSizeSelect = useStore((state)=> state.updateFrameSizeSelect)
 
     if(!show){
         return null;
     }
 
-    console.log('selectTaype:',selectType)
-    console.log('SearchTitle: ', searchTitle)
+    console.log('searchUser: ', searchUser)
+    console.log('selectType: ', selectType)
+    console.log('frameSize: ', frameSizeSelect)
+
+    function searchByTitle(event){
+        updateSearchUser(event.target.value)
+        updateSelectType('')
+        updateFrameSizeSelect(0)
+        console.log('searchUser: ', searchUser)
+        console.log('selectType: ', selectType)
+        console.log('frameSize: ', frameSizeSelect)
+    }
+    function selectByType(event){
+        updateSelectType(event.target.value)
+        updateSearchUser('')
+        updateFrameSizeSelect(0)
+        console.log('searchUser: ', searchUser)
+        console.log('selectType: ', selectType)
+        console.log('frameSize: ', frameSizeSelect)
+    }
+    function selectByFrameSize(event){
+        updateFrameSizeSelect(event.target.value)
+        updateSearchUser('')
+        updateSelectType('')
+        console.log('searchTitle: ', searchTitle)
+        console.log('selectType: ', selectType)
+        console.log('frameSize: ', frameSizeSelect)
+    }
 
 return (<section className={SearchBar.searchbar_wrap}>
     <ul>
         <li className={SearchBar.list}>
             <div>
                 <label>
-                <p>Search by User</p>
+                <p>search by user</p>
                 <input
                 type='text'
                 placeholder='user search'
-                onChange={(e)=> updateSearchTitle(e.target.value)} 
+                onChange={(e)=> searchByTitle(e)} 
                 value={searchTitle}
                 >
                 </input>
@@ -37,10 +66,10 @@ return (<section className={SearchBar.searchbar_wrap}>
         <li className={SearchBar.list}>
             <div>
                 <label>
-                <p>Search by Type</p>
+                <p>select by Type</p>
                 <select
                 value={selectType}
-                onChange={(e)=>updateSelectType(e.target.value)} 
+                onChange={(e)=> selectByType(e)} 
                 >
                     <option value=''>search by type</option>
                     <option value='City'>City</option>
@@ -60,6 +89,8 @@ return (<section className={SearchBar.searchbar_wrap}>
                 placeholder='frame size search'
                 min='25'
                 max='70'
+                value={frameSizeSelect}
+                onChange={(e)=>{selectByFrameSize(e)}}
                 >
                 </input>
                 </label>
