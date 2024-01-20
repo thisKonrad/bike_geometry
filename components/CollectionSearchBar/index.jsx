@@ -1,6 +1,7 @@
 /* :::: CollectionSearchBar :::: */
 import SearchBar from '@/styles/SearchBar.module.css'
 import {useStore} from '../Zustand';
+import HeaderStyle from '../../styles/HeaderStyle.module.css';
 
 
 export default function CollectionSearchBar({show}){
@@ -44,61 +45,60 @@ export default function CollectionSearchBar({show}){
         updateSelectType('')
     }
 
-return (<section className={SearchBar.searchbar_wrap}>
-    <ul>
-        <li className={SearchBar.list}>
-            <button className={SearchBar.search_reset}
-            onClick={resetSearch}>
+
+return (<section className={HeaderStyle.searchbar_wrap}>
+    <div className={HeaderStyle.list_001}>
+        <button className={HeaderStyle.search_reset}
+        onClick={resetSearch}>
             reset
-            </button>
-        </li>
-        <li className={SearchBar.list}>
-            <div>
-                <label>
-                <p>search by user</p>
-                <input
-                type='text'
-                placeholder='user search'
-                onChange={(e)=> searchByTitle(e)} 
-                value={searchUser}
-                >
-                </input>
-                </label>
-            </div>
-        </li>
-        <li className={SearchBar.list}>
-            <div>
-                <label>
-                <p>select by Type</p>
-                <select
-                value={selectType}
-                onChange={(e)=> selectByType(e)} 
-                >
-                    <option value=''>search by type</option>
-                    <option value='City'>City</option>
-                    <option value='Trekking'>Trekking</option>
-                    <option value='MTB'>MTB</option>
-                    <option value='Race'>Race</option>
-                </select>
-                </label>
-            </div>
-        </li>
-        <li className={SearchBar.list}>
-            <div>
-                <label>
-                <p>Search by Frame Size</p>
-                <input
-                type='number'
-                placeholder='frame size search'
-                min='25'
-                max='70'
-                value={frameSizeSelect}
-                onChange={(e)=>{selectByFrameSize(e)}}
-                >
-                </input>
-                </label>
-            </div>
-        </li>
-    </ul>
+        </button>
+    </div>
+    <div className={HeaderStyle.search_list_002}>
+        <div>
+            <label>
+        search by user
+            <input
+            type='text'
+            placeholder='user search'
+            onChange={(e)=> searchByTitle(e)} 
+            value={searchUser}
+            >
+            </input>
+            </label>
+        </div>
+    </div>
+    <div className={HeaderStyle.search_list_003}>
+        <div>
+            <label>
+            select by Type
+            <select
+            value={selectType}
+            onChange={(e)=> selectByType(e)} 
+            >
+            <option value=''>search by type</option>
+            <option value='City'>City</option>
+            <option value='Trekking'>Trekking</option>
+            <option value='MTB'>MTB</option>
+            <option value='Race'>Race</option>
+        </select>
+        </label>
+    </div>
+    </div>
+    <div className={HeaderStyle.search_list_004}>
+         <div>
+            <label>
+            search by frame size
+            <input
+            type='number'
+            placeholder='frame size search'
+            min='25'
+            max='70'
+            value={frameSizeSelect}
+            onChange={(e)=>{selectByFrameSize(e)}}
+            >
+            </input>
+            </label>
+        </div>
+    </div>
 </section>)
 }

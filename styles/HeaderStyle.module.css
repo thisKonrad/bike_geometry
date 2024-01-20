@@ -1,0 +1,89 @@
+/* :::: header style :::: */
+.header{
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    gap: 1rem;
+    height: 12rem;
+    /* top | right | bottom | left */
+    padding: 2rem 12rem 1rem 14rem;
+    background-color: var(--headerColor);
+}
+
+.header_content_wrap{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap; 
+    height: 10rem;
+    width: 100%;
+}
+
+.title{
+    font-size: 2rem;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    display: inline-block;
+    margin: 1rem;
+}
+
+
+/* :::: NavBar Style :::: */
+.navbar_wrap{
+    grid-area: 1/1/1/4;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+.nav_link_001{
+    list-style: none;
+}
+.nav_link_002{
+    list-style: none;
+}
+.nav_link_003{
+    list-style: none;
+}
+.nav_link_004{
+    list-style: none;
+}
+
+/* :::: searchbar styles :::: */
+.searchbar_wrap{
+    display: flex;
+    justify-content:center;
+    width: 100%; 
+}
+
+.search_list_001{
+    display: inline-block;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+.search_list_002{
+ 
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+.search_list_003{
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+.search_list_004{
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+.search_reset{
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    height: 1.4rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

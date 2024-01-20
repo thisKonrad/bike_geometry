@@ -1,42 +1,29 @@
 /* :::: HEADER :::: */
 'use client'
 import CollectionSearchBar from '../CollectionSearchBar'
-import Link from 'next/link'
-import styles from '@/styles/Header.module.css'
+import NavBar from '../NavBar'
+import HeaderStyle from '../../styles/HeaderStyle.module.css';
 
 
 export default function Header ({currentPageTitle}) {
 
+
 return (<>
-    <header className={styles.header}>
-    <h1>{currentPageTitle}</h1>
-        <nav>
-        <div>
-            <Link href="/">
-                <button>Home</button>
-            </Link>
-            </div>
-            <div>
-            <Link href="/info">
-                <button>Information</button>
-            </Link>
-            </div> 
-            <div>
-            <Link href="/calculator_ergo">
-                <button>Ergonomic Calculator</button>
-            </Link>
-            </div>
-            <div>
-            <Link href="/collection">
-                <button>Collection</button>
-            </Link>
-            </div>
-          </nav>
-          <div>
-            <CollectionSearchBar
-            show={ currentPageTitle === 'Collection'}
-            />
-          </div>
-      </header>
-      </>)
+ <header className={HeaderStyle.header}>
+    <section className={HeaderStyle.header_content_wrap}>
+    <div>
+    <h1 className={HeaderStyle.title}>{currentPageTitle}</h1>
+    </div>
+    <div>
+    <NavBar/>
+    </div>
+    <div>
+    <CollectionSearchBar
+    show={ currentPageTitle === 'Collection'}
+    />
+    </div>
+    </section>
+</header>
+</>)
 };
+
