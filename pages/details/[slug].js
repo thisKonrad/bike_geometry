@@ -2,6 +2,7 @@
 'use client'
 import Header from '@/components/Header/index.jsx';
 import DetailCard from '@/components/BikeCard';
+//import { useRouter } from 'next/router'
 import useSWR from 'swr';
 import styles from '@/styles/Home.module.css';
 
@@ -9,6 +10,9 @@ import styles from '@/styles/Home.module.css';
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function DetailPage() {
+
+    /*    const router = useRouter()
+       const { id } = router.query */
 
     const { data, isLoading } = useSWR("/api/[id].js", fetcher);
     if (isLoading) {
