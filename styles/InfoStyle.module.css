@@ -1,0 +1,16 @@
+/* :::: info style :::: */
+
+.jumbo{
+    display:inline-block;
+    width: 24rem;
+    height: 42rem;
+}
+.arcticle{
+    display:inline-block;
+    font-size: 1.2rem;
+    text-align:justify;
+    text-wrap:wrap;
+}
+/* .image{
+    box-shadow: 0px 0px 8px black;
+} */
