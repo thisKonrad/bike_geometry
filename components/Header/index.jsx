@@ -9,8 +9,11 @@ export default function Header ({currentPageTitle}) {
 
 
 return (<>
-    <header className={HeaderStyle.header}>
+ <header className={HeaderStyle.header}>
+    <section className={HeaderStyle.header_content_wrap}>
+    <div>
     <h1 className={HeaderStyle.title}>{currentPageTitle}</h1>
+    </div>
     <div>
     <NavBar/>
     </div>
@@ -19,7 +22,8 @@ return (<>
     show={ currentPageTitle === 'Collection'}
     />
     </div>
-    </header>
+    </section>
+</header>
 </>)
 };
 
