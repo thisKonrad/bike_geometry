@@ -8,6 +8,10 @@
     justify-content: center;
     gap: 2rem;
     width: 24rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2rem 2rem 2rem 2rem 2rem;
+    gap:1rem;
 }
 .form_component{
     margin: 2rem;
