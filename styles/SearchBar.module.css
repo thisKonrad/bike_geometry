@@ -6,8 +6,20 @@
     align-items: center;
     gap: 1rem;
 }
+
 .list{
     list-style: none;
     margin: 1rem;
     font-size: 1.2rem;
+}
+
+.resetSearch{
+    list-style: none;
+    margin: 1rem;
+    font-size: 2rem;
+    height: 1.4rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

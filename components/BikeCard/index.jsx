@@ -10,29 +10,62 @@ export default function BikeCard({data}){
     const selectType = useStore((state) => state.selectType);
     const frameSizeSelect = useStore((state)=> state.frameSizeSelect);
 
-    function getStates() { 
-        if(searchTitle){
-      /*   data.filter((bike) =>
-        bike.bikeTitle.toLowerCase().includes(searchTitle.toLowerCase())) */
-        console.log('Bike Card title search: ', searchUser);
+/*     const filterData = ()=> { 
+        if(searchUser){
+        data.filter((bike) =>
+        bike.bikeTitle.toLowerCase().includes(searchUser.toLowerCase())) 
+       return searchUser;
+        console.log('Bike Card title search: ', searchUser); 
         }
         if(selectType){
-        /* data.filter((bike) =>
-        bike.bikeType.includes(selectType)) */
-        console.log('Bike Card select Type: ', selectType);
+        data.filter((bike) =>
+        bike.bikeType.includes(selectType)) 
+        return selectType;
+        console.log('Bike Card select Type: ', selectType); 
         }
         if(frameSizeSelect){
-      /*   data.filter((bike) =>
-        bike.frameSize.includes(frameSizeSelect)) */
-        console.log('Bike Card: ', frameSizeSelect);
+        data.filter((bike) =>
+        bike.frameSize === frameSizeSelect) 
+        return frameSizeSelect;
+        console.log('Bike Card: ', frameSizeSelect); 
         }
-    }getStates()
+    };
+    console.log("Filter Data: ", filterData()); */
 
+    const filterData = ()=> { 
+        if(searchUser || selectType || frameSizeSelect){
+            let filteredData = data;
+
+            if(searchUser){
+                filteredData = filteredData.filter((bike) =>
+                bike.bikeTitle.toLowerCase().includes(searchUser.toLowerCase()))
+            }
+            if(selectType){
+                filteredData = filteredData.filter((bike) =>
+                bike.bikeType.includes(selectType))
+            }
+            if(frameSizeSelect){
+                filteredData = filteredData.filter((bike) =>
+                bike.frameSize === frameSizeSelect)
+            }
+            return filteredData;
+        } else {
+            return data;
+        }
+    };
+
+    const filteredBikes = filterData();
+
+    console.log("Filtered Bikes: ", filteredBikes);
+
+    function resetSearch(){
+
+    }
     
 
 return (<section className={BikeCardStyle.card_wrap}>
     <ul>
-    {data && data.map((bike) => (
+    {filteredBikes.map((bike) => (
     <li
     key={bike._id}
     className={BikeCardStyle.bikecard}
@@ -44,6 +77,7 @@ return (<section className={BikeCardStyle.card_wrap}>
         <p>Bike Title: {bike.bikeTitle}</p>
         <p>Bike Type: {bike.bikeType}</p>
         <p>User Name: {bike.userName}</p>
+        <p>Frame Size: {bike.frameSize}</p>
     </div> 
 </li>)
 )} 

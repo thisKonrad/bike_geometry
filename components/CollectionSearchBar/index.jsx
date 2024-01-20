@@ -42,13 +42,25 @@ export default function CollectionSearchBar({show}){
         updateFrameSizeSelect(event.target.value)
         updateSearchUser('')
         updateSelectType('')
-        console.log('searchTitle: ', searchTitle)
+        console.log('searchTitle: ', searchUser)
         console.log('selectType: ', selectType)
         console.log('frameSize: ', frameSizeSelect)
     }
 
+    function resetSearch(){
+        updateFrameSizeSelect(0)
+        updateSearchUser('')
+        updateSelectType('')
+    }
+
 return (<section className={SearchBar.searchbar_wrap}>
     <ul>
+        <li>
+            <button className={SearchBar.searchreset}
+            onClick={resetSearch}>
+                reset search
+            </button>
+        </li>
         <li className={SearchBar.list}>
             <div>
                 <label>
@@ -57,7 +69,7 @@ return (<section className={SearchBar.searchbar_wrap}>
                 type='text'
                 placeholder='user search'
                 onChange={(e)=> searchByTitle(e)} 
-                value={searchTitle}
+                value={searchUser}
                 >
                 </input>
                 </label>
