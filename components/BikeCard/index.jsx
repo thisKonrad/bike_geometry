@@ -10,27 +10,6 @@ export default function BikeCard({data}){
     const selectType = useStore((state) => state.selectType);
     const frameSizeSelect = useStore((state)=> state.frameSizeSelect);
 
-/*     const filterData = ()=> { 
-        if(searchUser){
-        data.filter((bike) =>
-        bike.bikeTitle.toLowerCase().includes(searchUser.toLowerCase())) 
-       return searchUser;
-        console.log('Bike Card title search: ', searchUser); 
-        }
-        if(selectType){
-        data.filter((bike) =>
-        bike.bikeType.includes(selectType)) 
-        return selectType;
-        console.log('Bike Card select Type: ', selectType); 
-        }
-        if(frameSizeSelect){
-        data.filter((bike) =>
-        bike.frameSize === frameSizeSelect) 
-        return frameSizeSelect;
-        console.log('Bike Card: ', frameSizeSelect); 
-        }
-    };
-    console.log("Filter Data: ", filterData()); */
 
     const filterData = ()=> { 
         if(searchUser || selectType || frameSizeSelect){

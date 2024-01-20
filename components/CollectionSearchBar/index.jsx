@@ -26,25 +26,16 @@ export default function CollectionSearchBar({show}){
         updateSearchUser(event.target.value)
         updateSelectType('')
         updateFrameSizeSelect(0)
-        console.log('searchUser: ', searchUser)
-        console.log('selectType: ', selectType)
-        console.log('frameSize: ', frameSizeSelect)
     }
     function selectByType(event){
         updateSelectType(event.target.value)
         updateSearchUser('')
         updateFrameSizeSelect(0)
-        console.log('searchUser: ', searchUser)
-        console.log('selectType: ', selectType)
-        console.log('frameSize: ', frameSizeSelect)
     }
     function selectByFrameSize(event){
         updateFrameSizeSelect(event.target.value)
         updateSearchUser('')
         updateSelectType('')
-        console.log('searchTitle: ', searchUser)
-        console.log('selectType: ', selectType)
-        console.log('frameSize: ', frameSizeSelect)
     }
 
     function resetSearch(){
