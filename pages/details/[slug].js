@@ -16,13 +16,13 @@ export default function DetailPage() {
 
     const { data, isLoading } = useSWR("/api/[id].js", fetcher);
     if (isLoading) {
-
         return <h1 className={styles.loader}>Details are Loading...</h1>;
     }
     if (!data) {
         console.log('No ID DB Data!');
         return;
     }
+
     console.log('ID Data from DB: ', data);
 
 
