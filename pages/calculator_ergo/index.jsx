@@ -225,7 +225,7 @@ export default function Calculator() {
     </Header>
     <main className={styles.main}>
       <section className={CalcStyle.calculator_wrap}>
-      <section >
+      <section className={CalcStyle.title_wrap}>
       <h1>Calculate your Bike !</h1>
       <article>
         <p>you just need your </p>
@@ -236,21 +236,23 @@ export default function Calculator() {
      onSubmit={handleSubmit} 
      method='post' 
      action='./api'>
-      <BikeTitle/>
-      <UserName/>
-      <FrameSize/>
-      <StrQuotient
+    <BikeTitle/>
+    <UserName/>
+    <FrameSize/>
+    <StrQuotient
       onCheck={handleStrRadio}
       check={strCheck}
       strRangeValue={strRange}
       onRangeChange={handleStrRange}
       />
-      <SeatTubeAngle
+    <SeatTubeAngle
       onChange={handleSeatTubeRange}
       angle={seatTubeAngleState}
       />
-      <WheelSize/>
-       <button type='submit'>Calculate</button>
+    <WheelSize/>
+    <div className={CalcStyle.submitBtn}>
+    <button type='submit'>Calculate</button>
+    </div>
      </form>
      <section>
     <div>

@@ -7,10 +7,11 @@ import CalcStyle from '../../styles/CalcStyle.module.css';
 * formular: Stack/STRQuotient
 */
 
+
 export default function StrQuotient({check, onCheck, strRangeValue, onRangeChange}){
 
 
-    return(<div className={CalcStyle.form_component}>
+    return(<div className={CalcStyle.strquotient}>
         <h4>Define Str Values</h4>
     <input
         type="radio"
@@ -37,7 +38,6 @@ export default function StrQuotient({check, onCheck, strRangeValue, onRangeChang
       />
       <label htmlFor="strRace">race</label>
     <div>
-    <p>str range: {strRangeValue/100}</p>
      <input
        type="range"
        name="comfortRange"
@@ -47,6 +47,7 @@ export default function StrQuotient({check, onCheck, strRangeValue, onRangeChang
        value={strRangeValue}
        onChange={onRangeChange}
      />
+     <p>str range: {strRangeValue/100}</p>
    </div>
 </div>)
 }
