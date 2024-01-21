@@ -11,8 +11,8 @@ import CalcStyle from '../../styles/CalcStyle.module.css';
 export default function StrQuotient({check, onCheck, strRangeValue, onRangeChange}){
 
 
-    return(<div className={CalcStyle.strquotient}>
-        <h4>Define Str Values</h4>
+    return(<div className={CalcStyle.str_quotient}>
+      <p className={CalcStyle.form_tag}>STR Quotient:</p>
     <input
         type="radio"
         name="strQuotient"

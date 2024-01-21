@@ -9,45 +9,46 @@
     align-items:flex-start; */
     gap: 2rem;
     height: 60rem;
-    width: 42rem; 
+    width: 62rem; 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 4rem 4rem 4rem 4rem 4rem 4rem 4rem; 
-    gap: 2rem; 
-}
-
-.title_warp{
-    grid-area:1/1/1/1;
+    grid-template-rows: 10rem 10rem 10rem 10rem;
+    gap: 2.4rem; 
 }
 
 .bike_title{
-    grid-area:2/1/1/2;
+    grid-area:1/1/1/1;
     margin:1rem;
 }
 
 .user_name{
+    grid-area:1/2/1/2;
+    margin: 1rem;
+}
+.inside_leg{
+    grid-area:2/1/2/1;
+    margin:1rem;
+}
+.bike_type{
     grid-area:2/2/2/2;
-    margin: 1rem;
+    margin:1rem;
 }
-.framesize{
-    grid-area:3/1/3/1;
-    margin: 1rem;
-}
-.strquotient{
+
+.str_quotient{
     grid-area:3/2/3/2;
     margin: 1rem;
 }
-.seattubeangle{
-    grid-area:4/1/4/1;
+.seat_tubeangle{
+    grid-area:3/1/3/1;
     margin: 1rem;
 }
 .wheelsize{
-    grid-area:4/2/4/2;
+    grid-area:4/1/4/1;
     margin: 1rem;
 }
 
 .submitBtn{
-    grid-area:5/1/5/2;
+    grid-area:4/2/4/2;
     margin: 1rem;
 }
 

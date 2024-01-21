@@ -224,15 +224,7 @@ export default function Calculator() {
     currentPageTitle={'Ergonomic Calculator'}>
     </Header>
     <main className={styles.main}>
-      <section className={CalcStyle.calculator_wrap}>
-      <section className={CalcStyle.title_wrap}>
-      <h1>Calculate your Bike !</h1>
-      <article>
-        <p>you just need your </p>
-        <p>inside Leg measurement</p>
-      </article>
-    </section>
-     <form 
+     <form className={CalcStyle.calculator_wrap}
      onSubmit={handleSubmit} 
      method='post' 
      action='./api'>
@@ -253,12 +245,7 @@ export default function Calculator() {
     <div className={CalcStyle.submitBtn}>
     <button type='submit'>Calculate</button>
     </div>
-     </form>
-     <section>
-    <div>
-    </div>
-  </section>  
-  </section>
+    </form>
   </main>
-  </>);
+ </>);
 }
