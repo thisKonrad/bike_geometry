@@ -1,58 +1,33 @@
 /* :::: Information :::: */
 'use client'
-import Header from '@/components/Header'
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from 'react-accessible-accordion';
-import styles from '@/styles/Home.module.css'
-import InfoStyle from '@/styles/InfoStyle.module.css'
+import Header from '@/components/Header';
+import Accordeon from '@/components/Accordeon/index.jsx';
+import styles from '@/styles/Home.module.css';
+import InfoStyle from '@/styles/InfoStyle.module.css';
 
 
 
 export default function Information() {
+
+  const measurementLegend=[
+    {title: 'Framesize',
+    content: 'The size of your frame.'},
+    {title: 'Stack',
+    content: 'The size of your frame.'},
+    {title: 'Reach',
+    content: 'The size of your frame.'},
+  ];
+
+
+
   return (<>
     <Header
   currentPageTitle={'Information'}>
   </Header>
   <main className={styles.main}>
-    <section className={InfoStyle.accordeon_wrap}>
-    <Accordion>
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        What harsh truths do you prefer to ignore?
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-                        Exercitation in fugiat est ut ad ea cupidatat ut in
-                        cupidatat occaecat ut occaecat consequat est minim minim
-                        esse tempor laborum consequat esse adipisicing eu
-                        reprehenderit enim.
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-            <AccordionItem>
-                <AccordionItemHeading>
-                    <AccordionItemButton>
-                        Is free will real or just an illusion?
-                    </AccordionItemButton>
-                </AccordionItemHeading>
-                <AccordionItemPanel>
-                    <p>
-                        In ad velit in ex nostrud dolore cupidatat consectetur
-                        ea in ut nostrud velit in irure cillum tempor laboris
-                        sed adipisicing eu esse duis nulla non.
-                    </p>
-                </AccordionItemPanel>
-            </AccordionItem>
-        </Accordion>
-    </section>
-
+    <Accordeon
+    items={measurementLegend}
+    />
 
 {/* <section className={InfoStyle.jumbo}>
       <article className={InfoStyle.article}>

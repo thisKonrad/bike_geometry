@@ -11,6 +11,9 @@ export const useStore = create((set) => ({
     updateSelectType: (value)=> set({selectType: value}),
 
     frameSizeSelect:0,
-    updateFrameSizeSelect: (value)=> set({frameSizeSelect: value})
+    updateFrameSizeSelect: (value)=> set({frameSizeSelect: value}),
+
+    expanded: null,
+    updateExpanded:(value)=> set({expanded: value}),
 
 }));
