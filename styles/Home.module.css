@@ -20,3 +20,14 @@ background-color: var(--backgroundColor);
     font-size: 4rem;
 }
 
+.jumbo{
+    width: 55%;
+}
+.article{
+    font-size: 1.4rem;
+    line-height: 2.5;
+    text-align: justify;
+    letter-spacing: 4px;
+    text-wrap:wrap;
+    line-break: auto;
+}

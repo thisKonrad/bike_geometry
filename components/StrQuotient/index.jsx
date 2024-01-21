@@ -38,6 +38,7 @@ export default function StrQuotient({check, onCheck, strRangeValue, onRangeChang
       />
       <label htmlFor="strRace">race</label>
     <div>
+      <br></br>
      <input
        type="range"
        name="comfortRange"
@@ -46,6 +47,7 @@ export default function StrQuotient({check, onCheck, strRangeValue, onRangeChang
        step='1'
        value={strRangeValue}
        onChange={onRangeChange}
+       className={CalcStyle.str_range}
      />
      <p>str range: {strRangeValue/100}</p>
    </div>
