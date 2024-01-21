@@ -32,3 +32,42 @@ input, select{
   padding: 8px;
   font-size: 1.2rem;
 }
+
+/* :::: global range slider styles :::: */
+/* ::: general apperance ::: */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
+/* :::: TRACK >> Chrome, Safari, Opera, and Edge Chromium :::: */
+input[type="range"]::-webkit-slider-runnable-track {
+  background: black;
+  height: 0.5rem;
+}
+/* :::: Firefox :::: */
+input[type="range"]::-moz-range-track {
+  background: black;
+  height: 0.5rem;
+}
+/* :::: THUMB >> Chrome, Safari, Opera, and Edge Chromium :::: */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -12px; /* Centers thumb */
+  border: 1px solid black;
+  background-color: white;
+  height: 2rem;
+  width: 2rem;    
+}
+/***** Firefox *****/
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0; /*Removes default border-radius that FF applies*/
+  border: 1px solid black;
+  background-color: white;
+  height: 2rem;
+  width: 2rem;
+}
