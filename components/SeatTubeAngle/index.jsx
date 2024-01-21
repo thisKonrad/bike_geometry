@@ -4,9 +4,9 @@ import CalcStyle from '../../styles/CalcStyle.module.css';
 export default function SeatTubeAngle({onChange, angle}) {
 
 
-    return (<div className={CalcStyle.seattubeangle}>
+    return (<div className={CalcStyle.seattube_angle}>
         <label>
-            <p className='form_tag'>Seat Tube Angel:</p>
+            <p className={CalcStyle.form_tag}>Seat Tube Angel:</p>
             <input
             type='range'
             name='seatTubeAngel' 
@@ -17,8 +17,9 @@ export default function SeatTubeAngle({onChange, angle}) {
             onChange={onChange} 
             ></input>
         </label>
+        <br></br>
         <div>
-            <p>angle: {angle}°</p>
+            <p className={CalcStyle.angle_info}>angle: {angle}°</p>
         </div>
         </div>)
 }
