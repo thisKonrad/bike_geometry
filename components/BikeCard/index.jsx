@@ -47,7 +47,7 @@ return (<section className={BikeCardStyle.card_wrap}>
     key={bike._id}
     className={BikeCardStyle.bikecard}
     >
-    <Link href={`/api/${bike._id}`}>
+    <Link href={`/details/${bike._id}`}>
     <button className={BikeCardStyle.detail_button}
     >&#187;</button>
     </Link>
