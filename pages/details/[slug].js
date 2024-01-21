@@ -14,14 +14,13 @@ export default function DetailPage() {
     const router = useRouter();
     const { isReady } = router;
     const { id } = router.query;
-    //const { data, isLoading, error } = useSWR("/api/[id].js", fetcher);
-    const { data, isLoading, error } = useSWR(id ? `/api/${id}` : null);
+    const { data, isLoading, error } = useSWR(`/api/${id}`, fetcher);
+    //const { data, isLoading, error } = useSWR(id ? `/api/${id}` : null);
 
-    if (!isReady || isLoading || error) return <h2 className={styles.loader}>Details Loading...</h2>;
+    if (!isReady || isLoading || error) {
+        return <h2 className={styles.loader}>Details Loading...</h2>;
+    }
 
-    /* if (isLoading) {`/api/places/${id}`
-        return <h1 className={styles.loader}>Details are Loading...</h1>;
-    } */
     if (!data) {
         console.log('No ID DB Data!');
         return;
@@ -30,7 +29,7 @@ export default function DetailPage() {
         console.log('error: ', error)
     }
 
-    console.log('ID Data from DB: ', data);
+    console.log('ID Details Data from DB: ', data);
 
 
     return (<>
@@ -38,6 +37,8 @@ export default function DetailPage() {
             currentPageTitle={'Details'}>
         </Header>
         <main className={styles.main}>
+            <h1>Hello from Details!</h1>
+            <h1>{data.bikeTitle}</h1>
             <DetailCard
                 data={data}
             />
