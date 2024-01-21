@@ -35,6 +35,12 @@ export default function Information() {
     {title: 'Stack to Reach STR',
     content: `The relation between stack and reach`},
 
+    {title: 'STR Quotient',
+    content: `The stack to reach quotient is a
+    relation that defines your basic seating position.
+    Values are:
+    comfort: over 1.55, sport: 1.45 till 1.55, race: under 1.45`},
+
     {title: 'Seattube Angle',
     content: `The angle of your seattube. This measurement defines your drive handling
     and your power take off from your legs to the whole bike.
@@ -53,7 +59,11 @@ export default function Information() {
     Dependend from which ridestyle you prefer you should use 
     shorter cranks for agile handling and longer cranks 
     for speed and endurance.`},
-
+    
+    {title: 'Wheelsize',
+    content: `Adult Bikes have an wheelsize range between 26" AND 29". There are some other
+    measurements for he wheelsize but for the basic inch measurements are enough.
+    Smaller wheels are better for agility, bigger ones are better for fast riders.`},
   ];
 
 

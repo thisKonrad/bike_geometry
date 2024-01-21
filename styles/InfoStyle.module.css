@@ -14,25 +14,33 @@
 /* :::: accordeon :::: */
 .accordeon_wrap{
     /* top | right | bottom | left */
-    margin: 1rem 0rem 6rem 0rem;
+    margin: 1em 0em 6em 0em;
 }
+
 .accordeon_body{
     width: 62rem;
     margin: 1.2rem;
-    padding: 1rem;
+    padding: 0em 0.2em 1em 0.2em;
     font-size: 1.4rem;
+    letter-spacing: 2px;
     border: 1px solid black;
 }
+
 .accordeon_header{
     cursor: pointer;
     margin: 1rem;
     padding: 1rem;
     border: 1px solid black;
 }
+
 .accordeon_icon{
     cursor: pointer;
     margin-right: 96%;
     font-size: 1.4rem;
     transition: 0.4s;
+}
+
+.accordeon_content{
+    padding: 1em;
 }
 
