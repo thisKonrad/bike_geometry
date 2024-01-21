@@ -19,8 +19,12 @@ export default function StrQuotient({check, onCheck, strRangeValue, onRangeChang
         value="strComfort"
         checked={check === 'strComfort'}
         onChange={onCheck}
+        className={CalcStyle.radio}
       />
-      <label htmlFor="strComfort">comfort
+      <label 
+      htmlFor="strComfort"
+      className={CalcStyle.radio_label}
+      >comfort
       </label>
       <input
         type="radio"
@@ -28,8 +32,11 @@ export default function StrQuotient({check, onCheck, strRangeValue, onRangeChang
         value="strSport"
         checked={check === 'strSport'}
         onChange={onCheck}
+        className={CalcStyle.radio}
       />
-      <label htmlFor="strSport">sport
+      <label htmlFor="strSport"
+        className={CalcStyle.radio_label}
+      >sport
       </label>
       <input
         type="radio"
@@ -37,8 +44,11 @@ export default function StrQuotient({check, onCheck, strRangeValue, onRangeChang
         value="strRace"
         checked={check === 'strRace'}
         onChange={onCheck}
+        className={CalcStyle.radio}
       />
-      <label htmlFor="strRace">race
+      <label htmlFor="strRace"
+        className={CalcStyle.radio_label}
+      >race
       </label>
     <div>
       <br></br>

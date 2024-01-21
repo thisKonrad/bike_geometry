@@ -40,7 +40,7 @@
 }
 
 .wheelsize{
-    grid-area:4/3/4/3;
+    grid-area:3/3/3/3;
 }
 
 .submitBtn{
@@ -54,3 +54,8 @@
     margin: 10px;
 }
 
+
+/* :::: calculator  radio styles :::: */
+.radio{
+    cursor: pointer;
+}

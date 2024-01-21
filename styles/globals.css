@@ -35,7 +35,7 @@ input, select{
 
 /* :::: global style for all Range Sliders :::: */
 /* :: << Range Reset >> :: */
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none;
    appearance: none;
    background: transparent;
@@ -43,24 +43,24 @@ input[type="range"] {
    width: 15rem;
 }
 /* :: << Removes default focus >> :: */
-input[type="range"]:focus {
+input[type='range']:focus {
  outline: none;
 }
                         
 /***** Chrome, Safari, Opera, and Edge Chromium *****/
-input[type="range"]::-webkit-slider-runnable-track {
+input[type='range']::-webkit-slider-runnable-track {
   background: black;
   height: 0.5rem;
 }
 
 /******** Firefox ********/
-input[type="range"]::-moz-range-track {
+input[type='range']::-moz-range-track {
   background: black;
   height: 0.5rem;
 }
 /* :::: << Thumb Styles >> :::: */
 /***** Chrome, Safari, Opera, and Edge Chromium *****/
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
   margin-top: -12px; /* Centers thumb on the track */
@@ -70,5 +70,3 @@ input[type="range"]::-webkit-slider-thumb {
   width: 2rem;    
 }
 
-
-/* :::: gloabl radio styles :::: */
