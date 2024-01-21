@@ -13,7 +13,7 @@ export default function Information() {
     {title: 'Inner Leg Measurement or Inside Leg',
     content: `The inner leg length is measured from crotch to floor, 
     where your true leg length is measured from the top of your legs to your ankles.
-    You just need this measurement for the calculator here`},
+    You just need the inner leg length for the calculator here`},
 
     {title: 'Framesize',
     content: `Adult bikes are measured by their frame size. 
@@ -32,12 +32,10 @@ export default function Information() {
     content: `Reach is the horizontal distance between stack and the top ending
     of your steering tube`}, 
 
-    {title: 'Stack to Reach STR',
-    content: `The relation between stack and reach`},
-
     {title: 'STR Quotient',
-    content: `The stack to reach quotient is a
-    relation that defines your basic seating position.
+    content: `The stack to reach quotient is kind of a relation 
+    between stack and reach. 
+    It defines your basic seating position.
     Values are:
     comfort: over 1.55, sport: 1.45 till 1.55, race: under 1.45`},
 
@@ -61,8 +59,8 @@ export default function Information() {
     for speed and endurance.`},
     
     {title: 'Wheelsize',
-    content: `Adult Bikes have an wheelsize range between 26" AND 29". There are some other
-    measurements for he wheelsize but for the basic inch measurements are enough.
+    content: `Adult bikes have an wheelsize range between 26" and 29". There are some other
+    measurements for the wheelsize but for the basics, inch measurements are enough.
     Smaller wheels are better for agility, bigger ones are better for fast riders.`},
   ];
 
