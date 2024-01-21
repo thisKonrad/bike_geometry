@@ -24,14 +24,13 @@
     font-size: 1.4rem;
     line-height: 2.5;
     letter-spacing: 2px;
-    border: 1px solid black;
 }
 
 .accordeon_header{
     cursor: pointer;
     margin: 1rem;
     padding: 1rem;
-    border: 1px solid black;
+    box-shadow: 0px 0px 2px black;
 }
 
 .accordeon_icon{

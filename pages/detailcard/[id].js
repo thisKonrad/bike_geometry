@@ -14,8 +14,9 @@ export default function DetailPage() {
     const router = useRouter();
     const { isReady } = router;
     const { id } = router.query;
-    const { data, isLoading, error } = useSWR(`/api/[id].js`, fetcher);
+    const { data, isLoading, error } = useSWR(`/api/details/${id}`, fetcher);
     //const { data, isLoading, error } = useSWR(id ? `/api/${id}` : null);
+
 
     if (!isReady || isLoading || error) {
         return <h2 className={styles.loader}>Details Loading...</h2>;

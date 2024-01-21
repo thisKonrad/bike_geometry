@@ -12,7 +12,8 @@ export default async function handler(request, response) {
     console.log("id server", id);
 
     if (request.method === "GET") {
-        const bike = await BikeGeometry.findById(id);
+        //const bike = await BikeGeometry.findById(id);
+        const bike = await BikeGeometry.findOne({ _id: new ObjectId(id) });
 
         console.log("bike", bike);
 
