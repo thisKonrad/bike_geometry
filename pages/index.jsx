@@ -8,17 +8,19 @@ export default function Home() {
     currentPageTitle={'Bike Calculator'}>
     </Header>
     <main className={styles.main}>
-      <article>
-      <h1>Welcome</h1>
-      <h3>Awesome Cyclist!</h3>
-        <div>
-          Lets calculate your bike geometry here
-          go over the menue bars to set your values
-          if you like go to the profile page
-          to store your personal
-          geometry properyties
-        </div>
+      <section className={styles.jumbo}>
+      <article className={styles.article}>
+        <h1>Welcome Cyclists!</h1>
+        <p>
+        Lets get your fitful personal bicycle measurements.
+        Here you can achieve the basic geometry datas for your new bike project.
+        You need only one measurement.
+        The famous inner leg length also known as "Inside Leg"
+        When you got it, go to the ergonomic calculator and pass your values.
+        After that you can go to the collection where you can see
+        all bike geometries and click on a bike card for your bike details.</p>
       </article>
+    </section>
     </main>
     </>)
 }

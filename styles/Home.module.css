@@ -14,6 +14,17 @@ text-align: center;
 background-color: var(--backgroundColor);
 }
 
+.jumbo{
+    width: 62rem;
+}
+
+.article{
+    font-size: 1.4rem;
+    line-height: 3;
+    text-align: justify;
+    letter-spacing: 4px;
+}
+
 .loader{
     margin-top: 40vh;
     margin-left: 20vw;
