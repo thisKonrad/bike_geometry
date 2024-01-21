@@ -3,6 +3,7 @@
 import Header from '@/components/Header/index.jsx';
 import BikeCard from '@/components/BikeCard';
 import useSWR from 'swr';
+import { Audio } from 'react-loader-spinner'
 //import {useEffect} from 'react';
 import styles from '@/styles/Home.module.css';
 
@@ -13,7 +14,17 @@ export default function Collection() {
 
     const { data, isLoading } = useSWR("/api", fetcher);
     if (isLoading) {
-    return <h1 className={styles.loader}>Bikes are Loading...</h1>;
+    return (<div className={styles.loader}>
+    <Audio
+    height="160"
+    width="220"
+    radius="9"
+    color="black"
+    ariaLabel="three-dots-loading"
+    wrapperStyle
+    wrapperClass
+    />
+    </div>)
   }
   if (!data) {
     console.log('No DB Data!')

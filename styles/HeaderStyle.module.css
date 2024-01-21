@@ -51,6 +51,10 @@
     list-style: none;
 }
 
+.activeLink{
+    border:8px solid red;
+}
+
 
 /* :::: searchbar styles :::: */
 .searchbar_wrap{

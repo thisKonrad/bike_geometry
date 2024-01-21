@@ -2,6 +2,7 @@
 'use client'
 import Header from '@/components/Header/index.jsx';
 import DetailCard from '@/components/BikeCard';
+import { Audio } from 'react-loader-spinner'
 import { useRouter } from 'next/router'
 import useSWR from 'swr';
 import styles from '@/styles/Home.module.css';
@@ -19,7 +20,17 @@ export default function DetailPage() {
 
 
     if (!isReady || isLoading || error) {
-        return <h2 className={styles.loader}>Details Loading...</h2>;
+        return (<div className={styles.loader}>
+            <Audio
+                height="160"
+                width="220"
+                radius="9"
+                color="black"
+                ariaLabel="three-dots-loading"
+                wrapperStyle
+                wrapperClass
+            />
+        </div>);
     }
 
     if (!data) {

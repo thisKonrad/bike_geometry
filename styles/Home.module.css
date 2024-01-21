@@ -16,9 +16,8 @@ background-color: var(--backgroundColor);
 
 .loader{
     margin-top: 40vh;
-    margin-left: 20vw;
-    font-size: 4rem;
-}
+    margin-left: 40vw;
+} 
 
 .jumbo{
     width: 55%;
