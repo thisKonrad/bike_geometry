@@ -3,11 +3,11 @@
 :root{
   font-family: 'Courier New', Courier, monospace;
   font-size: 100%;
-  --mainColor: whitesmoke;
+  --mainColor: ghostwhite;
   --accentColor: gainsboro;
   --backgroundColor: white;
-  --headerColor: rgb(225, 225, 225);
-  --bikeCardColor: lightgray;
+  --headerColor: white;
+  --bikeCardColor: white;
 }
  
 body{
@@ -24,6 +24,7 @@ button{
   font-size: 1.2rem;
 /* top | right | bottom | left */
   padding: 4px 14px 4px 14px;
+  background-color: var(--mainColor);
   box-shadow:0px 0px 2px rgba(0, 0, 0, 0.25);
 }
 input, select{

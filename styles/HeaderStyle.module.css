@@ -6,6 +6,7 @@
     top: 0;
     gap: 1rem;
     height: 12rem;
+    border-bottom: 1px solid black;
     /* top | right | bottom | left */
     padding: 2rem 12rem 1rem 14rem;
     background-color: var(--headerColor);
