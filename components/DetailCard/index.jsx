@@ -2,7 +2,7 @@
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
-export default function DetailCard({data}){
+export default function DetailCard({data, handleDelete}){
 
 
         switch (data.bikeType) {
@@ -23,15 +23,20 @@ export default function DetailCard({data}){
                 break;
 
             default:
-                return null;
+                console.log('no bike type')
                 break;
-        }
+        }  
 
-   
+
+        
 
 
 return (<section className={DetailCardStyle.detailcard}>
-    <button className={DetailCardStyle.delete_button}>X</button>
+    <button 
+    className={DetailCardStyle.delete_button}
+    onClick={handleDelete}
+    >X
+    </button>
     <div className={DetailCardStyle.detailcard_content}>
         <h3 className={DetailCardStyle.title}>
             Bike Title:{data.bikeTitle}</h3>
