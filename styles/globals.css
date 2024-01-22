@@ -3,8 +3,10 @@
 :root{
   font-family: 'Courier New', Courier, monospace;
   font-size: 100%;
-  --mainColor: ghostwhite;
-  --accentColor: gainsboro;
+  --mainColor: white;
+  --accentColor: black;
+  --cardShadow: 0px 0px 1px black;
+  --pageShadow: 0px 0px 2px black;
   --backgroundColor: white;
   --headerColor: white;
   --bikeCardColor: white;
@@ -50,12 +52,12 @@ input[type='range'] {
 }
 /* :::: TRACK >> Chrome, Safari, Opera, and Edge Chromium :::: */
 input[type="range"]::-webkit-slider-runnable-track {
-  background: black;
+  background: var(--accentColor);
   height: 2px;
 }
 /* :::: Firefox :::: */
 input[type="range"]::-moz-range-track {
-  background: black;
+  background: var(--accentColor);
   height: 2px;
 }
 /* :::: THUMB >> Chrome, Safari, Opera, and Edge Chromium :::: */
@@ -64,8 +66,8 @@ input[type="range"]::-webkit-slider-thumb {
   appearance: none;
   margin-top: -14px; /* Centers thumb */
   /* border: 1px solid black; */
-  box-shadow: 0px 0px 2px black;
-  background-color: white;
+  box-shadow: 0px 0px 2px var(--accentColor);
+  background-color: var(--mainColor);
   height: 2rem;
   width: 2rem;    
 }
@@ -74,8 +76,73 @@ input[type="range"]::-moz-range-thumb {
   border: none; /*Removes extra border that FF applies*/
   border-radius: 0; /*Removes default border-radius that FF applies*/
  /*  border: 1px solid black; */
-  box-shadow: 0px 0px 2px black;
-  background-color: white;
+  box-shadow: 0px 0px 2px var(--accentColor);
+  background-color: var(--mainColor);
   height: 2rem;
   width: 2rem;
 }
+
+
+/* :::: global radio style :::: */
+/* .radio_label{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} */
+
+/* hide the default box */
+/* input[type='radio']{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+} */
+/* custom checkmark */
+/* .radio_box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 1px solid var(--accentColor);
+  background-color: var(--mainColor);
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+/* .radio_label:hover input[type='radio'] ~ .radio_box {
+  background-color: #ccc;
+}
+
+input[type='radio']:checked ~ .radio_box{
+  background-color: var(--accentColor);
+}
+ */
+/* Create the indicator (the dot/circle - hidden when not checked) */
+/* .radio_box:after {
+  content: "";
+  position: absolute;
+  display: none;
+} */
+/* Show the indicator (dot/circle) when checked */
+/* .radio_label input[type='radio']:checked ~ .radio_box:after{
+  display: block;
+} */
+
+/* Style the indicator (dot/circle) */
+/* .radio_label .radio_box:after{
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}  */

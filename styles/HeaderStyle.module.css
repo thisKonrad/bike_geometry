@@ -6,10 +6,10 @@
     top: 0;
     gap: 1rem;
     height: 12rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--accentColor);
     /* top | right | bottom | left */
     padding: 2rem 12rem 1rem 14rem;
-    background-color: var(--headerColor);
+    background-color: var(--mainColor);
 }
 
 .header_content_wrap{
@@ -69,7 +69,6 @@
     font-size: 1.2rem;
 }
 .search_list_002{
- 
     margin: 1rem;
     font-size: 1.2rem;
 }

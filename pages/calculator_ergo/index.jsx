@@ -74,15 +74,16 @@ export default function Calculator() {
 
   function handleStrRadio(event){
     setStrChecked(event.target.value)
+    console.log('checked!')
   }
   
 
   async function handleSubmit (event){
 
-     event.preventDefault();
+    event.preventDefault();
      /* :::: Form :::: */
-     const formData = new FormData(event.target);
-     const data = Object.fromEntries(formData);
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
 
     /* :::: USER NAME :::: */
     const userName = data.userName;
