@@ -1,0 +1,10 @@
+/* :::: detailcard style :::: */
+.detailcard{
+    width: 78%;
+    height: 80vh;
+}
+
+.paragraph{
+    font-size: 1.4rem;
+    line-height: 2.5;
+}

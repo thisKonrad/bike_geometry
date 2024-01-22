@@ -1,7 +1,7 @@
 /* :::: DETAIL PAGE :::: */
 'use client'
 import Header from '@/components/Header/index.jsx';
-import DetailCard from '@/components/BikeCard';
+import DetailCard from '@/components/DetailCard';
 import { Audio } from 'react-loader-spinner'
 import { useRouter } from 'next/router'
 import useSWR from 'swr';
@@ -49,8 +49,6 @@ export default function DetailPage() {
             currentPageTitle={'Details'}>
         </Header>
         <main className={styles.main}>
-            <h1>Hello from Details!</h1>
-            <h1>{data.bikeTitle}</h1>
             <DetailCard
                 data={data}
             />

@@ -13,7 +13,7 @@ export default async function handler(request, response) {
 
     if (request.method === "GET") {
         //const bike = await BikeGeometry.findById(id);
-        const bike = await BikeGeometry.findOne({ _id: new ObjectId(id) });
+        const bike = await BikeGeometry.findById(id);
 
         console.log("bike", bike);
 

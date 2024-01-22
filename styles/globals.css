@@ -84,6 +84,18 @@ input[type="range"]::-moz-range-thumb {
 
 
 /* :::: global radio style :::: */
+
+/* easy one: */
+input[type='radio']{
+  cursor: pointer;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+
+
+
+
 /* .radio_label{
   display: block;
   position: relative;

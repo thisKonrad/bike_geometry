@@ -1,36 +1,27 @@
 /* :::: DETAIL CARD :::: */
-import BikeCardStyle from '../../styles/BikeCardStyle.module.css';
+import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
 export default function DetailCard({data}){
    
-
-return (<section>
-    <ul>
-    {data && data.map((bike) => (
-    <li
-    key={bike._id}
-    className={BikeCardStyle.bikecard}
-    >
-    <button className={BikeCardStyle.delete_button}>X</button>
-    <div className={BikeCardStyle.bikecard_fragment}>
-        <p>Bike Title: {bike.bikeTitle}</p>
-        <p>Bike Type: {bike.bikeType}</p>
-        <p>User Name: {bike.userName}</p>
-        <p>Inside Leg: {bike.insideLeg}</p>
-        <p>Frame size: {bike.frameSize}</p>
-        <p>Top tube length: {bike.topTubeLength}</p>
-        <p>Stack: {bike.stack}</p>
-        <p>Reach: {bike.reach}</p>
-        <p>Seattube angle: {bike.seatTubeangle}</p>
-        <p>Saddle height:{bike.saddleHeight}</p>
-        <p>Wheelsize: {bike.wheelsize}</p>
-        <p>Crank length: {bike.crankLength}</p>
-        <p>STR Quotient: {bike.strQuotient}</p>
-        <p>Preffered STR value: {bike.comfortRange}</p>
-    </div> 
-</li>)
-)} 
-</ul>
+console.log('data detailcard', data)
+return (<section className={DetailCardStyle.detailcard}>
+    <button className={DetailCardStyle.delete_button}>X</button>
+    <div className={DetailCardStyle.detailcard_content}>
+        <h3>Bike Title: {data.bikeTitle}</h3>
+        <p className={DetailCardStyle.paragraph}>Bike Type: {data.bikeType}</p>
+        <p className={DetailCardStyle.paragraph}>User Name: {data.userName}</p>
+        <p className={DetailCardStyle.paragraph}>Inside Leg: {data.insideLeg}</p>
+        <p className={DetailCardStyle.paragraph}>Frame size: {data.frameSize}</p>
+        <p className={DetailCardStyle.paragraph}>Top tube length: {data.topTubeLength}</p>
+        <p className={DetailCardStyle.paragraph}>Stack: {data.stack}</p>
+        <p className={DetailCardStyle.paragraph}>Reach: {data.reach}</p>
+        <p className={DetailCardStyle.paragraph}>Seattube angle: {data.seatTubeangle}</p>
+        <p className={DetailCardStyle.paragraph}>Saddle height:{data.saddleHeight}</p>
+        <p className={DetailCardStyle.paragraph}>Wheelsize: {data.wheelsize}</p>
+        <p className={DetailCardStyle.paragraph}>Crank length: {data.crankLength}</p>
+        <p className={DetailCardStyle.paragraph}>STR Quotient: {data.strQuotient}</p>
+        <p className={DetailCardStyle.paragraph}>Preffered STR value: {data.comfortRange}</p>
+    </div>
 </section>)
 }
