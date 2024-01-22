@@ -16,4 +16,7 @@ export const useStore = create((set) => ({
     expanded: null,
     updateExpanded:(value)=> set({expanded: value}),
 
+    isToggleOn: false,
+    toggle: () => set((state) => ({ isToggleOn: !state.isToggleOn })),
+   
 }));
