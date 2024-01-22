@@ -47,11 +47,11 @@ return (<section className={DetailCardStyle.detailcard}>
     >delete
     </button>
 
-    { !isToggled && <DeleteModal onDelete={handleDelete}/>}
+    {isToggled ? <DeleteModal onDelete={handleDelete}/> : null}
 
     <div className={DetailCardStyle.detailcard_content}>
         <h3 className={DetailCardStyle.title}>
-            Bike Title:{data.bikeTitle}</h3>
+            Bike Title: {data.bikeTitle}</h3>
         <p className={DetailCardStyle.paragraph}>
             Bike Type: {data.bikeType}</p>
         <p className={DetailCardStyle.paragraph}>
