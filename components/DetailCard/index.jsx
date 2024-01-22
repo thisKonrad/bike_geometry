@@ -27,7 +27,9 @@ export default function DetailCard({data, handleDelete}){
                 break;
         }  
 
-
+        function deleteAgreementModal(){
+            
+        }
         
 
 
