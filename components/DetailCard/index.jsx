@@ -1,7 +1,7 @@
 /* :::: DETAIL CARD :::: */
 import DeleteModal from '../DeleteModal';
-//import {useStore} from '../Zustand';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import Image from 'next/image';
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
@@ -9,6 +9,7 @@ import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 export default function DetailCard({data, handleDelete}){
 
     const [isToggled, setToggled] = useState(false);
+    const[currentImage, setImageUrl]= useState('/')
 
     const handleToggle = () => {
       setToggled(!isToggled);
@@ -17,18 +18,22 @@ export default function DetailCard({data, handleDelete}){
 
         switch (data.bikeType) {
             case 'MTB':
+                setImageUrl('bike_geometry/assets/MTB.svg')
                 console.log('MTB',data.bikeType)
                 break;
 
             case 'Race':
+                setImageUrl('bike_geometry/assets/racebike.svg')
                 console.log('race',data.bikeType)
                 break;
 
             case 'City':
+                setImageUrl('bike_geometry/assets/city.svg')
                 console.log('city',data.bikeType)
                 break;
 
             case 'Trekking':
+                setImageUrl('bike_geometry/assets/MTB.svg')
                 console.log('trekking',data.bikeType)
                 break;
 
@@ -78,6 +83,14 @@ return (<section className={DetailCardStyle.detailcard}>
             STR Quotient: {data.strQuotient}</p>
         <p className={DetailCardStyle.paragraph}>
             Preferred STR Value: {data.comfortRange}</p>
+    </div>
+    <div>
+    <Image
+        src={currentImage} 
+        width={800} 
+        height={420} 
+        alt="bike image" 
+      />
     </div>
 </section>)
 }
