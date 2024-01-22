@@ -9,6 +9,7 @@ import SeatTubeAngle from '@/components/SeatTubeAngle';
 import WheelSize from '@/components/Wheelsize';
 import useSWR from "swr";
 import {useState} from 'react';
+import { useRouter } from 'next/router'
 import styles from '../../styles/Home.module.css';
 import CalcStyle from '../../styles/CalcStyle.module.css';
 
@@ -53,6 +54,7 @@ Wheelsize:
 
 export default function Calculator() {
 
+  const router = useRouter();
   const { mutate } = useSWR("/api");
 
   const[seatTubeAngleState, setSeatTubeAngelState]= useState(0);
@@ -216,8 +218,9 @@ export default function Calculator() {
       console.log('Wheelsize: ', wheelsizeValue)
       console.log("SeatTubeAngleFromState: ", seatTubeAngle) */
       //console.log("STR RANGE :", strRangeSelect)
-      //console.log('insideLeg: ', insideLegLength)
-
+      //console.log('insideLeg: ', insideLegLength
+      
+    router.push('/collection');
   };
  
 

@@ -1,18 +1,19 @@
 /* :::: DETAIL CARD :::: */
 import DeleteModal from '../DeleteModal';
-import {useStore} from '../Zustand';
+//import {useStore} from '../Zustand';
+import { useState, useEffect } from 'react';
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
-/* showModal: false,
-toggleShow: () => set((state) => ({ showModal: !state.showModal})), */
+
 
 export default function DetailCard({data, handleDelete}){
 
-    const [showModal, toggleClass] = useStore(state => [
-        state.showModal,
-        state.toggleClass
-      ]);
-    //const modalState = useStore((state) => state.showModal);
+    const [isToggled, setToggled] = useState(false);
+
+    const handleToggle = () => {
+      setToggled(!isToggled);
+      console.log("state Toggle: ",isToggled)
+    };
 
         switch (data.bikeType) {
             case 'MTB':
@@ -36,24 +37,18 @@ export default function DetailCard({data, handleDelete}){
                 break;
         }  
 
-        function openModal(){
-
-            showModal
-        }
-        
-
+    
 
 return (<section className={DetailCardStyle.detailcard}>
-  
-    <DeleteModal
-        onToggle={toggleClass}
-        //onDelete={deleteBike}
-    />
+
     <button 
     className={DetailCardStyle.delete_button}
-    onClick={openModal}
-    >X
+    onClick={handleToggle}
+    >delete
     </button>
+
+    { !isToggled && <DeleteModal onDelete={handleDelete}/>}
+
     <div className={DetailCardStyle.detailcard_content}>
         <h3 className={DetailCardStyle.title}>
             Bike Title:{data.bikeTitle}</h3>
@@ -64,25 +59,25 @@ return (<section className={DetailCardStyle.detailcard}>
         <p className={DetailCardStyle.paragraph}>
             Inside Leg: {data.insideLeg}</p>
         <p className={DetailCardStyle.paragraph}>
-            Frame size: {data.frameSize}</p>
+            Frame Size: {data.frameSize}</p>
         <p className={DetailCardStyle.paragraph}>
-            Top tube length: {data.topTubeLength}</p>
+            Top Tube Length: {data.topTubeLength}</p>
         <p className={DetailCardStyle.paragraph}>
             Stack: {data.stack}</p>
         <p className={DetailCardStyle.paragraph}>
             Reach: {data.reach}</p>
         <p className={DetailCardStyle.paragraph}>
-            Seattube angle: {data.seatTubeangle}</p>
+            Seattube Angle: {data.seatTubeAngle}</p>
         <p className={DetailCardStyle.paragraph}>
-            Saddle height:{data.saddleHeight}</p>
+            Saddle Height:{data.saddleHeight}</p>
         <p className={DetailCardStyle.paragraph}>
             Wheelsize: {data.wheelsize}</p>
         <p className={DetailCardStyle.paragraph}>
-            Crank length: {data.crankLength}</p>
+            Crank Length: {data.crankLength}</p>
         <p className={DetailCardStyle.paragraph}>
             STR Quotient: {data.strQuotient}</p>
         <p className={DetailCardStyle.paragraph}>
-            Preffered STR value: {data.comfortRange}</p>
+            Preferred STR Value: {data.comfortRange}</p>
     </div>
 </section>)
 }
