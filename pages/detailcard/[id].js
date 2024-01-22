@@ -43,6 +43,26 @@ export default function DetailPage() {
 
     console.log('ID Details Data from DB: ', data);
 
+    /* ::: DELETE :::: */
+    async function deleteBikeById() {
+        try {
+            const response = await fetch(`/api/details/${id}`, {
+                method: "DELETE",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to delete bike");
+            }
+            router.push("/collection");
+            console.log(`Bike with ID ${id} deleted successfully.`);
+        } catch (error) {
+            console.error("Error deleting bike:", error.message);
+        }
+    }
+
 
     return (<>
         <Header
@@ -50,6 +70,7 @@ export default function DetailPage() {
         </Header>
         <main className={styles.main}>
             <DetailCard
+                handleDelete={deleteBikeById}
                 data={data}
             />
         </main>

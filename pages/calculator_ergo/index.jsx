@@ -217,6 +217,7 @@ export default function Calculator() {
       console.log("SeatTubeAngleFromState: ", seatTubeAngle) */
       //console.log("STR RANGE :", strRangeSelect)
       //console.log('insideLeg: ', insideLegLength)
+
   };
  
 

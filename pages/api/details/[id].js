@@ -25,12 +25,12 @@ export default async function handler(request, response) {
 
     }
 
-    /*  if (request.method === "DELETE") {
-         console.log("server id", id);
-         await BikeGeometry.findByIdAndDelete(id);
- 
-         response.status(200).json({ status: `Bike deleted.` });
-     } */
+    if (request.method === "DELETE") {
+        console.log("server id", id);
+        await BikeGeometry.findByIdAndDelete(id);
+
+        response.status(200).json({ status: `Bike deleted.` });
+    }
 }
 
 /*  if (request.method === "PUT") {
