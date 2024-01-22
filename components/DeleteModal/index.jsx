@@ -1,12 +1,17 @@
 /* :::: DELETE MODAL :::: */
+import {useStore} from '../Zustand';
 import DeleteModalStyle from '../../styles/DeleteModalStyle.module.css';
 
 
 
-export default function DeleteModal(){
+export default function DeleteModal({onDelete}){
 
+    const modalState = useStore((state) => state.modalOpen);
 
-return (<section className={DeleteModalStyle.modal_wrap}>
+return (<section className={ modalOpen === true ? 
+        DeleteModalStyle.modal_wrap.display='block' : 
+        DeleteModalStyle.modal_wrap.display='none'}>
+
     <div className={DeleteModalStyle.modal_content}>
         <header className={DeleteModalStyle.header}>
         <div>
@@ -27,7 +32,7 @@ return (<section className={DeleteModalStyle.modal_wrap}>
             <p>Delete</p>
             <button
             className={DeleteModalStyle.delete_button}
-            onClick={handleDelete}
+            onClick={onDelete}
             ></button>
         </div>
     </footer>

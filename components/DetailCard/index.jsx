@@ -1,9 +1,12 @@
 /* :::: DETAIL CARD :::: */
+import DeleteModal from '../DeleteModal';
+import {useStore} from '../Zustand';
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
 export default function DetailCard({data, handleDelete}){
 
+    const modalState = useStore((state) => state.modalOpen);
 
         switch (data.bikeType) {
             case 'MTB':
@@ -27,16 +30,21 @@ export default function DetailCard({data, handleDelete}){
                 break;
         }  
 
-        function deleteAgreementModal(){
-            
+        function showModal(){
+            updateModal(true)
+            console.log(modalOpen)
         }
         
 
 
 return (<section className={DetailCardStyle.detailcard}>
+  
+    <DeleteModal
+        onDelete={deleteBike}
+    />
     <button 
     className={DetailCardStyle.delete_button}
-    onClick={handleDelete}
+    onClick={showModal}
     >X
     </button>
     <div className={DetailCardStyle.detailcard_content}>
