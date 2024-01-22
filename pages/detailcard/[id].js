@@ -56,7 +56,7 @@ export default function DetailPage() {
             if (!response.ok) {
                 throw new Error("Failed to delete bike");
             }
-            router.push("/");
+            router.push("/collection");
             console.log(`Bike with ID ${id} deleted successfully.`);
         } catch (error) {
             console.error("Error deleting bike:", error.message);
