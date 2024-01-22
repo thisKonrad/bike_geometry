@@ -10,6 +10,7 @@ export default function DetailCard({data, handleDelete}){
 
     const [isToggled, setToggled] = useState(false);
     const[currentImageUrl, setImageUrl]= useState('');
+    const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
     useEffect(() => {
         getImageUrl()
@@ -21,6 +22,13 @@ export default function DetailCard({data, handleDelete}){
       console.log("state Toggle: ",isToggled)
     };
 
+    const showTooltip = () => {
+        setIsTooltipVisible(true);
+    };
+    
+    const hideTooltip = () => {
+        setIsTooltipVisible(false);
+    };
 
 
     console.log('BIKE-TYPE: ', data.bikeType)
@@ -40,47 +48,6 @@ export default function DetailCard({data, handleDelete}){
         }
     }
 
- /*    if(data.bikeType === 'City'){
-        setImageUrl('/CITY.svg')
-    }
-    if(data.bikeType === 'MTB'){
-        setImageUrl('/MTB.svg')
-    }
-    if(data.bikeType === 'Race'){
-        setImageUrl('/RACE.svg')
-    }
-    if(data.bikeType === 'Trekking'){
-        setImageUrl('/RACE.svg')
-    } */
-    
-    
-        /* switch (data.bikeType) {
-          case 'MTB':
-                setImageUrl('/MTB.svg')
-                console.log('MTB',data.bikeType)
-                break;
-
-            case 'Race':
-                setImageUrl('/RACE.svg')
-                console.log('race',data.bikeType)
-                break;
-
-            case 'City':
-                setImageUrl('/CITY.svg')
-                console.log('city',data.bikeType)
-                break; */
-
-          /*   case 'Trekking':
-                setImageUrl('/MTB.svg')
-                console.log('trekking',data.bikeType)
-                break; */
-
-    /*         default:
-                console.log('no bike type')
-                break;
-        }; */
-
-    
 
 return (<>
 <section className={DetailCardStyle.detailcard}>
@@ -120,13 +87,20 @@ return (<>
         <p className={DetailCardStyle.paragraph}>
             Preferred STR Value: {data.comfortRange}</p>
     </div>
-    <div className={DetailCardStyle.bike_image_wrap}>
+    <div 
+    onMouseEnter={showTooltip}
+    onMouseLeave={hideTooltip}
+    className={DetailCardStyle.bike_image_wrap}>
+        {isTooltipVisible && <div className={DetailCardStyle.tooltip_left}>Framesize: {data.frameSize}</div>}
+        {isTooltipVisible && <div className={DetailCardStyle.tooltip_right}>Saddle Height: {data.saddleHeight}</div>}
         <Image
             src={currentImageUrl}
             width={450} 
             height={400} 
             alt="bike image" 
         />
+        {isTooltipVisible && <div className={DetailCardStyle.tooltip_right}>Wheelsize: {data.wheelsize}</div>}
+        {isTooltipVisible && <div className={DetailCardStyle.tooltip_left}>Crank Length: {data.crankLength}</div>}
         </div>
     </section>
 </>)
