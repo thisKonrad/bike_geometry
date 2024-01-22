@@ -3,8 +3,33 @@ import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
 export default function DetailCard({data}){
+
+
+        switch (data.bikeType) {
+            case 'MTB':
+                console.log('MTB',data.bikeType)
+                break;
+
+            case 'Race':
+                console.log('race',data.bikeType)
+                break;
+
+            case 'City':
+                console.log('city',data.bikeType)
+                break;
+
+            case 'Trekking':
+                console.log('trekking',data.bikeType)
+                break;
+
+            default:
+                return null;
+                break;
+        }
+
    
-console.log('data detailcard', data)
+
+
 return (<section className={DetailCardStyle.detailcard}>
     <button className={DetailCardStyle.delete_button}>X</button>
     <div className={DetailCardStyle.detailcard_content}>
