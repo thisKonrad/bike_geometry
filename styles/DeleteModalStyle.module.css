@@ -1,1 +1,35 @@
 /* :::: delete modal style :::: */
+.modal_active{
+ display: block;
+}
+
+.modal_wrap{
+    display: none;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    background-color: var(--modalColor);
+}
+
+.modal_content{
+    position: relative;
+    background-color: var(--mainColor);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid var(--accentColor);
+    width: 50%;
+    font-size: 1.4rem;
+    line-height: 2;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+.header .footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
