@@ -3,10 +3,16 @@ import DeleteModal from '../DeleteModal';
 import {useStore} from '../Zustand';
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
+/* showModal: false,
+toggleShow: () => set((state) => ({ showModal: !state.showModal})), */
 
 export default function DetailCard({data, handleDelete}){
 
-    const modalState = useStore((state) => state.modalOpen);
+    const [showModal, toggleClass] = useStore(state => [
+        state.showModal,
+        state.toggleClass
+      ]);
+    //const modalState = useStore((state) => state.showModal);
 
         switch (data.bikeType) {
             case 'MTB':
@@ -30,9 +36,9 @@ export default function DetailCard({data, handleDelete}){
                 break;
         }  
 
-        function showModal(){
-            updateModal(true)
-            console.log(modalOpen)
+        function openModal(){
+
+            showModal
         }
         
 
@@ -40,11 +46,12 @@ export default function DetailCard({data, handleDelete}){
 return (<section className={DetailCardStyle.detailcard}>
   
     <DeleteModal
-        onDelete={deleteBike}
+        onToggle={toggleClass}
+        //onDelete={deleteBike}
     />
     <button 
     className={DetailCardStyle.delete_button}
-    onClick={showModal}
+    onClick={openModal}
     >X
     </button>
     <div className={DetailCardStyle.detailcard_content}>

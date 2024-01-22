@@ -16,7 +16,7 @@ export const useStore = create((set) => ({
     expanded: null,
     updateExpanded:(value)=> set({expanded: value}),
 
-    modalOpen: false,
-    updateModal:(value)=> set({modalOpen: value}),
-
+    showModal: false,
+    toggleClass: () => set((state) => ({ showModal: !state.showModal})),
+  
 }));

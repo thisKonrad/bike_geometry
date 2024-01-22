@@ -3,14 +3,13 @@ import {useStore} from '../Zustand';
 import DeleteModalStyle from '../../styles/DeleteModalStyle.module.css';
 
 
+export default function DeleteModal({onToggle}){
 
-export default function DeleteModal({onDelete}){
 
-    const modalState = useStore((state) => state.modalOpen);
-
-return (<section className={ modalOpen === true ? 
-        DeleteModalStyle.modal_wrap.display='block' : 
-        DeleteModalStyle.modal_wrap.display='none'}>
+return (<section className={DeleteModalStyle.modal_wrap}>
+    {/* className={ !modalState ? 
+        DeleteModalStyle.modal_active : 
+        DeleteModalStyle.modal_wrap} */}
 
     <div className={DeleteModalStyle.modal_content}>
         <header className={DeleteModalStyle.header}>
@@ -18,8 +17,8 @@ return (<section className={ modalOpen === true ?
             <p>Cancel</p>
             <button
             className={DeleteModalStyle.close_button}
-            onClick={handleCloseModal}
-            ></button>
+         /*    onClick={} */
+            >X</button>
         </div>
         </header>
         <article>
@@ -32,8 +31,8 @@ return (<section className={ modalOpen === true ?
             <p>Delete</p>
             <button
             className={DeleteModalStyle.delete_button}
-            onClick={onDelete}
-            ></button>
+            /* onClick={onDelete} */
+            >Delete</button>
         </div>
     </footer>
     </div>
