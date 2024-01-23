@@ -1,7 +1,6 @@
 /* :::: BikeCard :::: */
 import Link from 'next/link';
 import {useStore} from '../Zustand';
-///import { useRouter } from 'next/router'
 import BikeCardStyle from '../../styles/BikeCardStyle.module.css';
 
 
@@ -10,7 +9,6 @@ export default function BikeCard({data}){
     const searchUser = useStore((state) => state.searchUser);
     const selectType = useStore((state) => state.selectType);
     const frameSizeSelect = useStore((state)=> state.frameSizeSelect);
-    //const router = useRouter();
 
 
     const filterData = ()=> { 
@@ -19,7 +17,7 @@ export default function BikeCard({data}){
 
             if(searchUser){
                 filteredData = filteredData.filter((bike) =>
-                bike.userName.toLowerCase().includes(searchUser.toLowerCase()));
+                bike.bikeTitle.toLowerCase().includes(searchUser.toLowerCase()));
             }
             if(selectType){
                 filteredData = filteredData.filter((bike) =>
@@ -53,7 +51,7 @@ return (<section className={BikeCardStyle.card_wrap}>
     >&#187;</button>
     </Link>
     <div className={BikeCardStyle.bikecard_fragment}>
-        <p>Bike Title: {bike.bikeTitle}</p>
+        <p className={BikeCardStyle.title}>Title: {bike.bikeTitle}</p>
         <p>Bike Type: {bike.bikeType}</p>
         <p>User Name: {bike.userName}</p>
         <p>Frame Size: {bike.frameSize}</p>
