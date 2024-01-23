@@ -13,7 +13,8 @@ export default function Information() {
     {title: 'Inner Leg Measurement or Inside Leg',
     content: `The inner leg length is measured from crotch to floor, 
     where your true leg length is measured from the top of your legs to your ankles.
-    You just need the inner leg length for the calculator here`},
+    You just need the inner leg length for the calculator here`,
+    image:'/inside_leg_measurement.jpg'},
 
     {title: 'Framesize',
     content: `Adult bikes are measured by their frame size. 
