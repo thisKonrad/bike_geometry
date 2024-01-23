@@ -13,7 +13,34 @@
   --bikeCardColor: white;
   --modalBackground: rgba(0, 0, 0, 0.45);
 }
+
+.light{
+  transition: all 0.25s linear;
+  --mainColor: white;
+  --accentColor: black;
+  --fontColor: black;
+  --cardShadow: 0px 0px 1px black;
+  --pageShadow: 0px 0px 2px black;
+  --backgroundColor: white;
+  --headerColor: white;
+  --bikeCardColor: white;
+  --modalBackground: rgba(0, 0, 0, 0.45);
+}
+
+.dark{
+  transition: all 0.25s linear;
+  --mainColor: black;
+  --accentColor: white;
+  --fontColor: white;
+  --cardShadow: 0px 0px 1px white;
+  --pageShadow: 0px 0px 2px white;
+  --backgroundColor: black;
+  --headerColor: black;
+  --bikeCardColor: black;
+  --modalBackground: rgba(255, 255, 255, 0.45); 
+}
  
+
 body{
 width: 100%;
 height: 100%;
