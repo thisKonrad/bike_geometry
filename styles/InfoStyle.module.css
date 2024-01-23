@@ -44,3 +44,14 @@
     padding: 1em;
 }
 
+.content_wrap{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1.2rem;
+    text-align: justify;
+}
+
+.innerleg_image{
+    float: right;
+}

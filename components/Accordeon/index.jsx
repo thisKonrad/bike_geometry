@@ -1,6 +1,6 @@
 /* :::: Accordeon :::: */
 'use client'
-import Image from 'next/image';
+//import Image from 'next/image';
 import {useStore} from '../Zustand';
 import InfoStyle from '@/styles/InfoStyle.module.css'
 
@@ -33,15 +33,8 @@ export default function Accordeon({items}) {
             </header>
             <div className={InfoStyle.accordeon_content}>
                 <article className={InfoStyle.accordeon_article}>
-                {index === expanded ? 
-                item.content && 
-                <Image 
-                src={item.image}
-                width={100}
-                height={200}
-                alt='image'
-                /> 
-                : ''}
+              {index === expanded ? 
+                <div className={InfoStyle.content_wrap}><p>{item.content.text}</p>{item.content.image}</div>: ''} 
                 </article>
             </div>
           </div>
