@@ -10,30 +10,37 @@ export default function GoogleSearch({data}){
 
     function googleBike(){
         if(data.bikeType === 'City'){
-            setGoogleUrl(document.location.href=`https://www.google.com/search?q=
-            City+Bike+frame+size+62&tbm=isch&ved=2ahUKEwjd9
-            _Lu6PODAxVhwgIHHWWbBwYQ2cCegQIABAA&oq=City+Bike+frame+size+${data.frameSize}&gs
-            _lcp=CgNpbWcQA1DrCViUEmD3KGgAcAB4AIABtQGIAeIDkgEDMy4ymAEAoAEBqgELZ3
-            dzLXdpei1pbWfAAQE&sclient=img&ei=X9qvZZ3MIuGEi-gP5baeMA&bih=966&biw=1920`);
+            setGoogleUrl(window.open(`
+            https://www.google.com/search?sca_esv=
+            600789614&sxsrf=ACQVn09r5GDchzziyPlVBtBRrN1vI6IdYw:1706029046189&q=
+            City+Bike+Frame+Size+${data.frameSize}&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjXy5i
+            6_fODAxUpR_EDHR_gBAoQ0pQJegQICxAB&biw=1920&bih=966&dpr=1
+            `));
         }
         if(data.bikeType === 'MTB'){
-            setGoogleUrl(document.location.href=``);
+            setGoogleUrl(window.open(`
+            https://www.google.com/search?sca_esv=
+            600789614&sxsrf=ACQVn0-hfqeyYGBfxYXtoXCur0kT0ROJzg:
+            1706029278756&q=Mountain+Bike+Frame+Size+${data.frameSize}&tbm=isch&source=
+            lnms&sa=X&ved=2ahUKEwiWyYup_vODAxX2RPEDHdbIBTQQ0pQJeg
+            QICxAB&biw=1920&bih=966&dpr=1
+            `));
         }
         if(data.bikeType === 'Race'){
-            setGoogleUrl(document.location.href=`https://www.google.com/search?
-            sca_esv=600762144&sxsrf=ACQVn0-Mc9CdLJcem17UsdwLTNwKhr4Ofg:
-            1706023448842&q=Road+Bike+frame+size+${data.frameSize}&tbm=
-            isch&source=lnms&sa=X&ved=2ahUKEwj34pXN6PODAxXdSvEDHVhOBOMQ
-            0pQJegQIDhAB&biw=1920&bih=966&dpr=1`);
+            setGoogleUrl(window.open(`
+            https://www.google.com/search?sca_esv=
+            600789614&sxsrf=ACQVn0_p1l8gRl4L_igSc0KIDQ9T_UzJZg:1706029183121&q=
+            Road+Bike+Frame+Size+${data.frameSize}&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiUu77
+            7_fODAxUKSvEDHS5RDB8Q0pQJegQIChAB&biw=1920&bih=966&dpr=1
+            `));
         }
         if(data.bikeType === 'Trekking'){
-            setGoogleUrl(document.location.href=`https://www.google.com/search?q=
-            Trekking+Bike+frame+size+62&tbm=isch&ved=2ahUKEwjUmMCB6fODAxUMxwIHHZutBnEQ2
-            -cCegQIABAA&oq=Trekking+Bike+frame+size+${data.frameSize}&gs
-            _lcp=CgNpbWcQA1DkEljbH2DPKmgAcAB4AYAB3wKIAZgMkgEHMi40LjIu
-            MZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=
-            htqvZdS9I4yOi-gPm9uaiAc&bih=966&biw=1920
-            `);
+            setGoogleUrl(window.open(`
+            https://www.google.com/search?sca_esv=
+            600789614&sxsrf=ACQVn09uFalq715tgGx6fVvROqvXKlaGtw:1706029350961&q=
+            Trekking+Bike+Frame+Size+${data.frameSize}&tbm=isch&source=lnms&sa=X&ved=
+            2ahUKEwjEw8LL_vODAxWC9bsIHSSgA1kQ0pQJegQIDBAB&biw=1920&bih=966&dpr=1
+            `));
         }
 
         console.log('CLICKED! ', googleUrl);
