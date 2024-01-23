@@ -52,6 +52,6 @@
     text-align: justify;
 }
 
-.innerleg_image{
-    float: right;
+.image{
+    float: inline-end;
 }

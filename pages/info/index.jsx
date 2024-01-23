@@ -17,10 +17,10 @@ export default function Information() {
       where your true leg length is measured from the top of your legs to your ankles.
       You just need the inner leg length for the calculator here`,
       image:
-      <div className={InfoStyle.innerleg_image}>
+      <div className={InfoStyle.image}>
       <Image 
       src='/innerleg_alpha.png'
-      width={160}
+      width={200}
       height={240}
       alt='inside leg measurement'
       />
@@ -37,24 +37,42 @@ export default function Information() {
 
     {title: 'Top Tube Length',
     content: {text:`The length of your top tube is important for the relation between stack an
-    reach and is a important measure to define your seat position.`}
+    reach and is a important measure to define your seat position.`,
+    image:
+    <div className={InfoStyle.image}>
+    <Image 
+    src='/toptube.png'
+    width={400}
+    height={220}
+    alt='reach'
+    />
+    </div>}
     },
 
     {title: 'Stack',
     content:{text:
     `Stack defines the distance between the bracket ball bearing till
-    the top tube measured from down till up in 90° degrees`}
+    the top tube measured from down till up in 90° degrees`,
+    image:
+    <div className={InfoStyle.image}>
+    <Image 
+    src='/stack.png'
+    width={400}
+    height={220}
+    alt='reach'
+    />
+    </div>}
     },
 
     {title: 'Reach',
     content: {text:`Reach is the horizontal distance between stack and the top ending
     of your steering tube`,
     image:
-      <div className={InfoStyle.innerleg_image}>
+      <div className={InfoStyle.image}>
       <Image 
       src='/reach.png'
-      width={160}
-      height={240}
+      width={400}
+      height={220}
       alt='reach'
       />
       </div>}
@@ -74,7 +92,16 @@ export default function Information() {
     When you ride a lower angle you have a bike with a more comfortable 
     behaviour but less power take off. 
     Higher angles ending up in a more effective 
-    power take off unit.`}
+    power take off unit.`,
+    image:
+    <div className={InfoStyle.image}>
+    <Image 
+    src='/seattubeangle.png'
+    width={400}
+    height={220}
+    alt='reach'
+    />
+    </div>}
     },
 
     {title: 'Saddle Height',
