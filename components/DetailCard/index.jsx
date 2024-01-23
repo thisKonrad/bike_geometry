@@ -2,6 +2,7 @@
 import DeleteModal from '../DeleteModal';
 import { useState, useEffect} from 'react';
 import Image from 'next/image';
+import GoogleSearch from '../GoogleSearch';
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
@@ -87,6 +88,8 @@ return (<>
         <p className={DetailCardStyle.paragraph}>
             STR Quotient: {data.strQuotient}</p>
     </div>
+    <GoogleSearch
+    data={data}/>
     <div 
     onMouseEnter={showTooltip}
     onMouseLeave={hideTooltip}
