@@ -29,6 +29,10 @@
     margin: 1rem;
 }
 
+.input{
+    margin-left: 1rem;
+}
+
 
 /* :::: NavBar Style :::: */
 .navbar_wrap{
@@ -49,10 +53,6 @@
 }
 .nav_link_004{
     list-style: none;
-}
-
-.activeLink{
-    border:8px solid red;
 }
 
 

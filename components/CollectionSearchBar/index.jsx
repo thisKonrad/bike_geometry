@@ -1,5 +1,4 @@
 /* :::: CollectionSearchBar :::: */
-/* import SearchBar from '@/styles/SearchBar.module.css' */
 import {useStore} from '../Zustand';
 import HeaderStyle from '../../styles/HeaderStyle.module.css';
 
@@ -56,12 +55,13 @@ return (<section className={HeaderStyle.searchbar_wrap}>
     <div className={HeaderStyle.search_list_002}>
         <div>
             <label>
-        search by user
+            search by title
             <input
             type='text'
-            placeholder='user search'
+            placeholder='title search'
             onChange={(e)=> searchByTitle(e)} 
             value={searchUser}
+            className={HeaderStyle.input}
             >
             </input>
             </label>
@@ -70,10 +70,11 @@ return (<section className={HeaderStyle.searchbar_wrap}>
     <div className={HeaderStyle.search_list_003}>
         <div>
             <label>
-            select by Type
+            select by type
             <select
             value={selectType}
             onChange={(e)=> selectByType(e)} 
+            className={HeaderStyle.input}
             >
             <option value=''>search by type</option>
             <option value='City'>City</option>
@@ -95,6 +96,7 @@ return (<section className={HeaderStyle.searchbar_wrap}>
             max='70'
             value={frameSizeSelect}
             onChange={(e)=>{selectByFrameSize(e)}}
+            className={HeaderStyle.input}
             >
             </input>
             </label>

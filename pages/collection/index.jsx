@@ -3,8 +3,7 @@
 import Header from '@/components/Header/index.jsx';
 import BikeCard from '@/components/BikeCard';
 import useSWR from 'swr';
-import { Audio } from 'react-loader-spinner'
-//import {useEffect} from 'react';
+import { Audio } from 'react-loader-spinner';
 import styles from '@/styles/Home.module.css';
 
 
@@ -33,7 +32,6 @@ export default function Collection() {
  console.log('Data from DB: ', data);
 
 
-
   return (<>
     <Header
     currentPageTitle={'Collection'}>
@@ -45,16 +43,3 @@ export default function Collection() {
     </main>
   </>)
 }
-
-
-
-{/* <DeleteButton id={bike._id} mutate={mutate} />
-<FaEdit
-  size="1rem"
-  color="black"
-  onClick={() => {
-    setEditBike(note._id);
-    setAllEditBikes((toggle) => !toggle);
-  }}
-/>
-<favouriteButton /> */}
