@@ -48,7 +48,16 @@ export default function Information() {
 
     {title: 'Reach',
     content: {text:`Reach is the horizontal distance between stack and the top ending
-    of your steering tube`}
+    of your steering tube`,
+    image:
+      <div className={InfoStyle.innerleg_image}>
+      <Image 
+      src='/reach.png'
+      width={160}
+      height={240}
+      alt='reach'
+      />
+      </div>}
     }, 
 
     {title: 'STR Quotient',
