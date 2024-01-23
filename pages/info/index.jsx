@@ -4,11 +4,15 @@ import Header from '@/components/Header';
 import Accordeon from '@/components/Accordeon/index.jsx';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
+import { useState } from 'react';
 import InfoStyle from '@/styles/InfoStyle.module.css';
-
+import Popup from 'reactjs-popup';
 
 
 export default function Information() {
+
+  const[popText, setPopText]= useState(false);
+
 
   const measurementLegend=[
     {title: 'Inner Leg Measurement or Inside Leg',
@@ -40,10 +44,10 @@ export default function Information() {
     reach and is a important measure to define your seat position.`,
     image:
     <div className={InfoStyle.image}>
-    <Image 
+      <Image 
     src='/toptube.png'
     width={400}
-    height={220}
+    height={240}
     alt='reach'
     />
     </div>}

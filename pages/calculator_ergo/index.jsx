@@ -95,7 +95,7 @@ export default function Calculator() {
 
     /* :::: DATE :::: */
     const date = new Date().toUTCString();
-      data['timeStamp']= date;
+      data['date']= date;
     console.log('timeStamp: ', date);
 
      /* :::: calculate FRAMESIZE :::: */
