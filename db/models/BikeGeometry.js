@@ -4,11 +4,10 @@ import mongoose from "mongoose";
 
 const { Schema } = mongoose;
 
-
 const BikeGeometrySchema = new Schema({
     bikeTitle: { type: String, required: true },
     bikeType: { type: String, required: true },
-    date: { type: String, required: true },
+    date: { type: String },
     userName: { type: String, required: true },
     insideLeg: { type: Number, required: true },
     comfortRange: { type: Number, required: true },

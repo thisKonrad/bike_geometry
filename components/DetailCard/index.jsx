@@ -63,6 +63,8 @@ return (<>
         <p className={DetailCardStyle.paragraph}>
             Bike Type: {data.bikeType}</p>
         <p className={DetailCardStyle.paragraph}>
+            Date: {data.date}</p>
+        <p className={DetailCardStyle.paragraph}>
             User Name: {data.userName}</p>
         <p className={DetailCardStyle.paragraph}>
             Inside Leg: {data.insideLeg}</p>
@@ -84,8 +86,6 @@ return (<>
             Crank Length: {data.crankLength}</p>
         <p className={DetailCardStyle.paragraph}>
             STR Quotient: {data.strQuotient}</p>
-        <p className={DetailCardStyle.paragraph}>
-            Preferred STR Value: {data.comfortRange}</p>
     </div>
     <div 
     onMouseEnter={showTooltip}

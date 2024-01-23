@@ -95,8 +95,8 @@ export default function Calculator() {
 
     /* :::: DATE :::: */
     const date = new Date().toUTCString();
-      data['date']= date;
-    console.log('date: ', date);
+      data['timeStamp']= date;
+    console.log('timeStamp: ', date);
 
      /* :::: calculate FRAMESIZE :::: */
       switch (data.bikeType) {
