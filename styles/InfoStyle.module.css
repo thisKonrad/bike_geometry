@@ -50,10 +50,12 @@
     flex-direction: row;
     gap: 1.2rem;
     text-align: justify;
+    line-break: auto;
+    text-wrap:wrap;
 }
 
 .image{
-    float: inline-end;
+    float: right;
     padding: 1rem;
     background: var(--imageBackground);
     box-shadow: var(--imageShadow);

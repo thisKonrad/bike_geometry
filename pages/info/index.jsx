@@ -23,12 +23,13 @@ export default function Information() {
       where your true leg length is measured from the top of your legs to your ankles.
       You just need the inner leg length for the calculator here`,
       image:
-      <div className={InfoStyle.image}>
+      <div >
       <Image 
       src='/innerleg_alpha.png'
       width={200}
       height={240}
       alt='inside leg measurement'
+      className={InfoStyle.image}
       />
       </div>}
     },
@@ -45,12 +46,13 @@ export default function Information() {
     content: {text:`The length of your top tube is important for the relation between stack an
     reach and is a important measure to define your seat position.`,
     image:
-    <div className={InfoStyle.image}>
-      <Image 
+    <div >
+    <Image 
     src='/toptube.png'
     width={400}
     height={240}
     alt='reach'
+    className={InfoStyle.image}
     />
     </div>}
     },
@@ -60,12 +62,13 @@ export default function Information() {
     `Stack defines the distance between the bracket ball bearing till
     the top tube measured from down till up in 90° degrees`,
     image:
-    <div className={InfoStyle.image}>
+    <div>
     <Image 
     src='/stack.png'
     width={400}
     height={220}
     alt='reach'
+    className={InfoStyle.image}
     />
     </div>}
     },
@@ -74,12 +77,13 @@ export default function Information() {
     content: {text:`Reach is the horizontal distance between stack and the top ending
     of your steering tube`,
     image:
-      <div className={InfoStyle.image}>
+      <div>
       <Image 
       src='/reach.png'
       width={400}
       height={220}
       alt='reach'
+      className={InfoStyle.image}
       />
       </div>}
     }, 
@@ -121,12 +125,13 @@ export default function Information() {
     Higher angles ending up in a more effective 
     power take off unit.`,
     image:
-    <div className={InfoStyle.image}>
+    <div>
     <Image 
     src='/seattubeangle.png'
     width={400}
     height={220}
     alt='reach'
+    className={InfoStyle.image}
     />
     </div>}
     },
