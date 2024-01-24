@@ -7,7 +7,7 @@ import GoogleSearch from '../GoogleSearch';
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
-export default function DetailCard({data, handleDelete, updateRemark}){
+export default function DetailCard({data, handleDelete, updateRemark, deleteRemark}){
 
     const [isToggled, setToggled] = useState(false);
     const[currentImageUrl, setImageUrl]= useState('');
@@ -113,6 +113,7 @@ return (<>
     <Remarks
     data={data}
     updateRemark={updateRemark}
+    deleteRemark={deleteRemark}
     />
 </section>
 </>)

@@ -29,6 +29,11 @@ export default async function handler(request, response) {
         response.status(200).json({ status: `Bike deleted.` });
     }
 
+    if (request.method === 'DELETE') {
+        await Remark.findByIdAndDelete(id);
+        response.status(200).json({ status: `Bike deleted.` });
+    }
+
     if (request.method === 'POST') {
         console.log('request Body Remark:', request.body);
         const remark = await Remark.create(request.body);

@@ -3,24 +3,9 @@
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
-export default function Remarks({data, updateRemark}) {
+export default function Remarks({data, updateRemark, deleteRemarks}) {
 
     console.log('Remarks-DATA:', data);
-   /*  const [inputValue, setInputValue] = useState('');
-    const [items, setItems] = useState([]); */
-
-  /* :::: remark list :::: */
-/*   const [inputValue, setInputValue] = useState('');
-  const [items, setItems] = useState([]);
-  const addItem = () => {
-    setItems([...items, inputValue]);
-    setInputValue('');
-  }; */
- /*  const deleteItem = (index) => {
-      const newItems = [...items];
-      newItems.splice(index, 1);
-      setItems(newItems);
-  }; */
 
     
    return (<div className={DetailCardStyle.remark_wrap}>
@@ -49,7 +34,9 @@ export default function Remarks({data, updateRemark}) {
         <ul>
           {data.remarks.map(({comment }, _id) => {
             return (<li key={_id}
-                className={DetailCardStyle.remark_list_item}>
+                onClick={deleteRemarks}
+                className={DetailCardStyle.remark_list_item}
+                >
             <p>{comment}</p>
             </li>);
           })}
