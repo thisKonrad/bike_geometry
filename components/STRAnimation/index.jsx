@@ -30,7 +30,6 @@ export default function STRAnimation() {
         }
     }
 
- 
     
    return (
       <div className={InfoStyle.str_animation_wrap}>
@@ -51,4 +50,3 @@ export default function STRAnimation() {
       </div>
    );
 };
-
