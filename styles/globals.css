@@ -28,6 +28,7 @@
   --imageShadow: 0px 0px 2px transparent;
   --modalBackground: rgba(0, 0, 0, 0.45);
   --modalBackDropFilter: blur(6px);
+  --imageFilterInvert:invert(0%);
   transition: all 0.25s linear;
 }
 
@@ -46,9 +47,10 @@
   --imageShadow: 0px 0px 8px white;
   --modalBackground: rgba(255, 255, 255, 0.45);
   --modalBackDropFilter: blur(6px);
+  --imageFilterInvert:invert(100%);
   transition: all 0.25s linear;
 }
- 
+
 .darkmode_button{
   width: 4rem;
 }

@@ -95,10 +95,14 @@ return (<>
     onMouseEnter={showTooltip}
     onMouseLeave={hideTooltip}
     className={DetailCardStyle.bike_image_wrap}>
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_left_001}>Saddle Height: {data.saddleHeight}</div>}
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_right_001}>Framesize: {data.frameSize}</div>}
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_center_right}>Reach: {data.reach}</div>}
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_center_001}>Seattube Angle: {data.seatTubeAngle}</div>}
+        {isTooltipVisible && <div className={DetailCardStyle.tooltip_left_001}>
+            Saddle Height: {data.saddleHeight}</div>}
+        {isTooltipVisible && <div className={DetailCardStyle.tooltip_right_001}>
+            Framesize: {data.frameSize}</div>}
+        {isTooltipVisible && <div className={DetailCardStyle.tooltip_center_right}>
+            Reach: {data.reach}</div>}
+        {isTooltipVisible && <div className={DetailCardStyle.tooltip_center_001}>
+            Seattube Angle: {data.seatTubeAngle}</div>}
         <Image
             src={currentImageUrl}
             width={520} 
@@ -106,9 +110,12 @@ return (<>
             alt='bike image' 
             className={DetailCardStyle.image}
         />
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_right_002}>Wheelsize: {data.wheelsize}</div>}
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_left_002}>Crank Length: {data.crankLength}</div>}
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_center_left}>Stack: {data.stack}</div>}
+        {isTooltipVisible && <div className={DetailCardStyle.tooltip_right_002}>
+            Wheelsize: {data.wheelsize}</div>}
+        {isTooltipVisible && <div className={DetailCardStyle.tooltip_left_002}>
+            Crank Length: {data.crankLength}</div>}
+        {isTooltipVisible && <div className={DetailCardStyle.tooltip_center_left}>
+            Stack: {data.stack}</div>}
     </div>
     <Remarks
     data={data}
