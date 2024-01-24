@@ -17,6 +17,9 @@ export default function DetailPage() {
     const { id } = router.query;
     const { data, isLoading, error } = useSWR(`/api/details/${id}`, fetcher);
 
+    const { mutate } = useSWR(`/api/places/${id}`);
+
+    /* :::: Loader Animation :::: */
     if (!isReady || isLoading || error) {
         return (<div className={styles.loader}>
             <Audio
@@ -61,25 +64,53 @@ export default function DetailPage() {
         }
     }
 
-
-    async function updateRemarkByID() {
+    async function deleteRemarkById() {
         try {
             const response = await fetch(`/api/details/${id}`, {
-                method: 'POST',
+                method: 'DELETE',
                 headers: {
-                    "Content-Type": "application/json",
+                    'Content-Type': 'application/json',
                 },
             });
 
             if (!response.ok) {
-                throw new Error('Failed to update remark');
+                throw new Error('Failed to delete remark');
             }
-            router.push('/api/details/${id}');
-            console.log(`Bike with ID ${id} deleted successfully.`);
+            console.log(`remark with ID ${id} deleted successfully.`);
         } catch (error) {
-            console.error('Error deleting remark!:', error.message);
+            console.error('Error deleting Remark', error.message);
         }
     }
+
+
+    async function updateRemarkByID(event) {
+
+        event.preventDefault();
+        /* :::: Form :::: */
+        console.log(event.target)
+        const formData = new FormData(event.target);
+        const data = Object.fromEntries(formData);
+
+        try {
+            const response = await fetch(`/api/details/${id}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error("Error!");
+            }
+            console.log('Remark-Data: ', data)
+            event.target.reset();
+            mutate();
+
+        } catch (error) {
+            console.log("ERROR With Remarks!!");
+        }
+        console.log(`Remark added successfully...`);
+    }
+
 
     return (<>
         <Header
@@ -89,6 +120,8 @@ export default function DetailPage() {
             <DetailCard
                 handleDelete={deleteBikeById}
                 data={data}
+                updateRemark={updateRemarkByID}
+                deleteRemark={deleteRemarkById}
             />
         </main>
     </>)

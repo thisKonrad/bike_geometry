@@ -7,10 +7,9 @@ export default async function handler(request, response) {
 
   await dbConnect();
   console.log('Hi from Server!')
-  console.log('req met.: ', request.method)
+
   if (request.method === "POST") {
     try {
-      console.log('Request Body: ', request.body);
       const bikeData = request.body;
       //const bike = new BikeGeometry(bikeData);
       await BikeGeometry.create(bikeData);
@@ -23,7 +22,6 @@ export default async function handler(request, response) {
 
   if (request.method === "GET") {
     const bikes = await BikeGeometry.find();
-    console.log('Request: ', bikes)
     return response.status(200).json(bikes);
   }
 
