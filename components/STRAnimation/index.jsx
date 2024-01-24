@@ -8,7 +8,7 @@ import InfoStyle from '@/styles/InfoStyle.module.css';
 export default function STRAnimation() {
 
     const[skipImage, setSkipImage]= useState(0);
-    const[strInfoText, setStrInfoText]= useState('');
+    const[strInfoText, setStrInfoText]= useState('Comfort: > 155');
 
     const strImages=['/str_comfort.png', 
                     '/str_sport.png',
@@ -19,13 +19,13 @@ export default function STRAnimation() {
         setSkipImage((skipImage +1) % strImages.length);
 
         console.log('str button click',skipImage)
-        if(skipImage === 0){
+        if(skipImage === 2){
         setStrInfoText('Comfort: > 155')
         }
-        if(skipImage === 1){
+        if(skipImage === 0){
         setStrInfoText('Sport: 145 - 155')
         }
-        if(skipImage === 2){
+        if(skipImage === 1){
         setStrInfoText('Race: < 145')
         }
     }
