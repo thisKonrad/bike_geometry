@@ -1,22 +1,44 @@
 /*:::: STR ANIMATION :::: */
 'use client'
+import { useState } from 'react';
 import Image from 'next/image';
 import { IoIosFastforward } from "react-icons/io";
 import InfoStyle from '@/styles/InfoStyle.module.css';
 
-export default function STRAnimation({items}) {
+export default function STRAnimation() {
 
-    function strSkip(event){
-        console.log('str button click',event)
+    const[skipImage, setSkipImage]= useState(0);
+    const[strInfoText, setStrInfoText]= useState('');
+
+    const strImages=['/str_comfort.png', 
+                    '/str_sport.png',
+                    '/str_race.png'];
+
+    function strSkip(){
+
+        setSkipImage((skipImage +1) % strImages.length);
+
+        console.log('str button click',skipImage)
+        if(skipImage === 0){
+        setStrInfoText('Comfort: > 155')
+        }
+        if(skipImage === 1){
+        setStrInfoText('Sport: 145 - 155')
+        }
+        if(skipImage === 2){
+        setStrInfoText('Race: < 145')
+        }
     }
+
+ 
     
    return (
       <div className={InfoStyle.str_animation_wrap}>
         <Image 
-        src='/str_comfort.png'
+        src={strImages[skipImage]}
         width={480}
         height={420}
-        alt='reach'
+        alt={`str range ${strImages[skipImage]}}`}
         className={InfoStyle.str_animation_image}
         />
         <div>
@@ -25,6 +47,7 @@ export default function STRAnimation({items}) {
             className={InfoStyle.str_button}
             ><IoIosFastforward size={35}/></button>
         </div>
+        <p>STR Range: {strInfoText}</p>
       </div>
    );
 };
