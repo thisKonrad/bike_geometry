@@ -55,5 +55,7 @@
 .image{
     float: inline-end;
     padding: 1rem;
+    background: var(--imageBackground);
+    box-shadow: var(--imageShadow);
 }
 

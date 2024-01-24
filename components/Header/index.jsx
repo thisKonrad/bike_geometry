@@ -3,6 +3,7 @@
 import CollectionSearchBar from '../CollectionSearchBar'
 import NavBar from '../NavBar'
 import HeaderStyle from '../../styles/HeaderStyle.module.css';
+import DarkModeToggle from '../DarkModeToggle';
 
 
 export default function Header ({currentPageTitle}) {
@@ -22,6 +23,7 @@ return (<>
     show={ currentPageTitle === 'Collection'}
     />
     </div>
+    <DarkModeToggle/>
     </section>
 </header>
 </>)

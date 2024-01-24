@@ -1,5 +1,6 @@
 /* :::: ZUSTAND STORE :::: */
 import {create} from 'zustand';
+import {persist} from 'zustand/middleware';
 
 
 export const useStore = create((set) => ({
@@ -18,4 +19,17 @@ export const useStore = create((set) => ({
    
 }));
 
+
+export const useToggleStore = create(
+    persist(
+      (set) => ({
+        isToggled: false,
+        toggle: () => set((state) => ({ isToggled: !state.isToggled })),
+      }),
+      {
+        name: 'toggle-storage', /* :: name of the item in the storage (must be unique)*/
+       /* :: storage: createJSONStorage(() => localStorage), // (optional) by default, 'localStorage' is used */
+      }
+    )
+);
    

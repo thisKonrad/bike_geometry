@@ -3,6 +3,18 @@
 :root{
   font-family: 'Courier New', Courier, monospace;
   font-size: 100%;
+/*   --mainColor: white;
+  --accentColor: black;
+  --fontColor: black;
+  --cardShadow: 0px 0px 1px black;
+  --pageShadow: 0px 0px 2px black;
+  --backgroundColor: white;
+  --headerColor: white;
+  --bikeCardColor: white;
+  --modalBackground: rgba(0, 0, 0, 0.45); */
+}
+
+:root[data-theme='light']{
   --mainColor: white;
   --accentColor: black;
   --fontColor: black;
@@ -11,40 +23,38 @@
   --backgroundColor: white;
   --headerColor: white;
   --bikeCardColor: white;
+  --imageBackground: transparent;
+  --imageShadow: 0px 0px 2px transparent;
   --modalBackground: rgba(0, 0, 0, 0.45);
+  transition: all 0.25s linear;
 }
 
-.light{
-  transition: all 0.25s linear;
-  --mainColor: white;
-  --accentColor: black;
-  --fontColor: black;
-  --cardShadow: 0px 0px 1px black;
-  --pageShadow: 0px 0px 2px black;
-  --backgroundColor: white;
-  --headerColor: white;
-  --bikeCardColor: white;
-  --modalBackground: rgba(0, 0, 0, 0.45);
-}
 
-.dark{
-  transition: all 0.25s linear;
-  --mainColor: black;
+:root[data-theme='dark']{
+  --mainColor:rgb(23, 23, 23);
   --accentColor: white;
   --fontColor: white;
   --cardShadow: 0px 0px 1px white;
   --pageShadow: 0px 0px 2px white;
-  --backgroundColor: black;
-  --headerColor: black;
-  --bikeCardColor: black;
-  --modalBackground: rgba(255, 255, 255, 0.45); 
+  --backgroundColor: rgb(38, 38, 38);
+  --headerColor: rgb(21, 21, 21);
+  --bikeCardColor: rgb(23, 23, 23);
+  --imageBackground: white;
+  --imageShadow: 0px 0px 8px white;
+  --modalBackground: rgba(255, 255, 255, 0.45);
+  transition: all 0.25s linear;
 }
  
+.darkmode_button{
+  width: 4rem;
+}
+
 
 body{
 width: 100%;
 height: 100%;
 margin: 0em auto;
+color: var(--fontColor);
 background: var(--backgroundColor);
 }
 
@@ -53,6 +63,7 @@ button{
   width: 16rem;
   margin: 0.5rem;
   font-size: 1.2rem;
+  color: var(--fontColor);
 /* top | right | bottom | left */
   padding: 4px 14px 4px 14px;
   border: none;
@@ -60,7 +71,7 @@ button{
   box-shadow:0px 0px 2px rgba(0, 0, 0);
 }
 button:hover{
-  box-shadow:0px 0px 0px rgba(0, 0, 0);
+  box-shadow: var(--pageShadow);
 }
 
 input, select{

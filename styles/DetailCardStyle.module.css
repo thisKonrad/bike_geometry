@@ -31,26 +31,15 @@
     margin-left: 35%;
 }
 
-/* .tootltip_left{
-    position: relative;
-    display: inline-block;
-    visibility: hidden;
-    width: 4rem;
-    border: 1px solid var(--accentColor);
-    background-color: var(--mainColor);
-    text-align: center;
+.image{
+    /* top | right | bottom | left */
+    padding: 0rem 2.4rem 0rem 2.4rem;
+    background: var(--imageBackground);
+    box-shadow: var(--imageShadow);
 }
-.tootltip_right{
-    position: relative;
-    display: inline-block;
-    visibility: hidden;
-    margin-left: 40%;
-    width: 4rem;
-    border: 1px solid var(--accentColor);
-    background-color: var(--mainColor);
-    text-align: center;
-} */
 
+
+/* :::: TOOLTIPS :::: */
 .tooltip_left,
 .tooltip_right,
 .tooltip_left_001,
