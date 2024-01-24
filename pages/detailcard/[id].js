@@ -65,8 +65,9 @@ export default function DetailPage() {
     }
 
     async function deleteRemarkById() {
+        console.log('CLICK REMARK DELETE ::::::::::::::::::')
         try {
-            const response = await fetch(`/api/details/${id}`, {
+            const response = await fetch(`/api/details/${id}/remarks`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -74,6 +75,7 @@ export default function DetailPage() {
             });
 
             if (!response.ok) {
+                console - log('remark not deleted')
                 throw new Error('Failed to delete remark');
             }
             console.log(`remark with ID ${id} deleted successfully.`);
@@ -101,10 +103,12 @@ export default function DetailPage() {
             if (!response.ok) {
                 throw new Error("Error!");
             }
+            if (response.ok) {
+                mutate();
+            }
             console.log('Remark-Data: ', data)
             event.target.reset();
             mutate();
-
         } catch (error) {
             console.log("ERROR With Remarks!!");
         }

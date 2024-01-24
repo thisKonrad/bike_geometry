@@ -9,7 +9,7 @@
     display:inline-block;
     gap: 1rem;
     width: 24rem;
-    height: 16rem;
+    height: 60%;
     font-size: 1.2;
     text-align:left;
     line-height: 2.5;
@@ -60,4 +60,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.image{
+    /* top | right | bottom | left */
+    padding: 0rem 2.4rem 0rem 2.4rem;
+    filter: var(--imageFilterInvert);
+    -webkit-filter: var(--imageFilterInvert);
+}
+
+.button_icon_tool{
+    filter: var(--imageFilterInvert);
+    -webkit-filter: var(--imageFilterInvert);
+}
+.button_icon_tool:hover{
+    transform: rotate(360deg);
+    transition: 1.2s;
 }

@@ -31,13 +31,16 @@ export default function Remarks({data, updateRemark, deleteRemarks}) {
       >Add</button>
     </form>
     {data.remarks && (
-        <ul>
+        <ul className={DetailCardStyle.remark_ul}>
           {data.remarks.map(({comment }, _id) => {
             return (<li key={_id}
-                onClick={deleteRemarks}
-                className={DetailCardStyle.remark_list_item}
-                >
+              className={DetailCardStyle.remark_list_item}
+              >
             <p>{comment}</p>
+            <button
+            className={DetailCardStyle.remark_delete_list_item}
+            onClick={deleteRemarks}
+            >X</button>
             </li>);
           })}
         </ul>

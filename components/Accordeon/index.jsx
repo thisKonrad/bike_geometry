@@ -34,7 +34,9 @@ export default function Accordeon({items}) {
             <div className={InfoStyle.accordeon_content}>
                 <article className={InfoStyle.accordeon_article}>
               {index === expanded ? 
-                <div className={InfoStyle.content_wrap}><p>{item.content.text}</p>{item.content.image}</div>: ''} 
+                <div className={InfoStyle.content_wrap}>
+                <p>{item.content.text}</p>
+                {item.content.image}</div>: ''}
                 </article>
             </div>
           </div>

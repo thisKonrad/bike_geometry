@@ -26,13 +26,14 @@ export default async function handler(request, response) {
 
     if (request.method === 'DELETE') {
         await BikeGeometry.findByIdAndDelete(id).populate('remarks');
-        response.status(200).json({ status: `Bike deleted.` });
-    }
-
-    if (request.method === 'DELETE') {
         await Remark.findByIdAndDelete(id);
         response.status(200).json({ status: `Bike deleted.` });
     }
+
+    /*  if (request.method === 'DELETE') {
+         await Remark.findByIdAndDelete(id);
+         response.status(200).json({ status: `Remark deleted.` });
+     } */
 
     if (request.method === 'POST') {
         console.log('request Body Remark:', request.body);
