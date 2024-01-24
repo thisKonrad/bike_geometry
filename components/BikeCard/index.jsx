@@ -53,7 +53,7 @@ return (<section className={BikeCardStyle.card_wrap}>
     <div className={BikeCardStyle.bikecard_fragment}>
         <p className={BikeCardStyle.title}>Title: {bike.bikeTitle}</p>
         <p>Bike Type: {bike.bikeType}</p>
-        <p>User Name: {bike.userName}</p>
+        <p>Client Name: {bike.userName}</p>
         <p>Frame Size: {bike.frameSize}</p>
     </div> 
 </li>)

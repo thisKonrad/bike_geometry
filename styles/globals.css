@@ -26,6 +26,7 @@
   --imageBackground: transparent;
   --imageShadow: 0px 0px 2px transparent;
   --modalBackground: rgba(0, 0, 0, 0.45);
+  --modalBackDropFilter: blur(6px);
   transition: all 0.25s linear;
 }
 
@@ -42,6 +43,7 @@
   --imageBackground: white;
   --imageShadow: 0px 0px 8px white;
   --modalBackground: rgba(255, 255, 255, 0.45);
+  --modalBackDropFilter: blur(6px);
   transition: all 0.25s linear;
 }
  

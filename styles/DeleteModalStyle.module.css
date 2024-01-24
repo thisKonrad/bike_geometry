@@ -13,6 +13,7 @@
     top: 0;
     overflow: auto;
     background-color: var(--modalBackground);
+    backdrop-filter: var(--modalBackDropFilter);
 }
 
 .modal_content{

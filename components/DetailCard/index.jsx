@@ -6,7 +6,6 @@ import GoogleSearch from '../GoogleSearch';
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
-
 export default function DetailCard({data, handleDelete}){
 
     const [isToggled, setToggled] = useState(false);
@@ -66,7 +65,7 @@ return (<>
         <p className={DetailCardStyle.paragraph}>
             Date: {data.date}</p>
         <p className={DetailCardStyle.paragraph}>
-            User Name: {data.userName}</p>
+            Client Name: {data.userName}</p>
         <p className={DetailCardStyle.paragraph}>
             Inside Leg: {data.insideLeg}</p>
         <p className={DetailCardStyle.paragraph}>

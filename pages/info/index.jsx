@@ -91,26 +91,26 @@ export default function Information() {
     Values are:
     comfort: over 1.55, sport: 1.45 till 1.55, race: under 1.45`,
     image:
-    <div>
+    <>
     <Popup 
-    className={InfoStyle.str_popup_wrap}
     trigger={<button 
-    className={InfoStyle.popup_button}>
+      className={InfoStyle.popup_button}>
     <IoIosBrowsers 
     size={45}/>
     </button>} 
-    modal>
-    {close => (
-      <div className={InfoStyle.str_popup_info}>
+    modal 
+    overlayStyle={{background: 'var(--modalBackground)', 
+    backdropFilter:'var(--modalBackDropFilter)'}}>
+      {close => (
+      <div className={InfoStyle.str_popup_wrap}>
         <button className={InfoStyle.str_popup_close_button} onClick={close}>
           &times;
         </button>
         <div className={InfoStyle.str_popup_headline}> STR Ranges </div>
         <STRAnimation/>
-      </div>
-    )}
+      </div>)}
     </Popup>
-    </div>}
+    </>}
     },
 
     {title: 'Seattube Angle',
