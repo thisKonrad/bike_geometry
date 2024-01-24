@@ -100,9 +100,10 @@ return (<>
         {isTooltipVisible && <div className={DetailCardStyle.tooltip_center_001}>Seattube Angle: {data.seatTubeAngle}</div>}
         <Image
             src={currentImageUrl}
-            width={450} 
+            width={520} 
             height={400} 
             alt="bike image" 
+            className={DetailCardStyle.image}
         />
         {isTooltipVisible && <div className={DetailCardStyle.tooltip_right_002}>Wheelsize: {data.wheelsize}</div>}
         {isTooltipVisible && <div className={DetailCardStyle.tooltip_left_002}>Crank Length: {data.crankLength}</div>}

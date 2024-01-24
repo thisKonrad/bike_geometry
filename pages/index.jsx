@@ -1,9 +1,14 @@
+/* :::: HOME :::: */
 import Header from '@/components/Header'
 import styles from '@/styles/Home.module.css'
 
+
+
 export default function Home() {
-  return (
-    <>
+
+
+  return (<>
+    <div>
     <Header
     currentPageTitle={'Bike Calculator'}>
     </Header>
@@ -24,5 +29,6 @@ export default function Home() {
       </article>
     </section>
     </main>
+    </div>
     </>)
 }
