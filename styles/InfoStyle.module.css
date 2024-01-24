@@ -59,3 +59,48 @@
     box-shadow: var(--imageShadow);
 }
 
+/* :::: STR ANIMATION MODAL :::: */
+.popup_button{
+    width: 4rem;
+    backdrop-filter: blur(5px);
+}
+
+.str_popup_wrap{
+    z-index:1000;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.str_popup_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1rem;
+    background-color: var(--mainColor);
+    border: 1px solid black;
+    backdrop-filter: blur(5px);
+}
+.str_popup_close_button{
+    width: 4rem;
+    margin-left: 86%;
+}
+
+.str_popup_headline{
+    font-size: 2rem;
+}
+
+.str_animation_wrap{
+    border: 1px solid var(--accentColor);
+    padding: 2rem;
+    background-color: var(--mainColor);
+}
+.str_animation_image{
+       /* top | right | bottom | left */
+       padding: 0rem 2.4rem 0rem 2.4rem;
+       background: var(--imageBackground);
+       box-shadow: var(--imageShadow);
+}
+.str_button{
+    width: 4rem;
+}
