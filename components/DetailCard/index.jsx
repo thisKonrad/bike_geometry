@@ -102,7 +102,7 @@ return (<>
             src={currentImageUrl}
             width={520} 
             height={400} 
-            alt="bike image" 
+            alt='bike image' 
             className={DetailCardStyle.image}
         />
         {isTooltipVisible && <div className={DetailCardStyle.tooltip_right_002}>Wheelsize: {data.wheelsize}</div>}
