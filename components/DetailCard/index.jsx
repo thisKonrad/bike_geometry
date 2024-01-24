@@ -1,5 +1,6 @@
 /* :::: DETAIL CARD :::: */
 import DeleteModal from '../DeleteModal';
+import Remarks from '../Remarks';
 import { useState, useEffect} from 'react';
 import Image from 'next/image';
 import GoogleSearch from '../GoogleSearch';
@@ -11,7 +12,22 @@ export default function DetailCard({data, handleDelete}){
     const [isToggled, setToggled] = useState(false);
     const[currentImageUrl, setImageUrl]= useState('');
     const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+   /* :::: remark list :::: */
+   /*  const [inputValue, setInputValue] = useState('');
+    const [items, setItems] = useState([]);
+  
+    const addItem = () => {
+      setItems([...items, inputValue]);
+      setInputValue('');
+    };
 
+    const deleteItem = (index) => {
+        const newItems = [...items];
+        newItems.splice(index, 1);
+        setItems(newItems);
+    }; */ 
+
+    /* :::: Image :::: */
     useEffect(() => {
         getImageUrl()
       }, []);
@@ -107,7 +123,41 @@ return (<>
         {isTooltipVisible && <div className={DetailCardStyle.tooltip_right_002}>Wheelsize: {data.wheelsize}</div>}
         {isTooltipVisible && <div className={DetailCardStyle.tooltip_left_002}>Crank Length: {data.crankLength}</div>}
         {isTooltipVisible && <div className={DetailCardStyle.tooltip_center_left}>Stack: {data.stack}</div>}
-        </div>
-    </section>
+    </div>
+    <Remarks/>
+   {/*  <div className={DetailCardStyle.remark_wrap}>
+        <label htmlFor='remark'>
+            <p className={DetailCardStyle.remark_label}>Leave a remark:</p>
+        <input
+        id='remark'
+        name='comment'
+        type="text"
+        placeholder='add a remark'
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              addItem(e);
+            }
+          }}
+        className={DetailCardStyle.remark_input}
+        maxlength='200'
+        minlength='3'
+        />
+        </label>
+      <button 
+      onClick={addItem}
+      >Add</button>
+      <ul>
+        {items.map((item, index) => (
+          <li key={index} 
+          onClick={() => deleteItem(index)}
+          className={DetailCardStyle.remark_list_item}
+          >{item}</li>
+        ))}
+      </ul>
+    </div> */}
+</section>
 </>)
 }

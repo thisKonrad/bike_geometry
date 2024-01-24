@@ -27,8 +27,8 @@
 }
 
 .bike_image_wrap{
-    grid-area:3/2/7/3;
-    margin-left: 35%;
+    grid-area: 3/2/7/3;
+    margin-left: 15%;
 }
 
 .image{
@@ -36,6 +36,24 @@
     padding: 0rem 2.4rem 0rem 2.4rem;
     background: var(--imageBackground);
     box-shadow: var(--imageShadow);
+}
+
+/* :::: REMARKS :::: */
+.remark_wrap{
+    grid-area: 9/2/11/3;
+}
+.remark_list_item{
+    margin: 1rem;
+    list-style:none;
+}
+.remark_list_item:hover{
+    cursor: pointer;
+    text-decoration: line-through;
+}
+
+.remark_label{
+    margin: 1rem;
+    font-size: 1.4rem;
 }
 
 

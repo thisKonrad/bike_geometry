@@ -20,8 +20,9 @@ const BikeGeometrySchema = new Schema({
     stack: { type: Number, },
     reach: { type: Number, },
     crankLength: { type: Number, },
+    remarks: { type: [Schema.Types.ObjectId], ref: 'Remark' },
 });
 
-const BikeGeometry = mongoose.models.BikeGeometry || mongoose.model("BikeGeometry", BikeGeometrySchema);
+const BikeGeometry = mongoose.models.BikeGeometry || mongoose.model('BikeGeometry', BikeGeometrySchema);
 
 export default BikeGeometry;

@@ -1,6 +1,7 @@
 /* :::: API ID :::: */
 import dbConnect from "@/db/connectDB";
 import BikeGeometry from "@/db/models/BikeGeometry";
+import Remark from "@/db/models/Remark";
 
 
 export default async function handler(request, response) {
@@ -12,7 +13,8 @@ export default async function handler(request, response) {
     console.log("id server", id);
 
     if (request.method === "GET") {
-        //const bike = await BikeGeometry.findById(id);
+
+        //const bike = await BikeGeometry.findById(id).populate('remark');
         const bike = await BikeGeometry.findById(id);
 
         console.log("bike", bike);
@@ -31,7 +33,20 @@ export default async function handler(request, response) {
 
         response.status(200).json({ status: `Bike deleted.` });
     }
+
+    if (request.method === 'POST') {
+        const remark = await Remark.create(request.body);
+        await BikeGeometry.findByIdAndUpdate(id, {
+            $push: { remarks: remark._id }
+        },
+            { new: true }
+        )
+    }
+
+
+    response.status(200).json({ status: `remark updated!` });
 }
+
 
 /*  if (request.method === "PUT") {
 await BikeGeometry.findByIdAndUpdate(id, {

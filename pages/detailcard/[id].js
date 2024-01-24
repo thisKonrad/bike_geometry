@@ -45,22 +45,41 @@ export default function DetailPage() {
     async function deleteBikeById() {
         try {
             const response = await fetch(`/api/details/${id}`, {
-                method: "DELETE",
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to delete bike');
+            }
+            router.push('/collection');
+            console.log(`Bike with ID ${id} deleted successfully.`);
+        } catch (error) {
+            console.error('Error deleting bike:', error.message);
+        }
+    }
+
+
+    async function updateRemarkByID() {
+        try {
+            const response = await fetch(`/api/details/${id}`, {
+                method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
                 },
             });
 
             if (!response.ok) {
-                throw new Error("Failed to delete bike");
+                throw new Error('Failed to update remark');
             }
-            router.push("/collection");
+            router.push('/api/details/${id}');
             console.log(`Bike with ID ${id} deleted successfully.`);
         } catch (error) {
-            console.error("Error deleting bike:", error.message);
+            console.error('Error deleting remark!:', error.message);
         }
     }
-
 
     return (<>
         <Header
