@@ -27,7 +27,7 @@
     letter-spacing: 4px;
     display: inline-block;
     margin: 1rem;
-    animation: fadein 0.5s linear forwards;
+    animation: fadein 0.4s linear forwards;
 }
 @keyframes fadein{
     from{
