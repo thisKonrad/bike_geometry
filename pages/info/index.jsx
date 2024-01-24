@@ -2,11 +2,13 @@
 'use client'
 import Header from '@/components/Header';
 import Accordeon from '@/components/Accordeon/index.jsx';
+import STRAnimation from '@/components/STRAnimation';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 import { useState } from 'react';
-import InfoStyle from '@/styles/InfoStyle.module.css';
+import { IoIosBrowsers } from "react-icons/io";
 import Popup from 'reactjs-popup';
+import InfoStyle from '@/styles/InfoStyle.module.css';
 
 
 export default function Information() {
@@ -87,7 +89,28 @@ export default function Information() {
     between stack and reach. 
     It defines your basic seating position.
     Values are:
-    comfort: over 1.55, sport: 1.45 till 1.55, race: under 1.45`}
+    comfort: over 1.55, sport: 1.45 till 1.55, race: under 1.45`,
+    image:
+    <div>
+    <Popup 
+    className={InfoStyle.str_popup_wrap}
+    trigger={<button 
+    className={InfoStyle.popup_button}>
+    <IoIosBrowsers 
+    size={45}/>
+    </button>} 
+    modal>
+    {close => (
+      <div className={InfoStyle.str_popup_info}>
+        <button className={InfoStyle.str_popup_close_button} onClick={close}>
+          &times;
+        </button>
+        <div className={InfoStyle.str_popup_headline}> STR Ranges </div>
+        <STRAnimation/>
+      </div>
+    )}
+    </Popup>
+    </div>}
     },
 
     {title: 'Seattube Angle',
