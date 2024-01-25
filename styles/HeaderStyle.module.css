@@ -45,31 +45,6 @@
 }
 
 
-/* :::: NavBar Style :::: */
-.navbar_wrap{
-    grid-area: 1/1/1/4;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-
-}
-.nav_link_001{
-    list-style: none;
-}
-.nav_link_002{
-    list-style: none;
-}
-.nav_link_003{
-    list-style: none;
-}
-.nav_link_004{
-    list-style: none;
-}
-.nav_link_005{
-    list-style: none;
-}
-
-
 /* :::: searchbar styles :::: */
 .searchbar_wrap{
     display: flex;

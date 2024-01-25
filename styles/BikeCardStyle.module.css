@@ -67,13 +67,16 @@
     padding: 0rem 2.4rem 0rem 2.4rem;
     filter: var(--imageFilterInvert);
     -webkit-filter: var(--imageFilterInvert);
+    background: transparent;
 }
 
 .button_icon_tool{
     filter: var(--imageFilterInvert);
     -webkit-filter: var(--imageFilterInvert);
+    background: transparent;
 }
 .button_icon_tool:hover{
     transform: rotate(360deg);
     transition: 1.2s;
+    background: transparent;
 }

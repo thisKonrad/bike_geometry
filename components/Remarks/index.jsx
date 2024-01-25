@@ -6,8 +6,6 @@ import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 export default function Remarks({data, updateRemark, deleteRemark}) {
 
-    console.log('Remarks-DATA:', data);
-
     
    return (<div className={DetailCardStyle.remark_wrap}>
     <form 
