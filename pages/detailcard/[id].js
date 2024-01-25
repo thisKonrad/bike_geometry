@@ -66,7 +66,7 @@ export default function DetailPage() {
     }
 
     async function deleteRemarkById() {
-        console.log('CLICK REMARK DELETE ::::::::::::::::::')
+        console.log('CLICK REMARK DELETE ::::::::::::::')
         try {
             const response = await fetch(`/api/remarks/${id}`, {
                 method: 'DELETE',
