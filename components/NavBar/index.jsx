@@ -1,13 +1,10 @@
 /* :::: NAVBAR :::: */
 'use client'
 import Link from 'next/link';
-import {useLocation } from 'react-router-dom';
-
 import HeaderStyle from '@/styles/HeaderStyle.module.css';
-//import NavBarStyle from '@/styles/NavbarStyle.module.css';
+
 
 export default function NavBar () {
-
 
 
 return (
@@ -27,7 +24,7 @@ return (
         <div className={HeaderStyle.nav_link_003}>
         <Link href="/calculator_ergo">
             <button
-            >Ergonomic Calculator</button>
+            >Calculator</button>
         </Link>
         </div>
         <div className={HeaderStyle.nav_link_004}>
