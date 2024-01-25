@@ -12,6 +12,7 @@ export default function BikeTitle(){
         type='text'
         placeholder='your bike title'
         defaultValue=''
+        autocomplete='off'
         required
       >
       </input>

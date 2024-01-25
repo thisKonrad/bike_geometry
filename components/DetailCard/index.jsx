@@ -4,6 +4,7 @@ import Remarks from '../Remarks';
 import { useState, useEffect} from 'react';
 import Image from 'next/image';
 import GoogleSearch from '../GoogleSearch';
+import { MdDeleteForever } from "react-icons/md";
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
@@ -56,7 +57,8 @@ return (<>
     <button 
         className={DetailCardStyle.delete_button}
         onClick={handleToggle}
-        >delete
+        >
+        <MdDeleteForever />
         </button>
     {isToggled ? <DeleteModal onDelete={handleDelete}/> : null}
     <div className={DetailCardStyle.detailcard_content}>
@@ -89,8 +91,6 @@ return (<>
         <p className={DetailCardStyle.paragraph}>
             STR Quotient: {data.strQuotient}</p>
     </div>
-    <GoogleSearch
-    data={data}/>
     <div 
     onMouseEnter={showTooltip}
     onMouseLeave={hideTooltip}

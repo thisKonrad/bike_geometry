@@ -1,5 +1,6 @@
 /* :::: REMARKS :::: */
 'use client'
+import { BiCommentAdd } from "react-icons/bi";
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
@@ -24,11 +25,15 @@ export default function Remarks({data, updateRemark, deleteRemark}) {
         className={DetailCardStyle.remark_input}
         maxLength='200'
         minLength='3'
+        autocomplete='off'
         />
         </label>
       <button 
+      className={DetailCardStyle.add_remark_button}
       type='submit'
-      >Add</button>
+      >
+      <BiCommentAdd />
+      </button>
     </form>
     {data.remarks && (
         <ul className={DetailCardStyle.remark_ul}>

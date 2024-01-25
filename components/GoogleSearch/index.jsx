@@ -1,6 +1,7 @@
 /* :::: GoogleSearch :::: */
-import Link from "next/link";
+import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
+import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
 export default function GoogleSearch({data}){
@@ -50,9 +51,10 @@ export default function GoogleSearch({data}){
 
     return( <div>
         <button
+        className={DetailCardStyle.search_button}
         onClick={googleBike}
         >
-        find with google
+        <FaSearch />
         </button>
 </div>)
 }

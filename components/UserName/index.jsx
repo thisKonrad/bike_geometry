@@ -11,6 +11,7 @@ export default function UserName(){
         type='text'
         placeholder='user name'
         defaultValue=''
+        autocomplete='off'
         required
         >
         </input>
