@@ -45,7 +45,7 @@
   --bikeCardColor: rgb(23, 23, 23);
   --imageBackground: white;
   --imageShadow: 0px 0px 8px white;
-  --modalBackground: rgba(255, 255, 255, 0.45);
+  --modalBackground: rgba(30, 30, 30, 0.45);
   --modalBackDropFilter: blur(6px);
   --imageFilterInvert:invert(100%);
   transition: all 0.25s linear;

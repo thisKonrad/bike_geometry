@@ -36,6 +36,7 @@
 .search_button{
     grid-area: 2/2/2/2;
     font-size: 1.4rem;
+    float: left;
     width: 4rem;
     height: 2.4rem;
 }

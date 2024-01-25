@@ -3,7 +3,9 @@ import DeleteModal from '../DeleteModal';
 import Remarks from '../Remarks';
 import { useState, useEffect} from 'react';
 import Image from 'next/image';
-import GoogleSearch from '../GoogleSearch';
+import GoogleSearchFrame from '../GoogleSearchFrame';
+import GoogleSearchCrank from '../GoogleSearchCrank';
+import GoogleSearchWheels from '../GoogleSearchWheels';
 import { MdDeleteForever } from "react-icons/md";
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
@@ -71,26 +73,37 @@ return (<>
         <p className={DetailCardStyle.paragraph}>
             Client Name: {data.userName}</p>
         <p className={DetailCardStyle.paragraph}>
-            Inside Leg: {data.insideLeg}</p>
+            Inside Leg: {data.insideLeg} cm</p>
         <p className={DetailCardStyle.paragraph}>
-            Frame Size: {data.frameSize}</p>
+            <GoogleSearchFrame
+                data={data}
+            />
+            Frame Size: {data.frameSize} cm
+        </p>
         <p className={DetailCardStyle.paragraph}>
-            Top Tube Length: {data.topTubeLength}</p>
+            Top Tube Length: {data.topTubeLength} cm</p>
         <p className={DetailCardStyle.paragraph}>
-            Stack: {data.stack}</p>
+            Stack: {data.stack} cm</p>
         <p className={DetailCardStyle.paragraph}>
-            Reach: {data.reach}</p>
+            Reach: {data.reach} cm</p>
         <p className={DetailCardStyle.paragraph}>
-            Seattube Angle: {data.seatTubeAngle}</p>
+            Seattube Angle: {data.seatTubeAngle}°</p>
         <p className={DetailCardStyle.paragraph}>
-            Saddle Height:{data.saddleHeight}</p>
+            Saddle Height:{data.saddleHeight} cm</p>
         <p className={DetailCardStyle.paragraph}>
-            Wheelsize: {data.wheelsize}</p>
+            <GoogleSearchWheels
+                data={data}
+            />
+            Wheelsize: {data.wheelsize} inch</p>
         <p className={DetailCardStyle.paragraph}>
-            Crank Length: {data.crankLength}</p>
+            <GoogleSearchCrank
+            data={data}
+            />
+            Crank Length: {data.crankLength} cm</p>
         <p className={DetailCardStyle.paragraph}>
             STR Quotient: {data.strQuotient}</p>
     </div>
+   
     <div 
     onMouseEnter={showTooltip}
     onMouseLeave={hideTooltip}

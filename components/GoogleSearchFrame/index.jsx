@@ -1,10 +1,10 @@
-/* :::: GoogleSearch :::: */
+/* :::: GoogleSearchFrame :::: */
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
-export default function GoogleSearch({data}){
+export default function GoogleSearchFrame({data}){
 
     const[googleUrl, setGoogleUrl]=useState('');
     
