@@ -1,6 +1,6 @@
 /* :::: API REMARKS ID :::: */
 import dbConnect from "@/db/connectDB";
-/* import BikeGeometry from "@/db/models/BikeGeometry"; */
+import BikeGeometry from "@/db/models/BikeGeometry";
 import Remark from "@/db/models/Remark";
 
 
@@ -14,6 +14,7 @@ export default async function handler(request, response) {
 
     if (request.method === 'DELETE') {
         await Remark.findByIdAndDelete(id);
+        //await BikeGeometry.findByIdAnd(id).delete(id);
         /*   await Remark.findByIdAndDelete(id, {
               $pull: { _id }
           }); */
