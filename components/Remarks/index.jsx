@@ -22,8 +22,8 @@ export default function Remarks({data, updateRemark, deleteRemarks}) {
         type="text"
         placeholder='add a remark'
         className={DetailCardStyle.remark_input}
-        maxlength='200'
-        minlength='3'
+        maxLength='200'
+        minLength='3'
         />
         </label>
       <button 
@@ -35,12 +35,9 @@ export default function Remarks({data, updateRemark, deleteRemarks}) {
           {data.remarks.map(({comment }, _id) => {
             return (<li key={_id}
               className={DetailCardStyle.remark_list_item}
+              onClick={deleteRemarks}
               >
             <p>{comment}</p>
-            <button
-            className={DetailCardStyle.remark_delete_list_item}
-            onClick={deleteRemarks}
-            >X</button>
             </li>);
           })}
         </ul>

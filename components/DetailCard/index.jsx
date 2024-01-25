@@ -48,7 +48,7 @@ export default function DetailCard({data, handleDelete, updateRemark, deleteRema
         if(data.bikeType === 'Trekking'){
             setImageUrl('/RACE.svg')
         }
-    }
+    };
 
 
 return (<>

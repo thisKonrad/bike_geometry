@@ -17,7 +17,8 @@ export default function DetailPage() {
     const { id } = router.query;
     const { data, isLoading, error } = useSWR(`/api/details/${id}`, fetcher);
 
-    const { mutate } = useSWR(`/api/places/${id}`);
+    const { mutate } = useSWR(`/api/details/${id}`);
+
 
     /* :::: Loader Animation :::: */
     if (!isReady || isLoading || error) {
@@ -67,7 +68,7 @@ export default function DetailPage() {
     async function deleteRemarkById() {
         console.log('CLICK REMARK DELETE ::::::::::::::::::')
         try {
-            const response = await fetch(`/api/details/${id}/remarks`, {
+            const response = await fetch(`/api/remarks/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -75,7 +76,7 @@ export default function DetailPage() {
             });
 
             if (!response.ok) {
-                console - log('remark not deleted')
+                console.log('remark not deleted')
                 throw new Error('Failed to delete remark');
             }
             console.log(`remark with ID ${id} deleted successfully.`);
@@ -108,10 +109,15 @@ export default function DetailPage() {
             }
             console.log('Remark-Data: ', data)
             event.target.reset();
+
             mutate();
+
+
         } catch (error) {
             console.log("ERROR With Remarks!!");
         }
+
+
         console.log(`Remark added successfully...`);
     }
 
