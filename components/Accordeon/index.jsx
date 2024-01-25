@@ -32,7 +32,7 @@ export default function Accordeon({items}) {
             {item.title}
             </header>
             <div className={InfoStyle.accordeon_content}>
-                <article className={InfoStyle.accordeon_article}>
+                <article>
               {index === expanded ? 
                 <div className={InfoStyle.content_wrap}>
                 <p>{item.content.text}</p>
