@@ -25,11 +25,11 @@ export default function DetailPage() {
     if (!isReady || isLoading || error) {
         return (<div className={styles.loader}>
             <Audio
-                height="160"
-                width="220"
-                radius="9"
-                color="black"
-                ariaLabel="three-dots-loading"
+                height='160'
+                width='220'
+                radius='9'
+                color='var(--accentColor)'
+                ariaLabel='three-dots-loading'
                 wrapperStyle
                 wrapperClass
             />
