@@ -67,6 +67,7 @@ export default function DetailPage() {
     }
 
     async function deleteRemarkById(ID) {
+
         try {
             const response = await fetch(`/api/remarks/${ID}`, {
                 method: 'DELETE',
