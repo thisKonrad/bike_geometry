@@ -14,25 +14,21 @@ export default async function handler(request, response) {
 
     if (request.method === 'DELETE') {
         await Remark.findByIdAndDelete(id);
-        //await BikeGeometry.findByIdAnd(id).delete(id);
-        /*   await Remark.findByIdAndDelete(id, {
-              $pull: { _id }
-          }); */
         response.status(200).json({ status: `REMARK deleted.` });
     }
 
-
-    /*     if (request.method === 'POST') {
-            console.log('request Body Remark:', request.body);
-            const remark = await Remark.create(request.body);
-            console.log('remark', remark);
-            await BikeGeometry.findByIdAndUpdate(id, {
-                $push: { remarks: remark._id }
-            },
-                { new: true }
-            );
-            response.status(200).json({ status: `remark updated!` });
-        } */
-
+    /*     if (request.method === "DELETE") {
+            // Find the DetailCard document that contains the comment
+            const detailCard = await BikeGeometry.findOne({
+                remarks: { $elemMatch: { _id: id } },
+            });
+            if (detailCard) {
+                // Remove the comment from the remarks array
+                detailCard.remarks = detailCard.remarks.filter(
+                    (remark) => remark._id.toString() !== id);
+                await detailCard.save();
+            }
+            await Remark.findByIdAndDelete(id);
+        }; */
 
 }
