@@ -3,7 +3,7 @@
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
-export default function Remarks({data, updateRemark, deleteRemarks}) {
+export default function Remarks({data, updateRemark, deleteRemark}) {
 
     console.log('Remarks-DATA:', data);
 
@@ -32,12 +32,12 @@ export default function Remarks({data, updateRemark, deleteRemarks}) {
     </form>
     {data.remarks && (
         <ul className={DetailCardStyle.remark_ul}>
-          {data.remarks.map(({comment }, _id) => {
-            return (<li key={_id}
+          {data.remarks.map((remark) => {
+            return (<li key={remark._id}
               className={DetailCardStyle.remark_list_item}
-              onClick={deleteRemarks}
+              onClick={()=> deleteRemark(remark._id)}
               >
-            <p>{comment}</p>
+            <p>{remark.comment}</p>
             </li>);
           })}
         </ul>

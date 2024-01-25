@@ -14,6 +14,9 @@ export default async function handler(request, response) {
 
     if (request.method === 'DELETE') {
         await Remark.findByIdAndDelete(id);
+        /*   await Remark.findByIdAndDelete(id, {
+              $pull: { _id }
+          }); */
         response.status(200).json({ status: `REMARK deleted.` });
     }
 

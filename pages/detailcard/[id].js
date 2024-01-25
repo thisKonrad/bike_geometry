@@ -10,6 +10,7 @@ import styles from '@/styles/Home.module.css';
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
+
 export default function DetailPage() {
 
     const router = useRouter();
@@ -65,10 +66,10 @@ export default function DetailPage() {
         }
     }
 
-    async function deleteRemarkById() {
-        console.log('CLICK REMARK DELETE ::::::::::::::')
+    async function deleteRemarkById(ID) {
+
         try {
-            const response = await fetch(`/api/remarks/${id}`, {
+            const response = await fetch(`/api/remarks/${ID}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -76,13 +77,14 @@ export default function DetailPage() {
             });
 
             if (!response.ok) {
-                console.log('remark not deleted')
+                console.log('remark not deleted', ID)
                 throw new Error('Failed to delete remark');
             }
-            console.log(`remark with ID ${id} deleted successfully.`);
+            console.log(`::: Remark with ID: ${ID} ,deleted successfully :::`);
         } catch (error) {
             console.error('Error deleting Remark', error.message);
         }
+        mutate()
     }
 
 
