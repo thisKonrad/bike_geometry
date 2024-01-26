@@ -46,7 +46,7 @@ export default function STRAnimation() {
             className={InfoStyle.str_button}
             ><IoIosFastforward size={35}/></button>
         </div>
-        <p>STR Range: {strInfoText}</p>
+        <p className={InfoStyle.str_animation_text}>STR Range = {strInfoText}</p>
       </div>
    );
 };
