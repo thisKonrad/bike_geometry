@@ -53,7 +53,7 @@ export default function GoogleSearchWheels({data}){
         className={DetailCardStyle.search_button}
         onClick={googleWheels}
         >
-        <FaSearch />
+        <FaSearch/>
         </button>
 </div>)
 }

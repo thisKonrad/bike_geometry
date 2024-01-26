@@ -4,9 +4,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(13,4rem);
     gap:1rem;
+    margin: 6% 0% 4% 0% ;
     width: 78%;
-    height: 80vh;
-    text-align: justify;
+    height: 90vh;
+    text-align:start;
+    line-break: auto;
+    word-break: break-all;
 }
 .title{
     display: inline-block;
@@ -16,8 +19,9 @@
 }
 
 .paragraph{
-    font-size: 1.4rem;
-    line-height: 2.5;
+    font-size: 1.2rem;
+    margin: 1rem;
+    line-height: 2.4;
 }
 
 .delete_button{
@@ -35,10 +39,10 @@
 
 .search_button{
     grid-area: 2/2/2/2;
-    font-size: 1.4rem;
+    font-size: 1rem;
     float: left;
-    width: 4rem;
-    height: 2.4rem;
+    width: 3.2rem;
+    height: 2rem;
 }
 
 .bike_image_wrap{

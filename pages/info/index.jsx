@@ -6,7 +6,7 @@ import STRAnimation from '@/components/STRAnimation';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 import { useState } from 'react';
-import { IoIosBrowsers } from "react-icons/io";
+import { FaInfoCircle } from "react-icons/fa";
 import Popup from 'reactjs-popup';
 import InfoStyle from '@/styles/InfoStyle.module.css';
 
@@ -99,8 +99,7 @@ export default function Information() {
     <Popup 
     trigger={<button 
       className={InfoStyle.popup_button}>
-    <IoIosBrowsers 
-    size={45}/>
+      <FaInfoCircle size={28}/> 
     </button>} 
     modal 
     overlayStyle={{background: 'var(--modalBackground)', 
