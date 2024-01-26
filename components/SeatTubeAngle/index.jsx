@@ -6,7 +6,7 @@ export default function SeatTubeAngle({onChange, angle}) {
 
     return (<div className={CalcStyle.seat_tubeangle}>
         <label>
-            <p className={CalcStyle.form_tag}>Seat Tube Angel:</p>
+            <p className={CalcStyle.form_tag}>Seat Tube Angle:</p>
             <input
             type='range'
             name='seatTubeAngel' 
