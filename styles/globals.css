@@ -15,6 +15,7 @@
   --backgroundColor: white;
   --headerColor: white;
   --bikeCardColor: white;
+  --buttonColor: white;
   --imageBackground: transparent;
   --imageShadow: 0px 0px 2px transparent;
   --modalBackground: rgba(0, 0, 0, 0.45);
@@ -31,9 +32,10 @@
   --cardShadow: 0px 0px 1px white;
   --pageShadow: 0px 0px 2px white;
   --headerShadow: 0px 0px 14px rgba(255, 255, 255, 0.45);
-  --backgroundColor: rgb(38, 38, 38);
-  --headerColor: rgb(21, 21, 21);
+  --backgroundColor: rgb(35, 35, 35);
+  --headerColor: rgb(30, 30, 30);
   --bikeCardColor: rgb(23, 23, 23);
+  --buttonColor: black ;
   --imageBackground: white;
   --imageShadow: 0px 0px 8px white;
   --modalBackground: rgba(0, 0, 0, 0.45);
@@ -57,14 +59,14 @@ background: var(--backgroundColor);
 
 button{
   cursor: pointer;
-  width: 14rem;
+  width: 110%;
   margin: 0.5rem;
   font-size: 1.2rem;
   color: var(--fontColor);
 /* top | right | bottom | left */
   padding: 4px 14px 4px 14px;
   border: none;
-  background-color: var(--backgroundColor);
+  background-color: var(--buttonColor);
   box-shadow:0px 0px 2px rgba(0, 0, 0);
 }
 button:hover{

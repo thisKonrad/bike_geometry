@@ -9,7 +9,7 @@ export default function UserName(){
         <input
         name='userName'
         type='text'
-        placeholder='user name'
+        placeholder='client name'
         defaultValue=''
         autocomplete='off'
         required

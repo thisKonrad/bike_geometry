@@ -5,11 +5,11 @@
     width: 100%;
     top: 0;
     gap: 1rem;
-    height: 20%;
+    height: 24%;
     box-shadow:  var(--headerShadow);
     /* top | right | bottom | left */
     padding: 2rem 12rem 3rem 14rem;
-    background-color: var(--mainColor);
+    background-color: var(--headerColor);
 }
 
 .header_content_wrap{
@@ -22,7 +22,7 @@
 }
 
 .title{
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: lighter;
     letter-spacing: 4px;
     display: inline-block;

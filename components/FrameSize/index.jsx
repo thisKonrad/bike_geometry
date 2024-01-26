@@ -16,6 +16,7 @@ return (<>
       min='40'
       max='140'
       step='1'
+      required
       />
   </label>
   </div>
@@ -25,6 +26,7 @@ return (<>
     <select 
     name='bikeType' 
     defaultValue=''
+    required
     >
      <option value=''>choose a bike type</option>
       <option value='MTB'>MTB</option>

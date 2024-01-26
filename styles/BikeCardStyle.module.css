@@ -15,7 +15,7 @@
     line-height: 2.5;
     line-break: auto;
     margin: 1rem;
-    background-color:var(--mainColor);
+    background-color:var(--backgroundColor);
     box-shadow: var(--pageShadow);
     transition: 0.25s;
 }   
