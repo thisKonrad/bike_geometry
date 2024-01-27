@@ -33,3 +33,14 @@ export const useToggleStore = create(
     )
 );
    
+
+export const useScreenWidth = create((set) => ({
+    screenWidth: 0,
+    setScreenWidth: () => set((state) => ({ screenWidth: state.screenWidth })),
+}));
+
+export const useOpen = create(
+    (set) => ({
+      isOpen: false,
+      setOpen: () => set((state) => ({ isOpen: !state.isOpen })),
+  }));
