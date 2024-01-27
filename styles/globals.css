@@ -44,11 +44,6 @@
   transition: all 0.25s linear;
 }
 
-.darkmode_button{
-  width: 4rem;
-}
-
-
 body{
 width: 100%;
 height: 100%;
@@ -123,7 +118,6 @@ input[type="range"]::-moz-range-thumb {
 
 
 /* :::: global radio style :::: */
-
 /* easy one: */
 input[type='radio']{
   cursor: pointer;
