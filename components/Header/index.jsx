@@ -5,6 +5,7 @@ import NavBar from '../NavBar';
 import Logo from '../Logo';
 import DarkModeToggle from '../DarkModeToggle';
 import MobileMenue from '../MobileMenue/index.jsx';
+
 import { useState, useEffect } from 'react';
 import {useOpen} from '../Zustand';
 import { Squeeze as Hamburger } from 'hamburger-react';
@@ -13,11 +14,13 @@ import HeaderStyle from '../../styles/HeaderStyle.module.css';
 
 export default function Header ({currentPageTitle}) {
 
-    const [screenWidth, setScreenWidth] = useState(0);
-    //const [isOpen, setOpen] = useState(false);
-
     const isOpen = useOpen(state => state.isOpen);
     const setOpen = useOpen(state => state.setOpen);
+
+/*     const [screenWidth, setScreenWidth] = useState(windowSize);
+    //const [isOpen, setOpen] = useState(false);
+
+
 
     useEffect(() => {
       const handleResize = () => {
@@ -27,7 +30,26 @@ export default function Header ({currentPageTitle}) {
       return () => {
         window.removeEventListener('resize', handleResize);
       };
-    }, []);  
+    }, [screenWidth]); */  
+
+
+    const [screenWidth, setWindowWidth] = useState(0);
+
+    useEffect(() => {
+      if (typeof window !== 'undefined') {
+        setWindowWidth(window.innerWidth);
+  
+        const handleResize = () => {
+          setWindowWidth(window.innerWidth);
+        };
+  
+        window.addEventListener('resize', handleResize);
+  
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }
+    }, []);
 
 
 return (<>

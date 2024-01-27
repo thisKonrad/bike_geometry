@@ -1,6 +1,6 @@
 /* :::: mobile menue style :::: */
 .menue_wrap{
-    z-index: 111;
+    z-index: 1111;
     position: fixed;
     display: flex;
     justify-content: space-evenly;

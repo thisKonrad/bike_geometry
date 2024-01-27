@@ -7,7 +7,6 @@ import MobileMenueStyle from '../../styles/MobileMenueStyle.module.css'
 
 export default function MobileMenue() {
 
-
     const isOpen = useOpen(state => state.isOpen);
     const setOpen = useOpen(state => state.setOpen);
 

@@ -88,6 +88,7 @@
 /* :::: MOBILE STYLE :::: */
 
 .mobile_header{
+    z-index: 999;
     display: none;
     justify-content: center;
     position: fixed;
