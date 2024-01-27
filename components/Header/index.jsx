@@ -5,7 +5,6 @@ import NavBar from '../NavBar';
 import Logo from '../Logo';
 import DarkModeToggle from '../DarkModeToggle';
 import MobileMenue from '../MobileMenue/index.jsx';
-
 import { useState, useEffect } from 'react';
 import {useOpen} from '../Zustand';
 import { Squeeze as Hamburger } from 'hamburger-react';
@@ -16,22 +15,6 @@ export default function Header ({currentPageTitle}) {
 
     const isOpen = useOpen(state => state.isOpen);
     const setOpen = useOpen(state => state.setOpen);
-
-/*     const [screenWidth, setScreenWidth] = useState(windowSize);
-    //const [isOpen, setOpen] = useState(false);
-
-
-
-    useEffect(() => {
-      const handleResize = () => {
-        setScreenWidth(window.innerWidth);
-      };
-        window.addEventListener('resize', handleResize);
-      return () => {
-        window.removeEventListener('resize', handleResize);
-      };
-    }, [screenWidth]); */  
-
 
     const [screenWidth, setWindowWidth] = useState(0);
 
@@ -85,7 +68,7 @@ return (<>
     { screenWidth <= 1190 ?
     <div className={HeaderStyle.mobile_burger_wrap}>
     <Hamburger 
-    size={25}
+    size={32}
     color={`var(--accentColor)`}
     toggled={isOpen} 
     toggle={setOpen} 
