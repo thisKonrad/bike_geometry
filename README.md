@@ -1,4 +1,4 @@
-build with next.JS MongoDb and styled with CSS modules
+build with Next.JS MongoDB and styled with CSS modules
 
 ## Bike Geometry Calculator
 
