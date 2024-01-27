@@ -24,7 +24,7 @@ export default function Home() {
         After that you can go to the collection where you can see
         all bike geometries.
         Don't know how to measure the inside leg?
-        Go to the info page where all measurements and values are explainde for you.</p>
+        Go to the info page where all measurements and values are explained for you.</p>
       </article>
     </section>
     </main>

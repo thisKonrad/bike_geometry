@@ -31,3 +31,37 @@ background-color: var(--backgroundColor);
     line-break: auto;
 }
 
+
+/* :::: :::: MEDIA QUERIES :::: :::: */
+@media only screen and (max-width: 1190px) {
+    .main{
+        margin-top: 15%;
+        width: 99%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .main{
+        margin-top: 35%;
+        width: 99%;
+    }
+}
+
+@media only screen and (max-width: 562px) {
+    .main{
+        margin-top: 55%;
+        width: 99%;
+    }
+}
+
+@media only screen and (max-width: 457px) {
+    .main{
+        margin-top: 5%;
+        width: 99%;
+    }
+    .article{
+        font-size: 0.8rem;
+        line-height: 1.4;
+        letter-spacing: 2px; 
+    }
+}

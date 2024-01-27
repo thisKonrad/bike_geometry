@@ -158,8 +158,8 @@ export default function Information() {
 
 
   return (<>
-    <Header
-  currentPageTitle={'Information'}>
+  <Header
+    currentPageTitle={'Information'}>
   </Header>
   <main className={styles.main}>
     <Accordeon

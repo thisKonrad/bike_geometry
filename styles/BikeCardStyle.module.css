@@ -4,6 +4,7 @@
 }
 
 .bikecard{
+    /* grow, shrink, basis(initial width) */
     flex: 1 0 30%; 
     list-style: none;
     display:inline-block;
@@ -79,4 +80,18 @@
     transform: rotate(360deg);
     transition: 1.2s;
     background: transparent;
+}
+
+
+
+/* :::: MEDIA QUERIES :::: */
+@media only screen and (max-width: 1190px) {
+    .bikecard{
+        width: 60%;
+        height: 60%;
+    }
+    .button_icon_tool{
+        height: 225%;
+        width: 225%;
+    }
 }
