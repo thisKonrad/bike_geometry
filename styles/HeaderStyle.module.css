@@ -85,13 +85,14 @@
     width: 4rem;
 }
 
-/* :::: MOBILE STYLE :::: */
+/* |||||||||||||||||||:::: MOBILE STYLE ::::|||||||||||||||||||||||||||||||| */
 
 .mobile_header{
     z-index: 999;
     display: none;
     justify-content: center;
     position: fixed;
+    font-size: 140%;
     width: 100%;
     height: 24%;
     top: 0;
@@ -114,12 +115,14 @@
     grid-area: 1/2/1/2;
 }
 .mobile_dark_mode_button{
+    border: none;
     box-shadow: none;
+    background: transparent;
 }
 
 .mobile_title{
     grid-area: 1/1/1/1;
-    font-size: 160%;
+   /*  font-size: 160%; */
     font-weight: lighter;
     letter-spacing: 2px;
     display: inline-block;

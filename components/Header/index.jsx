@@ -86,6 +86,7 @@ return (<>
     <div className={HeaderStyle.mobile_burger_wrap}>
     <Hamburger 
     size={25}
+    color={`var(--accentColor)`}
     toggled={isOpen} 
     toggle={setOpen} 
     duration={0.6}
