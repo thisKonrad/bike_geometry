@@ -152,3 +152,47 @@
     margin-top: 5%;
     margin-left: -3%;
 }
+
+
+
+
+/* :::: :::: MEDIA QUERIES :::: :::: */
+@media only screen and (max-width: 1190px) {
+
+    .detailcard{
+        width: 84%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap:2rem;
+        margin-top: 42%;
+    }
+    .delete_button{
+        margin-left: 76%;
+        font-size: 1.2rem;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .detailcard{
+        margin-top: 45%;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .detailcard{
+        margin-top: 75%;
+    }
+
+}
+@media only screen and (max-width: 400px) {
+
+    .detailcard{
+        margin-top: 75rem;
+    }
+
+}

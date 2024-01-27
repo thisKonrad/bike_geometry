@@ -1,5 +1,5 @@
 /* :::: DELETE MODAL :::: */
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import DeleteModalStyle from '../../styles/DeleteModalStyle.module.css';
 
 
