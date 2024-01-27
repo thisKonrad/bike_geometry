@@ -205,20 +205,6 @@ export default function Calculator() {
         console.log('Response', response)
       mutate();
     }
-
-      /* ::::::: LOGS ::::::::: */
-      console.log('data: ', data);
-      console.log('formData entries: ', formData.entries())
-
-      /* console.log('BikeTitle: ', bikeTitle)
-      console.log('UserName: ', userName)
-      console.log('SaddleHeight: ', saddleHeight)
-      console.log('Stack: ', stackResult)
-      console.log('CrankLength: ', crankLength)
-      console.log('Wheelsize: ', wheelsizeValue)
-      console.log("SeatTubeAngleFromState: ", seatTubeAngle) */
-      //console.log("STR RANGE :", strRangeSelect)
-      //console.log('insideLeg: ', insideLegLength
       
     router.push('/collection');
   };
