@@ -22,7 +22,7 @@ export default function CollectionSearchBar({show}){
     console.log('selectType: ', selectType)
     console.log('frameSize: ', frameSizeSelect)
 
-    function searchByTitle(event){
+    function searchByClient(event){
         updateSearchUser(event.target.value)
         updateSelectType('')
         updateFrameSizeSelect(0)
@@ -55,11 +55,11 @@ return (<section className={HeaderStyle.searchbar_wrap}>
     <div className={HeaderStyle.search_list_002}>
         <div>
             <label>
-            search by title
+            search by client
             <input
             type='text'
-            placeholder='title search'
-            onChange={(e)=> searchByTitle(e)} 
+            placeholder='client search'
+            onChange={(e)=> searchByClient(e)} 
             value={searchUser}
             className={HeaderStyle.input}
             >

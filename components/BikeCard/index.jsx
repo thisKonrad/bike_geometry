@@ -18,7 +18,7 @@ export default function BikeCard({data}){
 
             if(searchUser){
                 filteredData = filteredData.filter((bike) =>
-                bike.bikeTitle.toLowerCase().includes(searchUser.toLowerCase()));
+                bike.userName.toLowerCase().includes(searchUser.toLowerCase()));
             }
             if(selectType){
                 filteredData = filteredData.filter((bike) =>

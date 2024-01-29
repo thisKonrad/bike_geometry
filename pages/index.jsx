@@ -15,13 +15,19 @@ export default function Home() {
     <section className={styles.jumbo}>
       <article className={styles.article}>
         <h3>Welcome awesome cyclists!</h3>
+        <br></br>
         <p>
-        <p>Lets start a new bike project.
+        Lets start a new bike project.
         Here you can achieve the basic 
         geometry datas for a new bike.
-        You only need your inner leg length,
-        also known as inside leg.</p>
+        </p>
         <br></br>
+        <p>
+        You only need your inner leg length,
+        also known as inside leg.
+        </p>
+        <br></br>
+        <p>
         First go to the information page where all 
         the measurements are well explained to you.
         Also how to take the inner leg length.
