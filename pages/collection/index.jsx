@@ -15,11 +15,11 @@ export default function Collection() {
     if (isLoading) {
     return (<div className={styles.loader}>
     <Audio
-    height="160"
-    width="220"
-    radius="9"
-    color={`var(--accentColor)`}
-    ariaLabel="three-dots-loading"
+    height='160'
+    width='220'
+    radius='9'
+    color={'var(--accentColor)'}
+    ariaLabel='three-dots-loading'
     wrapperStyle
     wrapperClass
     />
