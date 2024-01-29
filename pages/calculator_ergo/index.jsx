@@ -100,7 +100,7 @@ export default function Calculator() {
 
      /* :::: calculate FRAMESIZE :::: */
       switch (data.bikeType) {
-      case 'Race':
+      case 'Road':
         const raceFrameSize = Math.round(data.insideLeg * 0.66)
         data['frameSize']= raceFrameSize;
         break;
@@ -123,7 +123,7 @@ export default function Calculator() {
 
     /*:::: calculate TOPTUBE :::::*/
     const topTubeBase = data.insideLeg * 0.66;
-    if(data.bikeType === 'Race'){
+    if(data.bikeType === 'Road'){
         const raceTopTube = Math.round(topTubeBase - 8);
           data['topTubeLength']=raceTopTube;
             console.log('topTubeLength: ',raceTopTube)}

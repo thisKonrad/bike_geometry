@@ -80,7 +80,7 @@ return (<section className={HeaderStyle.searchbar_wrap}>
             <option value='City'>City</option>
             <option value='Trekking'>Trekking</option>
             <option value='MTB'>MTB</option>
-            <option value='Race'>Race</option>
+            <option value='Road'>Road</option>
         </select>
         </label>
     </div>

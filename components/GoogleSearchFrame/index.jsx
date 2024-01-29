@@ -27,7 +27,7 @@ export default function GoogleSearchFrame({data}){
             QICxAB&biw=1920&bih=966&dpr=1
             `));
         }
-        if(data.bikeType === 'Race'){
+        if(data.bikeType === 'Road'){
             setGoogleUrl(window.open(`
             https://www.google.com/search?sca_esv=
             600789614&sxsrf=ACQVn0_p1l8gRl4L_igSc0KIDQ9T_UzJZg:1706029183121&q=

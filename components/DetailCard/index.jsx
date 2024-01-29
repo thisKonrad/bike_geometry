@@ -24,7 +24,6 @@ export default function DetailCard({data, handleDelete, updateRemark, deleteRema
 
     const handleToggle = () => {
       setToggled(!isToggled);
-      console.log("state Toggle: ",isToggled)
     };
 
     const showTooltip = () => {
@@ -45,7 +44,7 @@ export default function DetailCard({data, handleDelete, updateRemark, deleteRema
         if(data.bikeType === 'MTB'){
             setImageUrl('/MTB.svg')
         }
-        if(data.bikeType === 'Race'){
+        if(data.bikeType === 'Road' || data.bikeType === 'Race'){
             setImageUrl('/RACE.svg')
         }
         if(data.bikeType === 'Trekking'){

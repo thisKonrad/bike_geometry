@@ -26,7 +26,7 @@ export default function GoogleSearchCrank({data}){
             =img&ei=G1uyZaOSEerMi-gPxoSUsAs&bih=966&biw=1920
             `));
         }
-        if(data.bikeType === 'Race'){
+        if(data.bikeType === 'Road'){
             setGoogleUrl(window.open(`
             https://www.google.com/search?q=
             Road+Race+Bike+Crank+Arm+Length+${data.crankLength}cm&tbm=isch&ved=2ahUKEwjw79qAzfiDAxUi5wIH

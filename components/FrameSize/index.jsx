@@ -30,7 +30,7 @@ return (<>
     >
      <option value=''>choose a bike type</option>
       <option value='MTB'>MTB</option>
-      <option value='Race'>Race Bike</option>
+      <option value='Road'>Road Bike</option>
       <option value='City'>City Bike</option>
       <option value='Trekking'>Trekking Bike</option>
     </select>
