@@ -18,7 +18,7 @@ export default function Collection() {
     height="160"
     width="220"
     radius="9"
-    color="black"
+    color={`var(--accentColor)`}
     ariaLabel="three-dots-loading"
     wrapperStyle
     wrapperClass
