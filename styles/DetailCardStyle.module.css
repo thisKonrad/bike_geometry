@@ -168,7 +168,7 @@
         margin-top: 42%;
     }
     .delete_button{
-        margin-left: 76%;
+        margin-left: 120%;
         font-size: 1.2rem;
     }
 
@@ -179,6 +179,22 @@
     .detailcard{
         margin-top: 45%;
     }
+    .add_remark_button{
+        margin-left: 120%;
+    }
+    
+    .tooltip_left,
+.tooltip_right,
+.tooltip_left_001,
+.tooltip_left_002,
+.tooltip_right_001,
+.tooltip_right_002,
+.tooltip_center_001,
+.tooltip_center_left,
+.tooltip_center_right
+{
+    display: none;
+}
 
 }
 
@@ -192,7 +208,7 @@
 @media only screen and (max-width: 400px) {
 
     .detailcard{
-        margin-top: 75rem;
+        margin-top: 40rem;
     }
 
 }
