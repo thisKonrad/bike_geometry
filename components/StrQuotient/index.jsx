@@ -1,8 +1,9 @@
-/* :::: STRQUOTIENT :::: */
+/* :::: STR QUOTIENT :::: */
 import CalcStyle from '../../styles/CalcStyle.module.css';
 
 /**
-* STRQuotienten = Info: comfort: over 1.55, sport: 1.45 till 1.55, race: under 1.45;
+* STRQuotienten = Info: comfort: over 1.55, 
+* sport: 1.45 till 1.55, race: under 1.45;
 * Range Input between 1.3 till 1.6;
 * formular: Stack/STRQuotient
 */

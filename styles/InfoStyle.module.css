@@ -50,7 +50,6 @@
     flex-direction: row;
     gap: 1.2rem;
     text-align: justify;
-  /*   word-break:break-all; */
     line-break: auto;
 }
 
@@ -60,6 +59,7 @@
     filter: var(--imageFilterInvert);
     -webkit-filter: var(--imageFilterInvert);
 }
+
 
 /* :::: STR ANIMATION MODAL :::: */
 .popup_button{
