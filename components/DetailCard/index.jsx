@@ -16,21 +16,22 @@ export default function DetailCard({data, handleDelete, updateRemark, deleteRema
     const[currentImageUrl, setImageUrl]= useState('');
     const [isTooltipVisible, setIsTooltipVisible] = useState(false);
 
+
     /* :::: Image :::: */
     useEffect(() => {
         getImageUrl()
       }, []);
     
 
-    const handleToggle = () => {
+    function handleToggle (){
       setToggled(!isToggled);
-    };
+    };  
 
-    const showTooltip = () => {
+    function showTooltip (){
         setIsTooltipVisible(true);
     };
     
-    const hideTooltip = () => {
+    function hideTooltip() {
         setIsTooltipVisible(false);
     };
 

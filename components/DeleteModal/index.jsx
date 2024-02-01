@@ -7,9 +7,8 @@ export default function DeleteModal({onDelete}){
 
     const [closeModal, setCloseModal] = useState(false);
 
-    const handleClose = () => {
+    function handleClose () {
         setCloseModal(!closeModal);
-        console.log("state Toggle: ",closeModal);
     };
 
 
@@ -26,7 +25,7 @@ return (<section className={
             >X</button>
         </div>
         </header>
-        <article>
+        <article  className={DeleteModalStyle.article}>
             <p>Are you really sure
             you want to delete this bike?</p>
             <p>Changes can not be undone anymore!</p>

@@ -58,6 +58,9 @@
     width: 80%;
 }
 
+.article{
+    word-break: keep-all;
+}
 
 
 /* :::: :::: MEDIA QUERIES :::: :::: */

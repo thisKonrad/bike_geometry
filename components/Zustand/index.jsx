@@ -43,4 +43,5 @@ export const useOpen = create(
     (set) => ({
       isOpen: false,
       setOpen: () => set((state) => ({ isOpen: !state.isOpen })),
-  }));
+}));
+
