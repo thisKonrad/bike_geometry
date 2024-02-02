@@ -117,10 +117,11 @@ export default function Information() {
     },
 
     {title: 'Seattube Angle',
-    content: {text:`The angle of your seattube. This measurement defines your drive handling
+    content: {text:`The angle of your seattube. 
+    This measurement defines your drive handling
     and your power take off, from your legs to the whole bike.
-    When you ride a lower angle you have a bike with a more comfortable 
-    behaviour but less power take off. 
+    When you ride a lower angle you have a bike with a more 
+    comfortable behaviour but less power take off. 
     Higher angles ending up in a more effective 
     power take off unit.`,
     image:
