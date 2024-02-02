@@ -98,7 +98,7 @@
 }
 
 
-/* :::: pop up delete :::: */
+/* :::: pop up modal for bike delete :::: */
 .popup_wrap{
     display:flex;
     justify-content: space-evenly;
@@ -117,7 +117,6 @@
     text-align: justify;
     line-break: auto;
 }
-
 
 .popup_close_button{
     margin-left:90%;

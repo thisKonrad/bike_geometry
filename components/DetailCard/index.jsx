@@ -57,8 +57,6 @@ export default function DetailCard({data, handleDelete, updateRemark, deleteRema
 
 return (<>
 <section className={DetailCardStyle.detailcard}>
-
-<>
     <Popup 
     trigger= {<button 
     className={DetailCardStyle.delete_button}>
@@ -91,16 +89,7 @@ return (<>
             delete
           </button>
       </div>)}
-    </Popup>
-    </>
-
-    {/* <button  */}
-        {/* className={DetailCardStyle.delete_button}> */}
-      {/* onClick={handleToggle} */}
-        {/* <MdDeleteForever />
-        </button> */}
-   {/*  {isToggled ? <DeleteModal onDelete={handleDelete}/> : null}
-    <div className={DetailCardStyle.detailcard_content}> */}
+    </Popup> 
       <div className={DetailCardStyle.detailcard_content}>
         <h3 className={DetailCardStyle.title}>
             Bike Title: 
