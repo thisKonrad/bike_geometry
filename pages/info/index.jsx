@@ -5,15 +5,12 @@ import Accordeon from '@/components/Accordeon/index.jsx';
 import STRAnimation from '@/components/STRAnimation';
 import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
-import { useState } from 'react';
 import { FaInfoCircle } from "react-icons/fa";
 import Popup from 'reactjs-popup';
 import InfoStyle from '@/styles/InfoStyle.module.css';
 
 
 export default function Information() {
-
-  const[popText, setPopText]= useState(false);
 
 
   const measurementLegend=[
@@ -27,7 +24,7 @@ export default function Information() {
       <Image 
       src='/innerleg_alpha.png'
       width={200}
-      height={240}
+      height={260}
       alt='inside leg measurement'
       className={InfoStyle.image}
       />
@@ -66,7 +63,7 @@ export default function Information() {
     <Image 
     src='/stack.png'
     width={400}
-    height={220}
+    height={240}
     alt='reach'
     className={InfoStyle.image}
     />
@@ -81,7 +78,7 @@ export default function Information() {
       <Image 
       src='/reach.png'
       width={400}
-      height={220}
+      height={240}
       alt='reach'
       className={InfoStyle.image}
       />
@@ -129,7 +126,7 @@ export default function Information() {
     <Image 
     src='/seattubeangle.png'
     width={400}
-    height={220}
+    height={240}
     alt='reach'
     className={InfoStyle.image}
     />

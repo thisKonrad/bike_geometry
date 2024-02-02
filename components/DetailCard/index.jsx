@@ -3,6 +3,7 @@ import DeleteModal from '../DeleteModal';
 import Remarks from '../Remarks';
 import { useState, useEffect} from 'react';
 import Image from 'next/image';
+import Popup from 'reactjs-popup';
 import GoogleSearchFrame from '../GoogleSearchFrame';
 import GoogleSearchCrank from '../GoogleSearchCrank';
 import GoogleSearchWheels from '../GoogleSearchWheels';
@@ -56,14 +57,40 @@ export default function DetailCard({data, handleDelete, updateRemark, deleteRema
 
 return (<>
 <section className={DetailCardStyle.detailcard}>
-    <button 
-        className={DetailCardStyle.delete_button}
-        onClick={handleToggle}
-        >
-        <MdDeleteForever />
+    <Popup 
+    trigger= {<button 
+    className={DetailCardStyle.delete_button}>
+    <MdDeleteForever />
+    </button>}
+    modal 
+    overlayStyle={{background: 'var(--modalBackground)', 
+    backdropFilter:'var(--modalBackDropFilter)'}}>
+      {close => (
+      <div className={DetailCardStyle.popup_wrap}>
+        <button className={DetailCardStyle.popup_close_button} onClick={close}>
+          &times;
         </button>
-    {isToggled ? <DeleteModal onDelete={handleDelete}/> : null}
-    <div className={DetailCardStyle.detailcard_content}>
+        <div className={DetailCardStyle.popup_article}>
+            <p>Are you really sure you want to delete this bike?</p>
+            <p>Changes can not be undone!</p>
+        </div>
+        <button
+            className={DetailCardStyle.pop_up_cancel}
+            onClick={() => {
+              close();
+            }}
+          >
+            cancel
+          </button>
+          <button
+            className={DetailCardStyle.popup_delete_bike}
+            onClick={handleDelete}
+          >
+            delete
+          </button>
+      </div>)}
+    </Popup> 
+      <div className={DetailCardStyle.detailcard_content}>
         <h3 className={DetailCardStyle.title}>
             Bike Title: 
         </h3>
@@ -105,7 +132,6 @@ return (<>
         <p className={DetailCardStyle.paragraph}>
             STR Quotient: {data.strQuotient}</p>
     </div>
-   
     <div 
     onMouseEnter={showTooltip}
     onMouseLeave={hideTooltip}
