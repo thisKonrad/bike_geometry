@@ -24,7 +24,7 @@ export default function Information() {
       <Image 
       src='/innerleg_alpha.png'
       width={200}
-      height={240}
+      height={260}
       alt='inside leg measurement'
       className={InfoStyle.image}
       />
@@ -63,7 +63,7 @@ export default function Information() {
     <Image 
     src='/stack.png'
     width={400}
-    height={220}
+    height={240}
     alt='reach'
     className={InfoStyle.image}
     />
@@ -78,7 +78,7 @@ export default function Information() {
       <Image 
       src='/reach.png'
       width={400}
-      height={220}
+      height={240}
       alt='reach'
       className={InfoStyle.image}
       />
@@ -126,7 +126,7 @@ export default function Information() {
     <Image 
     src='/seattubeangle.png'
     width={400}
-    height={220}
+    height={240}
     alt='reach'
     className={InfoStyle.image}
     />
