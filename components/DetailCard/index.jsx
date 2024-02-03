@@ -3,11 +3,11 @@ import DeleteModal from '../DeleteModal';
 import Remarks from '../Remarks';
 import { useState, useEffect} from 'react';
 import Image from 'next/image';
-import Popup from 'reactjs-popup';
+/* import Popup from 'reactjs-popup'; */
 import GoogleSearchFrame from '../GoogleSearchFrame';
 import GoogleSearchCrank from '../GoogleSearchCrank';
 import GoogleSearchWheels from '../GoogleSearchWheels';
-import { MdDeleteForever } from "react-icons/md";
+/* import { MdDeleteForever } from "react-icons/md"; */
 import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
@@ -57,7 +57,8 @@ export default function DetailCard({data, handleDelete, updateRemark, deleteRema
 
 return (<>
 <section className={DetailCardStyle.detailcard}>
-    <Popup 
+    <DeleteModal onDelete={handleDelete}/>
+    {/* <Popup 
     trigger= {<button 
     className={DetailCardStyle.delete_button}>
     <MdDeleteForever />
@@ -89,7 +90,7 @@ return (<>
             delete
           </button>
       </div>)}
-    </Popup> 
+    </Popup>  */}
       <div className={DetailCardStyle.detailcard_content}>
         <h3 className={DetailCardStyle.title}>
             Bike Title: 

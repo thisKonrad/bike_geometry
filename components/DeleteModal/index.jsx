@@ -2,6 +2,7 @@
 import Popup from 'reactjs-popup';
 import { MdDeleteForever } from "react-icons/md";
 import DeleteModalStyle from '../../styles/DeleteModalStyle.module.css';
+import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
 
 
 export default function DeleteModal({onDelete}){
@@ -10,7 +11,7 @@ export default function DeleteModal({onDelete}){
 return (<>
   <Popup 
     trigger= {<button 
-    className={DeleteModalStyle.delete_button}>
+    className={DetailCardStyle.delete_button}>
     <MdDeleteForever />
     </button>}
     modal 
