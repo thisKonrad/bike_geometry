@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import {useStore} from '../Zustand';
-import BikeCardStyle from '../../styles/BikeCardStyle.module.css';
+import styles from '../../styles/BikeCardStyle.module.css';
 
 
 export default function BikeCard({data}){
@@ -37,32 +37,32 @@ export default function BikeCard({data}){
     const filteredBikes = filterData();
 
 
-return (<section className={BikeCardStyle.card_wrap}>
+return (<section className={styles.card_wrap}>
     <ul>
     {filteredBikes.map((bike) => (
     <li
     key={bike._id}
-    className={BikeCardStyle.bikecard}
+    className={styles.bikecard}
     >
     <Link href={`/detailcard/${bike._id}`}
-    className={BikeCardStyle.link}>
-    <button className={BikeCardStyle.detail_button}
+    className={styles.link}>
+    <button className={styles.detail_button}
     ><Image
     src='/ringschlüssel.png'
     width={100}
     height={100}
     alt='tool icon' 
-    className={BikeCardStyle.button_icon_tool}
+    className={styles.button_icon_tool}
     /></button>
     </Link>
-    <div className={BikeCardStyle.bikecard_fragment}>
-        <p className={BikeCardStyle.title}>Title: {bike.bikeTitle}</p>
+    <div className={styles.bikecard_fragment}>
+        <p className={styles.title}>Title: {bike.bikeTitle}</p>
         <Image
             src={bike.bikeType === 'City' ? '/CITY.svg' : bike.bikeType === 'MTB' ? '/MTB.svg' :'/RACE.svg'}
             width={180} 
             height={120} 
             alt='bike image' 
-            className={BikeCardStyle.image}
+            className={styles.image}
         />
         <p>Bike Type: {bike.bikeType}</p>
         <p>Client Name: {bike.userName}</p>

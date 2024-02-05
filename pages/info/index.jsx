@@ -7,7 +7,7 @@ import styles from '@/styles/Home.module.css';
 import Image from 'next/image';
 import { FaInfoCircle } from "react-icons/fa";
 import Popup from 'reactjs-popup';
-import InfoStyle from '@/styles/InfoStyle.module.css';
+import InfoStyles from '@/styles/InfoStyle.module.css';
 
 
 export default function Information() {
@@ -26,7 +26,7 @@ export default function Information() {
       width={200}
       height={260}
       alt='inside leg measurement'
-      className={InfoStyle.image}
+      className={InfoStyles.image}
       />
       </div>}
     },
@@ -49,7 +49,7 @@ export default function Information() {
     width={400}
     height={240}
     alt='reach'
-    className={InfoStyle.image}
+    className={InfoStyles.image}
     />
     </div>}
     },
@@ -65,7 +65,7 @@ export default function Information() {
     width={400}
     height={240}
     alt='reach'
-    className={InfoStyle.image}
+    className={InfoStyles.image}
     />
     </div>}
     },
@@ -80,7 +80,7 @@ export default function Information() {
       width={400}
       height={240}
       alt='reach'
-      className={InfoStyle.image}
+      className={InfoStyles.image}
       />
       </div>}
     }, 
@@ -95,18 +95,18 @@ export default function Information() {
     <>
     <Popup 
     trigger={<button 
-      className={InfoStyle.popup_button}>
+      className={InfoStyles.popup_button}>
       <FaInfoCircle size={28}/> 
     </button>} 
     modal 
     overlayStyle={{background: 'var(--modalBackground)', 
     backdropFilter:'var(--modalBackDropFilter)'}}>
       {close => (
-      <div className={InfoStyle.str_popup_wrap}>
-        <button className={InfoStyle.str_popup_close_button} onClick={close}>
+      <div className={InfoStyles.str_popup_wrap}>
+        <button className={InfoStyles.str_popup_close_button} onClick={close}>
           &times;
         </button>
-        <div className={InfoStyle.str_popup_headline}> STR Ranges </div>
+        <div className={InfoStyles.str_popup_headline}> STR Ranges </div>
         <STRAnimation/>
       </div>)}
     </Popup>
@@ -128,7 +128,7 @@ export default function Information() {
     width={400}
     height={240}
     alt='reach'
-    className={InfoStyle.image}
+    className={InfoStyles.image}
     />
     </div>}
     },

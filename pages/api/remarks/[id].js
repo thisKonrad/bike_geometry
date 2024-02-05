@@ -17,18 +17,4 @@ export default async function handler(request, response) {
         response.status(200).json({ status: `REMARK deleted.` });
     }
 
-    /*     if (request.method === "DELETE") {
-            // Find the DetailCard document that contains the comment
-            const detailCard = await BikeGeometry.findOne({
-                remarks: { $elemMatch: { _id: id } },
-            });
-            if (detailCard) {
-                // Remove the comment from the remarks array
-                detailCard.remarks = detailCard.remarks.filter(
-                    (remark) => remark._id.toString() !== id);
-                await detailCard.save();
-            }
-            await Remark.findByIdAndDelete(id);
-        }; */
-
 }

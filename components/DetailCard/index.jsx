@@ -3,12 +3,10 @@ import DeleteModal from '../DeleteModal';
 import Remarks from '../Remarks';
 import { useState, useEffect} from 'react';
 import Image from 'next/image';
-/* import Popup from 'reactjs-popup'; */
 import GoogleSearchFrame from '../GoogleSearchFrame';
 import GoogleSearchCrank from '../GoogleSearchCrank';
 import GoogleSearchWheels from '../GoogleSearchWheels';
-/* import { MdDeleteForever } from "react-icons/md"; */
-import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
+import styles from '../../styles/DetailCardStyle.module.css';
 
 
 export default function DetailCard({data, handleDelete, updateRemark, deleteRemark}){
@@ -56,107 +54,74 @@ export default function DetailCard({data, handleDelete, updateRemark, deleteRema
 
 
 return (<>
-<section className={DetailCardStyle.detailcard}>
+<section className={styles.detailcard}>
     <DeleteModal onDelete={handleDelete}/>
-    {/* <Popup 
-    trigger= {<button 
-    className={DetailCardStyle.delete_button}>
-    <MdDeleteForever />
-    </button>}
-    modal 
-    overlayStyle={{background: 'var(--modalBackground)', 
-    backdropFilter:'var(--modalBackDropFilter)'}}>
-      {close => (
-      <div className={DetailCardStyle.popup_wrap}>
-        <button className={DetailCardStyle.popup_close_button} onClick={close}>
-          &times;
-        </button>
-        <div className={DetailCardStyle.popup_article}>
-            <p>Are you really sure you want to delete this bike?</p>
-            <p>Changes can not be undone!</p>
-        </div>
-        <button
-            className={DetailCardStyle.pop_up_cancel}
-            onClick={() => {
-              close();
-            }}
-          >
-            cancel
-          </button>
-          <button
-            className={DetailCardStyle.popup_delete_bike}
-            onClick={handleDelete}
-          >
-            delete
-          </button>
-      </div>)}
-    </Popup>  */}
-      <div className={DetailCardStyle.detailcard_content}>
-        <h3 className={DetailCardStyle.title}>
+      <div className={styles.detailcard_content}>
+        <h3 className={styles.title}>
             Bike Title: 
         </h3>
-        <h3 className={DetailCardStyle.title}> {data.bikeTitle}</h3>
-        <p className={DetailCardStyle.paragraph}>
+        <h3 className={styles.title}> {data.bikeTitle}</h3>
+        <p className={styles.paragraph}>
             Bike Type: {data.bikeType}</p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             Date: {data.date}</p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             Client Name: {data.userName}</p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             Inside Leg: {data.insideLeg} cm</p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             <GoogleSearchFrame
                 data={data}
             />
             Frame Size: {data.frameSize} cm
         </p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             Top Tube Length: {data.topTubeLength} cm</p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             Stack: {data.stack} cm</p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             Reach: {data.reach} cm</p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             Seattube Angle: {data.seatTubeAngle}°</p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             Saddle Height:{data.saddleHeight} cm</p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             <GoogleSearchWheels
                 data={data}
             />
             Wheelsize: {data.wheelsize} inch</p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             <GoogleSearchCrank
             data={data}
             />
             Crank Length: {data.crankLength} cm</p>
-        <p className={DetailCardStyle.paragraph}>
+        <p className={styles.paragraph}>
             STR Quotient: {data.strQuotient}</p>
     </div>
     <div 
     onMouseEnter={showTooltip}
     onMouseLeave={hideTooltip}
-    className={DetailCardStyle.bike_image_wrap}>
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_left_001}>
+    className={styles.bike_image_wrap}>
+        {isTooltipVisible && <div className={styles.tooltip_left_001}>
             Saddle Height: {data.saddleHeight}</div>}
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_right_001}>
+        {isTooltipVisible && <div className={styles.tooltip_right_001}>
             Framesize: {data.frameSize}</div>}
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_center_right}>
+        {isTooltipVisible && <div className={styles.tooltip_center_right}>
             Reach: {data.reach}</div>}
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_center_001}>
+        {isTooltipVisible && <div className={styles.tooltip_center_001}>
             Seattube Angle: {data.seatTubeAngle}</div>}
         <Image
             src={currentImageUrl}
             width={520} 
             height={400} 
             alt='bike image' 
-            className={DetailCardStyle.image}
+            className={styles.image}
         />
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_right_002}>
+        {isTooltipVisible && <div className={styles.tooltip_right_002}>
             Wheelsize: {data.wheelsize}</div>}
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_left_002}>
+        {isTooltipVisible && <div className={styles.tooltip_left_002}>
             Crank Length: {data.crankLength}</div>}
-        {isTooltipVisible && <div className={DetailCardStyle.tooltip_center_left}>
+        {isTooltipVisible && <div className={styles.tooltip_center_left}>
             Stack: {data.stack}</div>}
     </div>
     <Remarks

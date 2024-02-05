@@ -1,6 +1,6 @@
 /* :::: CollectionSearchBar :::: */
 import {useStore} from '../Zustand';
-import HeaderStyle from '../../styles/HeaderStyle.module.css';
+import styles from '../../styles/HeaderStyle.module.css';
 
 
 export default function CollectionSearchBar({show}){
@@ -45,14 +45,14 @@ export default function CollectionSearchBar({show}){
     }
 
 
-return (<section className={HeaderStyle.searchbar_wrap}>
-    <div className={HeaderStyle.list_001}>
-        <button className={HeaderStyle.search_reset}
+return (<section className={styles.searchbar_wrap}>
+    <div className={styles.list_001}>
+        <button className={styles.search_reset}
         onClick={resetSearch}>
             reset
         </button>
     </div>
-    <div className={HeaderStyle.search_list_002}>
+    <div className={styles.search_list_002}>
         <div>
             <label>
             search by client
@@ -61,20 +61,20 @@ return (<section className={HeaderStyle.searchbar_wrap}>
             placeholder='client search'
             onChange={(e)=> searchByClient(e)} 
             value={searchUser}
-            className={HeaderStyle.input}
+            className={styles.input}
             >
             </input>
             </label>
         </div>
     </div>
-    <div className={HeaderStyle.search_list_003}>
+    <div className={styles.search_list_003}>
         <div>
             <label>
             select by type
             <select
             value={selectType}
             onChange={(e)=> selectByType(e)} 
-            className={HeaderStyle.input}
+            className={styles.input}
             >
             <option value=''>search by type</option>
             <option value='City'>City</option>
@@ -85,7 +85,7 @@ return (<section className={HeaderStyle.searchbar_wrap}>
         </label>
     </div>
     </div>
-    <div className={HeaderStyle.search_list_004}>
+    <div className={styles.search_list_004}>
          <div>
             <label>
             search by frame size
@@ -96,7 +96,7 @@ return (<section className={HeaderStyle.searchbar_wrap}>
             max='70'
             value={frameSizeSelect}
             onChange={(e)=>{selectByFrameSize(e)}}
-            className={HeaderStyle.input}
+            className={styles.input}
             >
             </input>
             </label>

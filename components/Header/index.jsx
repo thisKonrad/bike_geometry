@@ -8,7 +8,7 @@ import MobileMenue from '../MobileMenue/index.jsx';
 import { useState, useEffect } from 'react';
 import {useOpen} from '../Zustand';
 import { Squeeze as Hamburger } from 'hamburger-react';
-import HeaderStyle from '../../styles/HeaderStyle.module.css';
+import styles from '../../styles/HeaderStyle.module.css';
 
 
 export default function Header ({currentPageTitle}) {
@@ -38,20 +38,20 @@ export default function Header ({currentPageTitle}) {
 return (<>
  <header className={ 
         screenWidth >= 1190 ? 
-        HeaderStyle.header :
-        HeaderStyle.mobile_header }
+        styles.header :
+        styles.mobile_header }
     >
     <section 
         className={ 
         screenWidth >= 1190 ? 
-        HeaderStyle.header_content_wrap :
-        HeaderStyle.mobile_header_content_wrap }
+        styles.header_content_wrap :
+        styles.mobile_header_content_wrap }
     >
     { screenWidth >= 1190 ? <Logo/> : null}
     <div>
     <h1 className={ screenWidth >= 1190 ?
-        HeaderStyle.title :
-        HeaderStyle.mobile_title}
+        styles.title :
+        styles.mobile_title}
     >{currentPageTitle}</h1>
     </div>
     <div>
@@ -66,7 +66,7 @@ return (<>
     width={screenWidth}
     />
     { screenWidth <= 1190 ?
-    <div className={HeaderStyle.mobile_burger_wrap}>
+    <div className={styles.mobile_burger_wrap}>
     <Hamburger 
     size={32}
     color={`var(--accentColor)`}

@@ -1,7 +1,7 @@
 /* :::: GoogleSearchCrank :::: */
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
-import DetailCardStyle from '../../styles/DetailCardStyle.module.css';
+import styles from '../../styles/DetailCardStyle.module.css';
 
 
 export default function GoogleSearchCrank({data}){
@@ -50,7 +50,7 @@ export default function GoogleSearchCrank({data}){
 
     return( <div>
         <button
-        className={DetailCardStyle.search_button}
+        className={styles.search_button}
         onClick={googleCrank}
         >
         <FaSearch />

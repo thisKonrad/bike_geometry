@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { IoIosFastforward } from "react-icons/io";
-import InfoStyle from '@/styles/InfoStyle.module.css';
+import styles  from '@/styles/InfoStyle.module.css';
+
 
 export default function STRAnimation() {
 
@@ -32,21 +33,21 @@ export default function STRAnimation() {
 
     
    return (
-      <div className={InfoStyle.str_animation_wrap}>
+      <div className={styles.str_animation_wrap}>
         <Image 
         src={strImages[skipImage]}
         width={480}
         height={420}
         alt={`str range ${strImages[skipImage]}}`}
-        className={InfoStyle.str_animation_image}
+        className={styles.str_animation_image}
         />
         <div>
             <button
             onClick={strSkip}
-            className={InfoStyle.str_button}
+            className={styles.str_button}
             ><IoIosFastforward size={35}/></button>
         </div>
-        <p className={InfoStyle.str_animation_text}>STR Range = {strInfoText}</p>
+        <p className={styles.str_animation_text}>STR Range = {strInfoText}</p>
       </div>
    );
 };

@@ -1,5 +1,5 @@
 /* :::: STR QUOTIENT :::: */
-import CalcStyle from '../../styles/CalcStyle.module.css';
+import styles from '../../styles/CalcStyle.module.css';
 
 /**
 * STRQuotienten = Info: comfort: over 1.55, 
@@ -12,8 +12,8 @@ import CalcStyle from '../../styles/CalcStyle.module.css';
 export default function StrQuotient({check, onCheck, strRangeValue, onRangeChange}){
 
 
-    return(<div className={CalcStyle.str_quotient}>
-      <p className={CalcStyle.form_tag}>STR Quotient:</p>
+    return(<div className={styles.str_quotient}>
+      <p className={styles.form_tag}>STR Quotient:</p>
 
       <label htmlFor='strComfort'
       className='radio_label'
@@ -64,7 +64,7 @@ export default function StrQuotient({check, onCheck, strRangeValue, onRangeChang
        step='1'
        value={strRangeValue}
        onChange={onRangeChange}
-       className={CalcStyle.str_range}
+       className={styles.str_range}
      />
      <p>str range: {strRangeValue/100}</p>
    </div>

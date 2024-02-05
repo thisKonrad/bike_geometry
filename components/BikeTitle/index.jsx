@@ -1,12 +1,12 @@
 /* :::: Bike Title :::: */
-import CalcStyle from '../../styles/CalcStyle.module.css';
+import styles from '../../styles/CalcStyle.module.css';
 
 
 export default function BikeTitle(){
 
-    return (<div className={CalcStyle.bike_title}>
+    return (<div className={styles.bike_title}>
     <label>
-      <p className={CalcStyle.form_tag}>Bike Title</p>
+      <p className={styles.form_tag}>Bike Title</p>
       <input
         name='bikeTitle'
         type='text'
