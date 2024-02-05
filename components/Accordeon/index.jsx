@@ -2,7 +2,7 @@
 'use client'
 //import Image from 'next/image';
 import {useStore} from '../Zustand';
-import InfoStyle from '@/styles/InfoStyle.module.css'
+import styles from '@/styles/InfoStyle.module.css'
 
 
 export default function Accordeon({items}) {
@@ -15,26 +15,26 @@ export default function Accordeon({items}) {
     };
   
    return (
-      <div className={InfoStyle.accordeon_wrap}>
+      <div className={styles.accordeon_wrap}>
         {items.map((item, index) => (
-          <div key={index} className={InfoStyle.accordeon_body}>
+          <div key={index} className={styles.accordeon_body}>
             <header 
             onClick={() => handleClick(index)}
-            className={InfoStyle.accordeon_header}
+            className={styles.accordeon_header}
             >
             {index === expanded ? 
-            <p className={InfoStyle.accordeon_icon}>
+            <p className={styles.accordeon_icon}>
                 &#215;
             </p> :
-            <p className={InfoStyle.accordeon_icon}>
+            <p className={styles.accordeon_icon}>
                 &#43;
             </p>}
             {item.title}
             </header>
-            <div className={InfoStyle.accordeon_content}>
+            <div className={styles.accordeon_content}>
                 <article>
               {index === expanded ? 
-                <div className={InfoStyle.content_wrap}>
+                <div className={styles.content_wrap}>
                 <p>{item.content.text}</p>
                 {item.content.image}</div>: ''}
                 </article>

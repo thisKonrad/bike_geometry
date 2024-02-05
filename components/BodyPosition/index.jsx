@@ -1,5 +1,5 @@
 /* :::: Body Position :::: */
-import CalcStyle from '../../styles/CalcStyle.module.css';
+/* import CalcStyle from '../../styles/CalcStyle.module.css'; */
 
 /*Oberrohrlänge / Top Tube Length:
 * measures: (body measures, vorbaulänge)
@@ -10,7 +10,7 @@ import CalcStyle from '../../styles/CalcStyle.module.css';
 * formular: (rumpflänge + armlänge) * Haltung - Vorbaulänge  //O = ( R + A ) x H – V;
 */
 
-export default function BodyPosition(){
+/* export default function BodyPosition(){
 
   return (<label>
       body position:
@@ -24,4 +24,4 @@ export default function BodyPosition(){
         <option value='0.54'>race position</option>
       </select>
     </label>)
-}
+} */

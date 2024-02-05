@@ -1,11 +1,13 @@
 /* :::: USER NAME :::: */
-import CalcStyle from '../../styles/CalcStyle.module.css';
+import styles from '../../styles/CalcStyle.module.css';
+
 
 export default function UserName(){
 
-    return (<div className={CalcStyle.user_name}>
+
+    return (<div className={styles.user_name}>
         <label>
-        <p className={CalcStyle.form_tag}>Client Name</p>
+        <p className={styles.form_tag}>Client Name</p>
         <input
         name='userName'
         type='text'

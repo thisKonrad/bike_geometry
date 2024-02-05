@@ -1,14 +1,14 @@
 /* :::: FRAME SIZE :::: */
-import CalcStyle from '../../styles/CalcStyle.module.css';
+import styles from '../../styles/CalcStyle.module.css';
 
 
 export default function FrameSize(){
 
   
 return (<>
-<div className={CalcStyle.inside_leg}>
+<div className={styles.inside_leg}>
   <label>
-      <p className={CalcStyle.form_tag}>Inside Leg:</p>
+      <p className={styles.form_tag}>Inside Leg:</p>
       <input 
       type='number'
       name='insideLeg'
@@ -20,9 +20,9 @@ return (<>
       />
   </label>
   </div>
-  <div className={CalcStyle.bike_type}>
+  <div className={styles.bike_type}>
   <label>
-      <p className={CalcStyle.form_tag}>Bike Type</p>
+      <p className={styles.form_tag}>Bike Type</p>
     <select 
     name='bikeType' 
     defaultValue=''
